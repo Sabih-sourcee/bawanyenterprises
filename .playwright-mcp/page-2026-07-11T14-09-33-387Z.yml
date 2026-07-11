@@ -1,0 +1,583 @@
+- generic [ref=f22e3]:
+  - navigation [ref=f22e4]:
+    - generic [ref=f22e5]:
+      - link "Bawany." [ref=f22e6] [cursor=pointer]:
+        - /url: "#"
+      - generic [ref=f22e7]:
+        - link "About" [ref=f22e8] [cursor=pointer]:
+          - /url: "#about-section"
+        - link "Partners" [ref=f22e9] [cursor=pointer]:
+          - /url: "#partners-marquee-section"
+        - button "Verticals" [ref=f22e11] [cursor=pointer]
+        - link "Work" [ref=f22e13] [cursor=pointer]:
+          - /url: "#portfolio"
+        - link "Contact" [ref=f22e14] [cursor=pointer]:
+          - /url: "#contact-form-section"
+      - link "Partner With Us" [ref=f22e16] [cursor=pointer]:
+        - /url: "#contact-form-section"
+  - main [ref=f22e18]:
+    - generic [ref=f22e19]:
+      - heading "Leading Full-Service Energy Solutions Mobile Distribution Lighting Solutions Tech Accessories Energy Solutions" [level=1] [ref=f22e22]:
+        - generic [ref=f22e23]:
+          - generic [ref=f22e24]: Leading
+          - generic [ref=f22e25]: Full-Service
+        - generic [ref=f22e27]:
+          - generic [ref=f22e28]: Energy Solutions
+          - generic [ref=f22e29]: Mobile Distribution
+          - generic [ref=f22e30]: Lighting Solutions
+          - generic [ref=f22e31]: Tech Accessories
+          - generic [ref=f22e32]: Energy Solutions
+      - generic [ref=f22e35]:
+        - paragraph [ref=f22e37]: A narrative etched with decades of shaping industries across Pakistan.
+        - button "Unmute video" [ref=f22e38] [cursor=pointer]
+    - generic [ref=f22e44]:
+      - generic [ref=f22e45]: Energy Solutions
+      - generic [ref=f22e47]: Mobile Distribution
+      - generic [ref=f22e49]: Lighting Solutions
+      - generic [ref=f22e51]: Tech Accessories
+      - generic [ref=f22e53]: Solar & Storage Systems
+      - generic [ref=f22e55]: Nationwide Distribution
+      - generic [ref=f22e57]: Commercial LED
+      - generic [ref=f22e59]: Performance Accessories
+      - generic [ref=f22e61]: Dealer Network
+      - generic [ref=f22e63]: Enterprise Solutions
+      - generic [ref=f22e65]: Energy Solutions
+      - generic [ref=f22e67]: Mobile Distribution
+      - generic [ref=f22e69]: Lighting Solutions
+      - generic [ref=f22e71]: Tech Accessories
+      - generic [ref=f22e73]: Solar & Storage Systems
+      - generic [ref=f22e75]: Nationwide Distribution
+      - generic [ref=f22e77]: Commercial LED
+      - generic [ref=f22e79]: Performance Accessories
+      - generic [ref=f22e81]: Dealer Network
+      - generic [ref=f22e83]: Enterprise Solutions
+    - generic [ref=f22e86]:
+      - generic [ref=f22e87]:
+        - img "Samsung"
+      - generic [ref=f22e89]:
+        - img "Xiaomi"
+      - generic [ref=f22e91]:
+        - img "Oppo"
+      - generic [ref=f22e93]:
+        - img "Vivo"
+      - generic [ref=f22e95]:
+        - img "Realme"
+      - generic [ref=f22e97]:
+        - img "Infinix"
+      - generic [ref=f22e99]:
+        - img "Tecno"
+      - generic [ref=f22e101]:
+        - img "Haier"
+      - generic [ref=f22e103]:
+        - img "Samsung"
+      - generic [ref=f22e105]:
+        - img "Xiaomi"
+      - generic [ref=f22e107]:
+        - img "Oppo"
+      - generic [ref=f22e109]:
+        - img "Vivo"
+      - generic [ref=f22e111]:
+        - img "Realme"
+      - generic [ref=f22e113]:
+        - img "Infinix"
+      - generic [ref=f22e115]:
+        - img "Tecno"
+      - generic [ref=f22e117]:
+        - img "Haier"
+    - generic [ref=f22e120]:
+      - heading "Selected Work" [level=2] [ref=f22e121]:
+        - generic [ref=f22e122]:
+          - generic [ref=f22e123]: Selected
+          - generic [ref=f22e124]: Work
+      - generic [ref=f22e125]:
+        - article [ref=f22e126] [cursor=pointer]:
+          - generic [ref=f22e127]:
+            - generic [ref=f22e129]:
+              - generic [ref=f22e130]: SOLAR
+              - generic [ref=f22e131]: COMMERCIAL
+              - generic [ref=f22e132]: STORAGE
+            - generic: Commercial Solar & Storage Deployment
+          - generic [ref=f22e135]:
+            - heading "Commercial Solar & Storage Deployment" [level=3] [ref=f22e136]
+            - paragraph [ref=f22e137]: Samad Group of Industries
+        - article [ref=f22e141] [cursor=pointer]:
+          - generic [ref=f22e142]:
+            - generic [ref=f22e144]:
+              - generic [ref=f22e145]: MOBILE
+              - generic [ref=f22e146]: DISTRIBUTION
+              - generic [ref=f22e147]: B2B
+            - generic: Nationwide Mobile Dealer Network
+          - generic [ref=f22e150]:
+            - heading "Nationwide Mobile Dealer Network" [level=3] [ref=f22e151]
+            - paragraph [ref=f22e152]: Retail Channel Expansion
+        - article [ref=f22e156] [cursor=pointer]:
+          - generic [ref=f22e157]:
+            - generic [ref=f22e159]:
+              - generic [ref=f22e160]: LED
+              - generic [ref=f22e161]: COMMERCIAL
+              - generic [ref=f22e162]: EFFICIENCY
+            - generic: Commercial LED Retrofit Program
+          - generic [ref=f22e165]:
+            - heading "Commercial LED Retrofit Program" [level=3] [ref=f22e166]
+            - paragraph [ref=f22e167]: Corporate Campus — Karachi
+        - article [ref=f22e171] [cursor=pointer]:
+          - generic [ref=f22e172]:
+            - generic [ref=f22e174]:
+              - generic [ref=f22e175]: ACCESSORIES
+              - generic [ref=f22e176]: RETAIL
+              - generic [ref=f22e177]: DURABILITY
+            - generic: Performance Accessories Product Line
+          - generic [ref=f22e180]:
+            - heading "Performance Accessories Product Line" [level=3] [ref=f22e181]
+            - paragraph [ref=f22e182]: Retail Distribution Launch
+        - article [ref=f22e186] [cursor=pointer]:
+          - generic [ref=f22e187]:
+            - generic [ref=f22e189]:
+              - generic [ref=f22e190]: SOLAR
+              - generic [ref=f22e191]: RESIDENTIAL
+              - generic [ref=f22e192]: STORAGE
+            - generic: Residential Solar & Lithium Storage
+          - generic [ref=f22e195]:
+            - heading "Residential Solar & Lithium Storage" [level=3] [ref=f22e196]
+            - paragraph [ref=f22e197]: Housing Society — Lahore
+    - generic [ref=f22e202]:
+      - heading "We're an infrastructure & technology group making partners scale with confidence." [level=2] [ref=f22e204]:
+        - generic [ref=f22e205]:
+          - generic [ref=f22e206]: We're
+          - generic [ref=f22e207]: an
+          - generic [ref=f22e208]: infrastructure
+          - generic [ref=f22e209]: "&"
+        - generic [ref=f22e210]:
+          - generic [ref=f22e211]: technology
+          - generic [ref=f22e212]: group
+          - generic [ref=f22e213]: making
+        - generic [ref=f22e214]:
+          - generic [ref=f22e215]: partners
+          - generic [ref=f22e216]: scale
+          - generic [ref=f22e217]: with
+          - generic [ref=f22e218]: confidence.
+      - generic [ref=f22e221]:
+        - article [ref=f22e222]:
+          - heading "Energy Solutions" [level=3] [ref=f22e223]
+          - list [ref=f22e224]:
+            - listitem [ref=f22e225]:
+              - link "Residential Solar Systems" [ref=f22e226] [cursor=pointer]:
+                - /url: "#contact-form-section"
+            - listitem [ref=f22e231]:
+              - link "Commercial Solar Arrays" [ref=f22e232] [cursor=pointer]:
+                - /url: "#contact-form-section"
+            - listitem [ref=f22e237]:
+              - link "Lithium Battery Storage" [ref=f22e238] [cursor=pointer]:
+                - /url: "#contact-form-section"
+            - listitem [ref=f22e243]:
+              - link "Grid-Independent Power" [ref=f22e244] [cursor=pointer]:
+                - /url: "#contact-form-section"
+            - listitem [ref=f22e249]:
+              - link "Enterprise Procurement" [ref=f22e250] [cursor=pointer]:
+                - /url: "#contact-form-section"
+        - article [ref=f22e255]:
+          - heading "Mobile Distribution" [level=3] [ref=f22e256]
+          - list [ref=f22e257]:
+            - listitem [ref=f22e258]:
+              - link "Nationwide Dealer Network" [ref=f22e259] [cursor=pointer]:
+                - /url: "#contact-form-section"
+            - listitem [ref=f22e264]:
+              - link "Leading Brand Partnerships" [ref=f22e265] [cursor=pointer]:
+                - /url: "#contact-form-section"
+            - listitem [ref=f22e270]:
+              - link "Supply Chain Logistics" [ref=f22e271] [cursor=pointer]:
+                - /url: "#contact-form-section"
+            - listitem [ref=f22e276]:
+              - link "Retail Channel Support" [ref=f22e277] [cursor=pointer]:
+                - /url: "#contact-form-section"
+            - listitem [ref=f22e282]:
+              - link "Enterprise Procurement" [ref=f22e283] [cursor=pointer]:
+                - /url: "#contact-form-section"
+        - article [ref=f22e288]:
+          - heading "Lighting Solutions" [level=3] [ref=f22e289]
+          - list [ref=f22e290]:
+            - listitem [ref=f22e291]:
+              - link "Commercial LED Systems" [ref=f22e292] [cursor=pointer]:
+                - /url: "#contact-form-section"
+            - listitem [ref=f22e297]:
+              - link "Residential Illumination" [ref=f22e298] [cursor=pointer]:
+                - /url: "#contact-form-section"
+            - listitem [ref=f22e303]:
+              - link "Energy-Efficient Retrofits" [ref=f22e304] [cursor=pointer]:
+                - /url: "#contact-form-section"
+            - listitem [ref=f22e309]:
+              - link "Industrial Lighting" [ref=f22e310] [cursor=pointer]:
+                - /url: "#contact-form-section"
+            - listitem [ref=f22e315]:
+              - link "Enterprise Procurement" [ref=f22e316] [cursor=pointer]:
+                - /url: "#contact-form-section"
+        - article [ref=f22e321]:
+          - heading "Tech Accessories" [level=3] [ref=f22e322]
+          - list [ref=f22e323]:
+            - listitem [ref=f22e324]:
+              - link "Fast-Charging Solutions" [ref=f22e325] [cursor=pointer]:
+                - /url: "#contact-form-section"
+            - listitem [ref=f22e330]:
+              - link "Audio & Peripherals" [ref=f22e331] [cursor=pointer]:
+                - /url: "#contact-form-section"
+            - listitem [ref=f22e336]:
+              - link "Durability-Tested Hardware" [ref=f22e337] [cursor=pointer]:
+                - /url: "#contact-form-section"
+            - listitem [ref=f22e342]:
+              - link "Retail-Ready Packaging" [ref=f22e343] [cursor=pointer]:
+                - /url: "#contact-form-section"
+            - listitem [ref=f22e348]:
+              - link "Enterprise Procurement" [ref=f22e349] [cursor=pointer]:
+                - /url: "#contact-form-section"
+        - article [ref=f22e354]:
+          - heading "Distribution & Logistics" [level=3] [ref=f22e355]
+          - list [ref=f22e356]:
+            - listitem [ref=f22e357]:
+              - link "Nationwide Logistics" [ref=f22e358] [cursor=pointer]:
+                - /url: "#contact-form-section"
+            - listitem [ref=f22e363]:
+              - link "Dealer Onboarding" [ref=f22e364] [cursor=pointer]:
+                - /url: "#contact-form-section"
+            - listitem [ref=f22e369]:
+              - link "Warehouse Management" [ref=f22e370] [cursor=pointer]:
+                - /url: "#contact-form-section"
+            - listitem [ref=f22e375]:
+              - link "Retail Channel Support" [ref=f22e376] [cursor=pointer]:
+                - /url: "#contact-form-section"
+            - listitem [ref=f22e381]:
+              - link "After-Sales Service" [ref=f22e382] [cursor=pointer]:
+                - /url: "#contact-form-section"
+      - generic [ref=f22e388]:
+        - paragraph [ref=f22e389]:
+          - generic [ref=f22e390]:
+            - generic [ref=f22e391]: Honest
+            - generic [ref=f22e392]: pricing.
+            - generic [ref=f22e393]: Smart
+            - generic [ref=f22e394]: engineering.
+            - generic [ref=f22e395]: Real
+            - generic [ref=f22e396]: distribution
+          - generic [ref=f22e397]: results.
+        - paragraph [ref=f22e399]:
+          - generic [ref=f22e400]:
+            - generic [ref=f22e401]: You
+            - generic [ref=f22e402]: bring
+            - generic [ref=f22e403]: the
+            - generic [ref=f22e404]: vision.
+            - generic [ref=f22e405]: We'll
+            - generic [ref=f22e406]: wire
+            - generic [ref=f22e407]: it
+            - generic [ref=f22e408]: into
+            - generic [ref=f22e409]: reality.
+    - generic [ref=f22e411]:
+      - paragraph [ref=f22e412]: About us
+      - heading "The team behind your infrastructure & technology growth." [level=2] [ref=f22e413]:
+        - generic [ref=f22e414]:
+          - generic [ref=f22e415]: The
+          - generic [ref=f22e416]: team
+          - generic [ref=f22e417]: behind
+          - generic [ref=f22e418]: your
+          - generic [ref=f22e419]: infrastructure
+        - generic [ref=f22e420]:
+          - generic [ref=f22e421]: "&"
+          - generic [ref=f22e422]: technology
+          - generic [ref=f22e423]: growth.
+      - generic [ref=f22e424]:
+        - paragraph [ref=f22e425]:
+          - generic [ref=f22e426]:
+            - generic [ref=f22e427]: We're
+            - generic [ref=f22e428]: not
+            - generic [ref=f22e429]: just
+            - generic [ref=f22e430]: a
+            - generic [ref=f22e431]: distribution
+            - generic [ref=f22e432]: company
+            - generic [ref=f22e433]: —
+            - generic [ref=f22e434]: we're
+            - generic [ref=f22e435]: the
+            - generic [ref=f22e436]: people
+          - generic [ref=f22e437]:
+            - generic [ref=f22e438]: who
+            - generic [ref=f22e439]: get
+            - generic [ref=f22e440]: excited
+            - generic [ref=f22e441]: about
+            - generic [ref=f22e442]: powering
+            - generic [ref=f22e443]: homes,
+            - generic [ref=f22e444]: retailers,
+            - generic [ref=f22e445]: and
+          - generic [ref=f22e446]:
+            - generic [ref=f22e447]: enterprises
+            - generic [ref=f22e448]: with
+            - generic [ref=f22e449]: energy,
+            - generic [ref=f22e450]: lighting,
+            - generic [ref=f22e451]: and
+            - generic [ref=f22e452]: connectivity
+            - generic [ref=f22e453]: that
+            - generic [ref=f22e454]: lasts.
+        - paragraph [ref=f22e455]:
+          - generic [ref=f22e456]:
+            - generic [ref=f22e457]: We
+            - generic [ref=f22e458]: source,
+            - generic [ref=f22e459]: distribute,
+            - generic [ref=f22e460]: and
+            - generic [ref=f22e461]: implement
+            - generic [ref=f22e462]: high-performance
+          - generic [ref=f22e463]:
+            - generic [ref=f22e464]: technology
+            - generic [ref=f22e465]: and
+            - generic [ref=f22e466]: energy
+            - generic [ref=f22e467]: solutions.
+            - generic [ref=f22e468]: By
+            - generic [ref=f22e469]: focusing
+            - generic [ref=f22e470]: "on"
+            - generic [ref=f22e471]: honest
+          - generic [ref=f22e472]:
+            - generic [ref=f22e473]: pricing,
+            - generic [ref=f22e474]: smart
+            - generic [ref=f22e475]: engineering,
+            - generic [ref=f22e476]: and
+            - generic [ref=f22e477]: dependable
+            - generic [ref=f22e478]: post-sale
+          - generic [ref=f22e479]:
+            - generic [ref=f22e480]: relationships,
+            - generic [ref=f22e481]: we
+            - generic [ref=f22e482]: ensure
+            - generic [ref=f22e483]: every
+            - generic [ref=f22e484]: product
+            - generic [ref=f22e485]: we
+            - generic [ref=f22e486]: deliver
+            - generic [ref=f22e487]: adds
+          - generic [ref=f22e488]:
+            - generic [ref=f22e489]: measurable
+            - generic [ref=f22e490]: value
+            - generic [ref=f22e491]: to
+            - generic [ref=f22e492]: our
+            - generic [ref=f22e493]: clients'
+            - generic [ref=f22e494]: ecosystems.
+        - paragraph [ref=f22e495]:
+          - generic [ref=f22e496]:
+            - generic [ref=f22e497]: Why?
+            - generic [ref=f22e498]: Because
+            - generic [ref=f22e499]: we
+            - generic [ref=f22e500]: turn
+            - generic [ref=f22e501]: bold
+            - generic [ref=f22e502]: ideas
+            - generic [ref=f22e503]: into
+            - generic [ref=f22e504]: dependable
+            - generic [ref=f22e505]: infrastructure
+            - generic [ref=f22e506]: that
+            - generic [ref=f22e507]: actually
+            - generic [ref=f22e508]: works.
+            - generic [ref=f22e509]: From
+            - generic [ref=f22e510]: solar
+            - generic [ref=f22e511]: arrays
+            - generic [ref=f22e512]: and
+            - generic [ref=f22e513]: lithium
+            - generic [ref=f22e514]: storage
+            - generic [ref=f22e515]: to
+          - generic [ref=f22e516]:
+            - generic [ref=f22e517]: nationwide
+            - generic [ref=f22e518]: mobile
+            - generic [ref=f22e519]: distribution
+            - generic [ref=f22e520]: and
+            - generic [ref=f22e521]: commercial
+            - generic [ref=f22e522]: LED
+            - generic [ref=f22e523]: —
+            - generic [ref=f22e524]: we
+            - generic [ref=f22e525]: deliver
+            - generic [ref=f22e526]: results.
+            - generic [ref=f22e527]: We're
+            - generic [ref=f22e528]: the
+            - generic [ref=f22e529]: crew
+            - generic [ref=f22e530]: you
+            - generic [ref=f22e531]: call
+            - generic [ref=f22e532]: when
+            - generic [ref=f22e533]: you
+            - generic [ref=f22e534]: want
+            - generic [ref=f22e535]: your
+            - generic [ref=f22e536]: business
+          - generic [ref=f22e537]:
+            - generic [ref=f22e538]: to
+            - generic [ref=f22e539]: scale
+            - generic [ref=f22e540]: without
+            - generic [ref=f22e541]: compromise.
+    - generic [ref=f22e544]:
+      - generic [ref=f22e545]:
+        - paragraph [ref=f22e546]:
+          - generic [ref=f22e547]: 0%
+        - paragraph [ref=f22e548]:
+          - generic [ref=f22e549]:
+            - generic [ref=f22e550]: lead
+            - generic [ref=f22e551]: gen
+            - generic [ref=f22e552]: spike
+            - generic [ref=f22e553]: within
+            - generic [ref=f22e554]: partner
+            - generic [ref=f22e555]: networks.
+            - generic [ref=f22e556]: Actual
+          - generic [ref=f22e557]:
+            - generic [ref=f22e558]: math,
+            - generic [ref=f22e559]: not
+            - generic [ref=f22e560]: fluff.
+      - paragraph [ref=f22e562]:
+        - generic [ref=f22e563]:
+          - generic [ref=f22e564]: custom-built
+          - generic [ref=f22e565]: supply
+          - generic [ref=f22e566]: chains.
+          - generic [ref=f22e567]: From
+        - generic [ref=f22e568]:
+          - generic [ref=f22e569]: warehouse
+          - generic [ref=f22e570]: to
+          - generic [ref=f22e571]: retail
+          - generic [ref=f22e572]: shelf.
+          - generic [ref=f22e573]: "No"
+          - generic [ref=f22e574]: cookie-cutter
+        - generic [ref=f22e575]: distribution.
+      - generic [ref=f22e577]:
+        - paragraph [ref=f22e578]: Zero
+        - paragraph [ref=f22e579]:
+          - generic [ref=f22e580]:
+            - generic [ref=f22e581]: disposable
+            - generic [ref=f22e582]: solutions.
+            - generic [ref=f22e583]: Every
+            - generic [ref=f22e584]: product
+            - generic [ref=f22e585]: curated
+            - generic [ref=f22e586]: for
+          - generic [ref=f22e587]: endurance.
+      - generic [ref=f22e589]:
+        - paragraph [ref=f22e590]:
+          - generic [ref=f22e591]: 0X
+        - paragraph [ref=f22e592]:
+          - generic [ref=f22e593]:
+            - generic [ref=f22e594]: more
+            - generic [ref=f22e595]: distribution
+            - generic [ref=f22e596]: reach.
+            - generic [ref=f22e597]: When
+            - generic [ref=f22e598]: infrastructure
+            - generic [ref=f22e599]: works,
+            - generic [ref=f22e600]: partners
+            - generic [ref=f22e601]: scale.
+      - generic [ref=f22e602]:
+        - paragraph [ref=f22e603]:
+          - generic [ref=f22e604]: 0%
+        - paragraph [ref=f22e605]:
+          - generic [ref=f22e606]:
+            - generic [ref=f22e607]: of
+            - generic [ref=f22e608]: B2B
+            - generic [ref=f22e609]: partners
+            - generic [ref=f22e610]: stick
+            - generic [ref=f22e611]: around.
+            - generic [ref=f22e612]: Results
+            - generic [ref=f22e613]: earn
+          - generic [ref=f22e614]:
+            - generic [ref=f22e615]: repeat
+            - generic [ref=f22e616]: business.
+    - generic [ref=f22e621]:
+      - blockquote [ref=f22e748]:
+        - paragraph [ref=f22e749]: “Hiring Bawany was straightforward. We stopped evaluating other distributors halfway through the first call.”
+        - generic [ref=f22e750]:
+          - paragraph [ref=f22e751]: Head of Procurement
+          - paragraph [ref=f22e752]: Enterprise Retail Group
+      - generic [ref=f22e628]:
+        - generic [ref=f22e629]:
+          - button "Previous" [ref=f22e630] [cursor=pointer]
+          - button "Next" [ref=f22e633] [cursor=pointer]
+        - generic [ref=f22e636]:
+          - button "Slide 1" [ref=f22e637]
+          - button "Slide 2" [ref=f22e638]
+          - button "Slide 3" [ref=f22e639]
+          - button "Slide 4" [ref=f22e640]
+          - button "Slide 5" [ref=f22e641]
+          - button "Slide 6" [ref=f22e642]
+          - button "Slide 7" [ref=f22e643]
+          - button "Slide 8" [ref=f22e644]
+          - button "Slide 9" [ref=f22e645]
+    - generic [ref=f22e648]:
+      - heading "Let's Connect" [level=2] [ref=f22e649]
+      - generic [ref=f22e650]:
+        - textbox "Full name" [ref=f22e652]
+        - textbox "Email" [ref=f22e654]
+        - textbox "Phone" [ref=f22e656]
+        - textbox "Company name" [ref=f22e658]
+        - textbox "Your designation" [ref=f22e660]
+        - combobox [ref=f22e662] [cursor=pointer]:
+          - option "How did you hear about us" [disabled] [selected]
+          - option "Google"
+          - option "Referral"
+          - option "LinkedIn"
+          - option "Trade Event"
+          - option "Existing Partner"
+          - option "Other"
+        - textbox "Write your message" [ref=f22e664]
+        - generic [ref=f22e665]:
+          - paragraph [ref=f22e666]: I am interested in
+          - generic [ref=f22e667]:
+            - generic [ref=f22e668] [cursor=pointer]:
+              - checkbox "Energy Solutions" [ref=f22e669]
+              - text: Energy Solutions
+            - generic [ref=f22e670] [cursor=pointer]:
+              - checkbox "Mobile Distribution" [ref=f22e671]
+              - text: Mobile Distribution
+            - generic [ref=f22e672] [cursor=pointer]:
+              - checkbox "Lighting Solutions" [ref=f22e673]
+              - text: Lighting Solutions
+            - generic [ref=f22e674] [cursor=pointer]:
+              - checkbox "Tech Accessories" [ref=f22e675]
+              - text: Tech Accessories
+        - generic [ref=f22e676]:
+          - paragraph [ref=f22e677]: My budget is
+          - generic [ref=f22e678]:
+            - generic [ref=f22e679] [cursor=pointer]:
+              - radio "Under PKR 500,000" [ref=f22e680]
+              - text: Under PKR 500,000
+            - generic [ref=f22e681] [cursor=pointer]:
+              - radio "PKR 500,000 – 2,000,000" [ref=f22e682]
+              - text: PKR 500,000 – 2,000,000
+            - generic [ref=f22e683] [cursor=pointer]:
+              - radio "PKR 2,000,000+" [ref=f22e684]
+              - text: PKR 2,000,000+
+        - button "Submit" [ref=f22e685] [cursor=pointer]
+      - paragraph [ref=f22e686]: Bawany Enterprises
+  - contentinfo [ref=f22e687]:
+    - generic [ref=f22e690]:
+      - generic [ref=f22e691]:
+        - paragraph [ref=f22e692]: Karachi
+        - paragraph [ref=f22e693]: Bawany Enterprises, Karachi, Pakistan
+        - link "+92-300-0000000" [ref=f22e694] [cursor=pointer]:
+          - /url: tel:+92-300-0000000
+        - link "info@bawanyenterprises.com" [ref=f22e695] [cursor=pointer]:
+          - /url: mailto:info@bawanyenterprises.com
+      - generic [ref=f22e696]:
+        - paragraph [ref=f22e697]: Lahore
+        - paragraph [ref=f22e698]: Distribution Hub, Lahore, Pakistan
+        - link "+92-300-0000001" [ref=f22e699] [cursor=pointer]:
+          - /url: tel:+92-300-0000001
+        - link "lahore@bawanyenterprises.com" [ref=f22e700] [cursor=pointer]:
+          - /url: mailto:lahore@bawanyenterprises.com
+      - generic [ref=f22e701]:
+        - paragraph [ref=f22e702]: Islamabad
+        - paragraph [ref=f22e703]: Corporate Office, Islamabad, Pakistan
+        - link "+92-300-0000002" [ref=f22e704] [cursor=pointer]:
+          - /url: tel:+92-300-0000002
+        - link "islamabad@bawanyenterprises.com" [ref=f22e705] [cursor=pointer]:
+          - /url: mailto:islamabad@bawanyenterprises.com
+    - generic [ref=f22e710]:
+      - generic [ref=f22e711]:
+        - generic [ref=f22e712] [cursor=pointer]: B
+        - generic [ref=f22e713] [cursor=pointer]: a
+        - generic [ref=f22e714] [cursor=pointer]: w
+        - generic [ref=f22e715] [cursor=pointer]: a
+        - generic [ref=f22e716] [cursor=pointer]: "n"
+        - generic [ref=f22e717] [cursor=pointer]: "y"
+        - generic [ref=f22e718]: .
+      - generic [ref=f22e719]:
+        - link "LinkedIn" [ref=f22e720] [cursor=pointer]:
+          - /url: "#"
+        - link "Instagram" [ref=f22e725] [cursor=pointer]:
+          - /url: "#"
+      - button "Let's go up" [ref=f22e729] [cursor=pointer]
+      - generic [ref=f22e732]:
+        - link "Privacy Policy" [ref=f22e733] [cursor=pointer]:
+          - /url: "#"
+        - link "Terms Of Use" [ref=f22e734] [cursor=pointer]:
+          - /url: "#"
+        - link "Careers" [ref=f22e735] [cursor=pointer]:
+          - /url: "#contact-form-section"
+      - paragraph [ref=f22e736]: © 2026 Bawany Enterprises. Powered by Bawany Enterprises.

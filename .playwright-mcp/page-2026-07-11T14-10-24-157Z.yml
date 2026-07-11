@@ -1,0 +1,856 @@
+- generic [ref=f23e2]:
+  - banner [ref=f23e3]:
+    - generic [ref=f23e4]:
+      - link "home" [ref=f23e5]:
+        - /url: /
+      - navigation [ref=f23e6]:
+        - link "About Us" [ref=f23e7]:
+          - /url: /about
+        - link "Case Studies" [ref=f23e8]:
+          - /url: /buzz-portfolio
+        - button "Services" [ref=f23e10]: 
+        - link "Blog" [ref=f23e12]:
+          - /url: /blog
+        - link "Contact Us" [ref=f23e13]:
+          - /url: /contact
+      - generic [ref=f23e14]:
+        - link "Lets Work" [ref=f23e15]:
+          - /url: /contact
+        - text: 
+  - generic [ref=f23e19]:
+    - generic [ref=f23e20]:
+      - heading "Leading Full-Service Digital Agency" [level=1] [ref=f23e21]:
+        - generic [ref=f23e22]: Leading
+        - generic [ref=f23e23]: Full-Service
+        - generic [ref=f23e24]: Digital Agency
+      - generic [ref=f23e26]:
+        - generic [ref=f23e27]: Digital Agency
+        - generic [ref=f23e28]: Tech Agency
+        - generic [ref=f23e29]: Branding Agency
+        - generic [ref=f23e30]: Social Media Agency
+        - generic [ref=f23e31]: Web Agency
+        - generic [ref=f23e32]: Product Agency
+        - generic [ref=f23e33]: Digital Agency
+    - link [ref=f23e40]:
+      - /url: "#"
+  - generic [ref=f23e499]:
+    - generic [ref=f23e500]:
+      - paragraph [ref=f23e503]: KFC
+      - paragraph [ref=f23e507]: Kiko Milano
+      - paragraph [ref=f23e511]: Samad Group of Industries
+      - paragraph [ref=f23e515]: Dominos
+      - paragraph [ref=f23e519]: Descon Engineering
+      - paragraph [ref=f23e523]: Samsung
+      - paragraph [ref=f23e527]: Daily Deli
+      - paragraph [ref=f23e531]: Chat Pandas
+      - paragraph [ref=f23e535]: Lake City
+    - generic [ref=f23e537]:
+      - paragraph [ref=f23e540]: KFC
+      - paragraph [ref=f23e544]: Kiko Milano
+      - paragraph [ref=f23e548]: Samad Group of Industries
+      - paragraph [ref=f23e552]: Dominos
+      - paragraph [ref=f23e556]: Descon Engineering
+      - paragraph [ref=f23e560]: Samsung
+      - paragraph [ref=f23e564]: Daily Deli
+      - paragraph [ref=f23e568]: Chat Pandas
+      - paragraph [ref=f23e572]: Lake City
+  - generic [ref=f23e575]:
+    - heading "Selected Work" [level=2] [ref=f23e578]:
+      - generic [ref=f23e579]:
+        - generic [ref=f23e580]: Selected
+        - generic [ref=f23e581]: Work
+    - generic [ref=f23e582]:
+      - generic [ref=f23e583]:
+        - link "Website UI/UX Motion Graphics Close-knit Hosiery" [ref=f23e584]:
+          - /url: https://closeknit-buzzinteractive.webflow.io/
+          - generic:
+            - generic [ref=f23e585]:
+              - paragraph [ref=f23e587]: Website
+              - paragraph [ref=f23e589]: UI/UX
+              - paragraph [ref=f23e591]: Motion Graphics
+            - generic: Close-knit Hosiery
+        - link "Website UI/UX Motion Graphics Samad Group of Industries" [ref=f23e596]:
+          - /url: https://samadgroup-buzz.webflow.io/
+          - generic:
+            - generic [ref=f23e597]:
+              - paragraph [ref=f23e599]: Website
+              - paragraph [ref=f23e601]: UI/UX
+              - paragraph [ref=f23e603]: Motion Graphics
+            - generic: Samad Group of Industries
+      - link "Website UI/UX Motion Graphics Dynamite Gear" [ref=f23e609]:
+        - /url: https://dynamitegear-buzz.webflow.io/
+        - generic:
+          - generic [ref=f23e610]:
+            - paragraph [ref=f23e612]: Website
+            - paragraph [ref=f23e614]: UI/UX
+            - paragraph [ref=f23e616]: Motion Graphics
+          - generic: Dynamite Gear
+      - generic [ref=f23e621]:
+        - link "Website UI/UX Motion Graphics Advanced Aerial Mapping Services" [ref=f23e622]:
+          - /url: https://aamsbuzzinteractive.webflow.io/
+          - generic:
+            - generic [ref=f23e623]:
+              - paragraph [ref=f23e625]: Website
+              - paragraph [ref=f23e627]: UI/UX
+              - paragraph [ref=f23e629]: Motion Graphics
+            - generic: Advanced Aerial Mapping Services
+        - link "Website UI/UX Motion Graphics Level Up Vista" [ref=f23e634]:
+          - /url: https://levelupvistabuzz.webflow.io/
+          - generic:
+            - generic [ref=f23e635]:
+              - paragraph [ref=f23e637]: Website
+              - paragraph [ref=f23e639]: UI/UX
+              - paragraph [ref=f23e641]: Motion Graphics
+            - generic: Level Up Vista
+  - generic [ref=f23e650]:
+    - paragraph [ref=f23e652]:
+      - generic [ref=f23e653]:
+        - generic [ref=f23e654]: We’re
+        - generic [ref=f23e655]: a
+        - generic [ref=f23e656]: digital
+        - generic [ref=f23e657]: "&"
+        - generic [ref=f23e658]: tech
+        - generic [ref=f23e659]: agency
+      - generic [ref=f23e660]:
+        - generic [ref=f23e661]: making
+        - generic [ref=f23e662]: brands
+        - generic [ref=f23e663]: people
+        - generic [ref=f23e664]: remember
+    - generic [ref=f23e665]:
+      - paragraph [ref=f23e667]: Big ideas. Loud design. Real results. You bring the vision. We’ll wire it into reality.
+      - generic [ref=f23e669]:
+        - generic [ref=f23e670]:
+          - link "Designing" [ref=f23e671]:
+            - /url: /design-services
+          - generic [ref=f23e672]:
+            - link "Branding" [ref=f23e673]:
+              - /url: /design-services
+              - paragraph [ref=f23e675]: Branding
+            - link "Logo" [ref=f23e676]:
+              - /url: /design-services
+              - paragraph [ref=f23e678]: Logo
+            - link "Print Design" [ref=f23e679]:
+              - /url: /design-services
+              - paragraph [ref=f23e681]: Print Design
+            - link "Motion Graphics" [ref=f23e682]:
+              - /url: /design-services
+              - paragraph [ref=f23e684]: Motion Graphics
+            - link "UI/UX" [ref=f23e685]:
+              - /url: /ui-ux-design-services
+              - paragraph [ref=f23e687]: UI/UX
+        - generic [ref=f23e688]:
+          - link "CMS Websites" [ref=f23e689]:
+            - /url: /cms-development-services
+          - generic [ref=f23e690]:
+            - link "Webflow" [ref=f23e691]:
+              - /url: /cms-development-services
+              - paragraph [ref=f23e693]: Webflow
+            - link "Framer" [ref=f23e694]:
+              - /url: /cms-development-services
+              - paragraph [ref=f23e696]: Framer
+            - link "Wordpress" [ref=f23e697]:
+              - /url: /wordpress-development-services
+              - paragraph [ref=f23e699]: Wordpress
+            - link "Shopify" [ref=f23e700]:
+              - /url: /shopify-development-services
+              - paragraph [ref=f23e702]: Shopify
+            - link "Ecommerce Solutions" [ref=f23e703]:
+              - /url: /ecommerce-website-development
+              - paragraph [ref=f23e705]: Ecommerce Solutions
+        - generic [ref=f23e706]:
+          - paragraph [ref=f23e707]: Product Development
+          - generic [ref=f23e708]:
+            - link "Web Apps" [ref=f23e709]:
+              - /url: /web-development-services
+              - paragraph [ref=f23e711]: Web Apps
+            - link "React Native Development" [ref=f23e712]:
+              - /url: /react-native-app-development-services
+              - paragraph [ref=f23e714]: React Native Development
+            - link "PHP Development" [ref=f23e715]:
+              - /url: /php-development-services
+              - paragraph [ref=f23e717]: PHP Development
+            - link "MERN Stack Development" [ref=f23e718]:
+              - /url: /software-development-services
+              - paragraph [ref=f23e720]: MERN Stack Development
+            - link "QA Solutions" [ref=f23e721]:
+              - /url: /software-testing-services
+              - paragraph [ref=f23e723]: QA Solutions
+        - generic [ref=f23e724]:
+          - link "Mobile Apps" [ref=f23e725]:
+            - /url: /mobile-app-development-services
+          - generic [ref=f23e726]:
+            - link "Mobile Apps" [ref=f23e727]:
+              - /url: /mobile-app-development-services
+              - paragraph [ref=f23e729]: Mobile Apps
+            - link "IOS Mobile Apps" [ref=f23e730]:
+              - /url: /ios-app-development-services
+              - paragraph [ref=f23e732]: IOS Mobile Apps
+            - link "Android Mobile Apps" [ref=f23e733]:
+              - /url: /android-app-development-services
+              - paragraph [ref=f23e735]: Android Mobile Apps
+            - link "React Native Mobile Apps" [ref=f23e736]:
+              - /url: /react-native-app-development-services
+              - paragraph [ref=f23e738]: React Native Mobile Apps
+            - link "Mobile APP ASO" [ref=f23e739]:
+              - /url: /mobile-app-development-services
+              - paragraph [ref=f23e741]: Mobile APP ASO
+        - generic [ref=f23e742]:
+          - paragraph [ref=f23e743]: Marketing
+          - generic [ref=f23e744]:
+            - link "SEO" [ref=f23e745]:
+              - /url: /seo-services
+              - paragraph [ref=f23e747]: SEO
+            - link "SEM" [ref=f23e748]:
+              - /url: /sem-services
+              - paragraph [ref=f23e750]: SEM
+            - link "Social Media Marketing" [ref=f23e751]:
+              - /url: /social-media-services
+              - paragraph [ref=f23e753]: Social Media Marketing
+            - link "PPC Marketing" [ref=f23e754]:
+              - /url: /social-media-services
+              - paragraph [ref=f23e756]: PPC Marketing
+            - link "On-Page Optimization" [ref=f23e757]:
+              - /url: /social-media-services
+              - paragraph [ref=f23e759]: On-Page Optimization
+  - generic [ref=f23e763]:
+    - paragraph [ref=f23e766]:
+      - generic [ref=f23e768]:
+        - generic [ref=f23e769]: The
+        - generic [ref=f23e770]: Creatives
+        - generic [ref=f23e771]: Behind
+      - generic [ref=f23e772]:
+        - generic [ref=f23e773]: Your
+        - generic [ref=f23e774]: Digital
+        - generic [ref=f23e775]: Magic
+        - generic [ref=f23e776]: (
+        - generic [ref=f23e777]: 🪄
+        - generic [ref=f23e779]: )
+        - generic [ref=f23e780]: We’re
+        - generic [ref=f23e781]: not
+        - generic [ref=f23e782]: just
+      - generic [ref=f23e783]:
+        - generic [ref=f23e784]: a
+        - generic [ref=f23e785]: digital
+        - generic [ref=f23e786]: agency;
+        - generic [ref=f23e787]: we’re
+        - generic [ref=f23e788]: the
+        - generic [ref=f23e789]: people
+        - generic [ref=f23e790]: who
+      - generic [ref=f23e791]:
+        - generic [ref=f23e792]: get
+        - generic [ref=f23e793]: excited
+        - generic [ref=f23e794]: about
+        - generic [ref=f23e795]: your
+        - generic [ref=f23e796]: big
+        - generic [ref=f23e797]: ideas
+        - generic [ref=f23e798]: and
+      - generic [ref=f23e799]:
+        - generic [ref=f23e800]: bring
+        - generic [ref=f23e801]: them
+        - generic [ref=f23e802]: to
+        - generic [ref=f23e803]: life.
+    - generic [ref=f23e808]:
+      - paragraph [ref=f23e809]:
+        - generic [ref=f23e810]:
+          - generic [ref=f23e811]: We’ve
+          - generic [ref=f23e813]: grown
+          - generic [ref=f23e815]: into
+          - generic [ref=f23e817]: one
+          - generic [ref=f23e819]: of
+          - generic [ref=f23e821]: the
+          - generic [ref=f23e823]: best
+          - generic [ref=f23e825]: digital
+          - generic [ref=f23e827]: agencies
+          - generic [ref=f23e829]: and
+        - generic [ref=f23e831]:
+          - generic [ref=f23e832]: leading
+          - generic [ref=f23e834]: tech
+          - generic [ref=f23e836]: agencies
+          - generic [ref=f23e838]: in
+          - generic [ref=f23e840]: the
+          - generic [ref=f23e842]: region
+          - generic [ref=f23e844]: (and
+          - generic [ref=f23e846]: honestly,
+        - generic [ref=f23e848]:
+          - generic [ref=f23e849]: beyond).
+          - generic [ref=f23e851]: Our
+          - generic [ref=f23e853]: work
+          - generic [ref=f23e855]: has
+          - generic [ref=f23e857]: been
+          - generic [ref=f23e859]: featured,
+          - generic [ref=f23e861]: awarded,
+          - generic [ref=f23e863]: and
+        - generic [ref=f23e865]:
+          - generic [ref=f23e866]: occasionally
+          - generic [ref=f23e868]: copied
+          - generic [ref=f23e870]: but
+          - generic [ref=f23e872]: never
+          - generic [ref=f23e874]: ignored.
+      - paragraph [ref=f23e876]:
+        - generic [ref=f23e877]:
+          - generic [ref=f23e878]: Why?
+          - generic [ref=f23e880]: Because
+          - generic [ref=f23e882]: we
+          - generic [ref=f23e884]: turn
+          - generic [ref=f23e886]: bold
+          - generic [ref=f23e888]: ideas
+          - generic [ref=f23e890]: into
+          - generic [ref=f23e892]: beautiful
+          - generic [ref=f23e894]: things
+        - generic [ref=f23e896]:
+          - generic [ref=f23e897]: that
+          - generic [ref=f23e899]: actually
+          - generic [ref=f23e901]: work.
+          - generic [ref=f23e903]: From
+          - generic [ref=f23e905]: sleek
+          - generic [ref=f23e907]: websites
+          - generic [ref=f23e909]: and
+          - generic [ref=f23e911]: sharp
+        - generic [ref=f23e913]:
+          - generic [ref=f23e914]: branding
+          - generic [ref=f23e916]: to
+          - generic [ref=f23e918]: SEO
+          - generic [ref=f23e920]: that
+          - generic [ref=f23e922]: gets
+          - generic [ref=f23e924]: attention
+          - generic [ref=f23e926]: and
+          - generic [ref=f23e928]: campaigns
+          - generic [ref=f23e930]: that
+        - generic [ref=f23e932]:
+          - generic [ref=f23e933]: convert,
+          - generic [ref=f23e935]: we
+          - generic [ref=f23e937]: bring
+          - generic [ref=f23e939]: results.
+          - generic [ref=f23e941]: We’re
+          - generic [ref=f23e943]: the
+          - generic [ref=f23e945]: crew
+          - generic [ref=f23e947]: you
+          - generic [ref=f23e949]: call
+          - generic [ref=f23e951]: when
+        - generic [ref=f23e953]:
+          - generic [ref=f23e954]: you
+          - generic [ref=f23e956]: want
+          - generic [ref=f23e958]: your
+          - generic [ref=f23e960]: brand
+          - generic [ref=f23e962]: to
+          - generic [ref=f23e964]: stand
+          - generic [ref=f23e966]: out
+          - generic [ref=f23e968]: without
+          - generic [ref=f23e970]: shouting.
+    - generic [ref=f23e972]:
+      - generic [ref=f23e973]:
+        - generic [ref=f23e974]:
+          - generic [ref=f23e975]:
+            - generic [ref=f23e976]: "0"
+            - paragraph [ref=f23e977]: "%"
+          - paragraph [ref=f23e979]:
+            - generic [ref=f23e980]:
+              - generic [ref=f23e981]: lead
+              - generic [ref=f23e982]: gen
+              - generic [ref=f23e983]: spike
+              - generic [ref=f23e984]: within
+              - generic [ref=f23e985]: "3"
+            - generic [ref=f23e986]: months.
+            - generic [ref=f23e988]:
+              - generic [ref=f23e989]: Actual
+              - generic [ref=f23e990]: math,
+              - generic [ref=f23e991]: not
+              - generic [ref=f23e992]: fluff
+        - generic [ref=f23e994]:
+          - generic [ref=f23e995]:
+            - paragraph [ref=f23e996]: Zero templates.
+            - generic [ref=f23e997]:
+              - generic [ref=f23e998]: "0"
+              - paragraph [ref=f23e999]: "%"
+          - paragraph [ref=f23e1001]:
+            - generic [ref=f23e1002]:
+              - generic [ref=f23e1003]: custom-built
+              - generic [ref=f23e1004]: interfaces.
+            - generic [ref=f23e1005]:
+              - generic [ref=f23e1006]: From
+              - generic [ref=f23e1007]: brain
+              - generic [ref=f23e1008]: to
+              - generic [ref=f23e1009]: pixel.
+            - generic [ref=f23e1010]:
+              - generic [ref=f23e1011]: "No"
+              - generic [ref=f23e1012]: cookie-clutter
+              - generic [ref=f23e1013]: solutions.
+      - generic [ref=f23e1014]:
+        - generic [ref=f23e1015]:
+          - generic [ref=f23e1016]:
+            - generic [ref=f23e1017]: "0"
+            - paragraph [ref=f23e1018]: X
+          - paragraph [ref=f23e1019]:
+            - generic [ref=f23e1020]:
+              - generic [ref=f23e1021]: more
+              - generic [ref=f23e1022]: website
+              - generic [ref=f23e1023]: engagement.
+            - generic [ref=f23e1024]:
+              - generic [ref=f23e1025]: Turns
+              - generic [ref=f23e1026]: out,
+              - generic [ref=f23e1027]: when
+              - generic [ref=f23e1028]: it
+              - generic [ref=f23e1029]: looks
+              - generic [ref=f23e1030]: good
+              - generic [ref=f23e1031]: and
+              - generic [ref=f23e1032]: works,
+              - generic [ref=f23e1033]: people
+              - generic [ref=f23e1034]: click.
+        - generic [ref=f23e1035]:
+          - generic [ref=f23e1036]:
+            - generic [ref=f23e1037]: "0"
+            - paragraph [ref=f23e1038]: "%"
+          - paragraph [ref=f23e1040]:
+            - generic [ref=f23e1041]:
+              - generic [ref=f23e1042]: of
+              - generic [ref=f23e1043]: clients
+              - generic [ref=f23e1044]: stick
+              - generic [ref=f23e1045]: around.
+            - generic [ref=f23e1046]:
+              - generic [ref=f23e1047]: If
+              - generic [ref=f23e1048]: you
+              - generic [ref=f23e1049]: actually
+              - generic [ref=f23e1050]: bring
+              - generic [ref=f23e1051]: results
+              - generic [ref=f23e1052]: they
+              - generic [ref=f23e1053]: come
+            - generic [ref=f23e1054]: back.
+      - generic [ref=f23e1059]:
+        - generic [ref=f23e1060]:
+          - generic [ref=f23e1061]: "0"
+          - paragraph [ref=f23e1062]: "%"
+        - paragraph [ref=f23e1064]:
+          - generic [ref=f23e1065]:
+            - generic [ref=f23e1066]: Projects
+            - generic [ref=f23e1067]: where
+            - generic [ref=f23e1068]: we
+            - generic [ref=f23e1069]: didn’t
+            - generic [ref=f23e1070]: settle
+            - generic [ref=f23e1071]: for
+            - generic [ref=f23e1072]: ‘meh’.
+          - generic [ref=f23e1073]:
+            - generic [ref=f23e1074]: Generic
+            - generic [ref=f23e1075]: =
+            - generic [ref=f23e1076]: forgettable.
+  - region "carousel" [ref=f23e1079]:
+    - generic [ref=f23e1080]:
+      - group "1 of 9" [ref=f23e1081]:
+        - generic [ref=f23e1082]:
+          - paragraph [ref=f23e1084]:
+            - generic [ref=f23e1085]:
+              - generic [ref=f23e1086]: “Buzz
+              - generic [ref=f23e1087]: Interactive
+              - generic [ref=f23e1088]: delivered
+              - generic [ref=f23e1089]: exceptional
+              - generic [ref=f23e1090]: results
+              - generic [ref=f23e1091]: "on"
+              - generic [ref=f23e1092]: our
+            - generic [ref=f23e1093]:
+              - generic [ref=f23e1094]: complex
+              - generic [ref=f23e1095]: project.
+              - generic [ref=f23e1096]: Their
+              - generic [ref=f23e1097]: attention
+              - generic [ref=f23e1098]: to
+              - generic [ref=f23e1099]: detail
+              - generic [ref=f23e1100]: and
+            - generic [ref=f23e1101]:
+              - generic [ref=f23e1102]: understanding
+              - generic [ref=f23e1103]: of
+              - generic [ref=f23e1104]: our
+              - generic [ref=f23e1105]: needs
+              - generic [ref=f23e1106]: was
+              - generic [ref=f23e1107]: impressive.
+              - generic [ref=f23e1108]: We
+            - generic [ref=f23e1109]:
+              - generic [ref=f23e1110]: couldn't
+              - generic [ref=f23e1111]: be
+              - generic [ref=f23e1112]: happier
+              - generic [ref=f23e1113]: with
+              - generic [ref=f23e1114]: the
+              - generic [ref=f23e1115]: final
+              - generic [ref=f23e1116]: outcome!”
+          - generic [ref=f23e1119]:
+            - generic [ref=f23e1120]: Usman Khan
+            - generic [ref=f23e1121]: CEO — Aams
+      - group [ref=f23e1122]:
+        - generic [ref=f23e1123]:
+          - paragraph [ref=f23e1125]:
+            - generic [ref=f23e1126]:
+              - generic [ref=f23e1127]: “Hiring
+              - generic [ref=f23e1128]: Buzz
+              - generic [ref=f23e1129]: was
+              - generic [ref=f23e1130]: a
+              - generic [ref=f23e1131]: no-brainer.
+              - generic [ref=f23e1132]: We
+              - generic [ref=f23e1133]: stopped
+            - generic [ref=f23e1134]:
+              - generic [ref=f23e1135]: interviewing
+              - generic [ref=f23e1136]: other
+              - generic [ref=f23e1137]: agencies
+              - generic [ref=f23e1138]: halfway
+              - generic [ref=f23e1139]: through
+              - generic [ref=f23e1140]: the
+            - generic [ref=f23e1141]: call.”
+          - generic [ref=f23e1145]:
+            - generic [ref=f23e1146]: CMO
+            - generic [ref=f23e1147]: fast-growing SaaS startup
+      - group [ref=f23e1148]:
+        - generic [ref=f23e1149]:
+          - paragraph [ref=f23e1151]:
+            - generic [ref=f23e1152]:
+              - generic [ref=f23e1153]: "\"Working"
+              - generic [ref=f23e1154]: with
+              - generic [ref=f23e1155]: Buzz
+              - generic [ref=f23e1156]: was
+              - generic [ref=f23e1157]: an
+              - generic [ref=f23e1158]: absolute
+              - generic [ref=f23e1159]: pleasure.
+              - generic [ref=f23e1160]: They
+            - generic [ref=f23e1161]:
+              - generic [ref=f23e1162]: brought
+              - generic [ref=f23e1163]: innovative
+              - generic [ref=f23e1164]: solutions
+              - generic [ref=f23e1165]: to
+              - generic [ref=f23e1166]: the
+              - generic [ref=f23e1167]: table
+              - generic [ref=f23e1168]: and
+            - generic [ref=f23e1169]:
+              - generic [ref=f23e1170]: executed
+              - generic [ref=f23e1171]: the
+              - generic [ref=f23e1172]: project
+              - generic [ref=f23e1173]: flawlessly.
+              - generic [ref=f23e1174]: I'm
+              - generic [ref=f23e1175]: very
+              - generic [ref=f23e1176]: satisfied
+            - generic [ref=f23e1177]:
+              - generic [ref=f23e1178]: with
+              - generic [ref=f23e1179]: how
+              - generic [ref=f23e1180]: everything
+              - generic [ref=f23e1181]: turned
+              - generic [ref=f23e1182]: out."
+          - generic [ref=f23e1185]:
+            - generic [ref=f23e1186]: Jamal Khan
+            - generic [ref=f23e1187]: Level Up Vista
+      - group [ref=f23e1188]:
+        - generic [ref=f23e1189]:
+          - paragraph [ref=f23e1191]:
+            - generic [ref=f23e1192]:
+              - generic [ref=f23e1193]: “Within
+              - generic [ref=f23e1194]: two
+              - generic [ref=f23e1195]: weeks,
+              - generic [ref=f23e1196]: the
+              - generic [ref=f23e1197]: difference
+              - generic [ref=f23e1198]: was
+              - generic [ref=f23e1199]: obvious.
+              - generic [ref=f23e1200]: Our
+            - generic [ref=f23e1201]:
+              - generic [ref=f23e1202]: site
+              - generic [ref=f23e1203]: started
+              - generic [ref=f23e1204]: converting,
+              - generic [ref=f23e1205]: our
+              - generic [ref=f23e1206]: social
+              - generic [ref=f23e1207]: actually
+              - generic [ref=f23e1208]: worked,
+            - generic [ref=f23e1209]:
+              - generic [ref=f23e1210]: and
+              - generic [ref=f23e1211]: we
+              - generic [ref=f23e1212]: stopped
+              - generic [ref=f23e1213]: crying
+              - generic [ref=f23e1214]: into
+              - generic [ref=f23e1215]: analytics
+              - generic [ref=f23e1216]: dashboards.”
+          - generic [ref=f23e1219]:
+            - generic [ref=f23e1220]: Head of Growth
+            - generic [ref=f23e1221]: eCommerce brand
+      - group [ref=f23e1222]:
+        - generic [ref=f23e1223]:
+          - paragraph [ref=f23e1225]:
+            - generic [ref=f23e1226]:
+              - generic [ref=f23e1227]: "\"The"
+              - generic [ref=f23e1228]: team
+              - generic [ref=f23e1229]: at
+              - generic [ref=f23e1230]: Buzz
+              - generic [ref=f23e1231]: Interactive
+              - generic [ref=f23e1232]: exceeded
+              - generic [ref=f23e1233]: our
+            - generic [ref=f23e1234]:
+              - generic [ref=f23e1235]: expectations
+              - generic [ref=f23e1236]: "on"
+              - generic [ref=f23e1237]: this
+              - generic [ref=f23e1238]: challenging
+              - generic [ref=f23e1239]: project.
+              - generic [ref=f23e1240]: Their
+            - generic [ref=f23e1241]:
+              - generic [ref=f23e1242]: professionalism,
+              - generic [ref=f23e1243]: expertise,
+              - generic [ref=f23e1244]: and
+              - generic [ref=f23e1245]: dedication
+              - generic [ref=f23e1246]: ensured
+              - generic [ref=f23e1247]: a
+            - generic [ref=f23e1248]:
+              - generic [ref=f23e1249]: smooth
+              - generic [ref=f23e1250]: experience
+              - generic [ref=f23e1251]: and
+              - generic [ref=f23e1252]: an
+              - generic [ref=f23e1253]: outstanding
+              - generic [ref=f23e1254]: end
+              - generic [ref=f23e1255]: result."
+          - generic [ref=f23e1258]:
+            - generic [ref=f23e1259]: Aleem Ashraf
+            - generic [ref=f23e1260]: Chat Pandas
+      - group [ref=f23e1261]:
+        - generic [ref=f23e1262]:
+          - paragraph [ref=f23e1264]:
+            - generic [ref=f23e1265]:
+              - generic [ref=f23e1266]: “The
+              - generic [ref=f23e1267]: process
+              - generic [ref=f23e1268]: was
+              - generic [ref=f23e1269]: efficient,
+              - generic [ref=f23e1270]: collaborative,
+              - generic [ref=f23e1271]: and
+            - generic [ref=f23e1272]:
+              - generic [ref=f23e1273]: somehow
+              - generic [ref=f23e1274]: fun.
+              - generic [ref=f23e1275]: Also,
+              - generic [ref=f23e1276]: their
+              - generic [ref=f23e1277]: decks
+              - generic [ref=f23e1278]: are
+              - generic [ref=f23e1279]: terrifyingly
+              - generic [ref=f23e1280]: good.
+            - generic [ref=f23e1281]:
+              - generic [ref=f23e1282]: Like,
+              - generic [ref=f23e1283]: make-your-team-feel-bad
+              - generic [ref=f23e1284]: good.”
+          - generic [ref=f23e1287]:
+            - generic [ref=f23e1288]: Brand Manager
+            - generic [ref=f23e1289]: enterprise fintech platform
+      - group [ref=f23e1290]:
+        - generic [ref=f23e1291]:
+          - paragraph [ref=f23e1293]:
+            - generic [ref=f23e1294]:
+              - generic [ref=f23e1295]: "\"I’m"
+              - generic [ref=f23e1296]: extremely
+              - generic [ref=f23e1297]: impressed
+              - generic [ref=f23e1298]: with
+              - generic [ref=f23e1299]: the
+              - generic [ref=f23e1300]: work
+              - generic [ref=f23e1301]: Buzz
+            - generic [ref=f23e1302]:
+              - generic [ref=f23e1303]: Interactive
+              - generic [ref=f23e1304]: did
+              - generic [ref=f23e1305]: for
+              - generic [ref=f23e1306]: us.
+              - generic [ref=f23e1307]: Despite
+              - generic [ref=f23e1308]: the
+              - generic [ref=f23e1309]: tight
+              - generic [ref=f23e1310]: timeline
+              - generic [ref=f23e1311]: and
+            - generic [ref=f23e1312]:
+              - generic [ref=f23e1313]: unique
+              - generic [ref=f23e1314]: requirements,
+              - generic [ref=f23e1315]: they
+              - generic [ref=f23e1316]: delivered
+              - generic [ref=f23e1317]: quality
+              - generic [ref=f23e1318]: results
+              - generic [ref=f23e1319]: "on"
+            - generic [ref=f23e1320]:
+              - generic [ref=f23e1321]: time
+              - generic [ref=f23e1322]: and
+              - generic [ref=f23e1323]: beyond
+              - generic [ref=f23e1324]: what
+              - generic [ref=f23e1325]: we
+              - generic [ref=f23e1326]: envisioned."
+          - generic [ref=f23e1329]:
+            - generic [ref=f23e1330]: Amna Iqbal
+            - generic [ref=f23e1331]: Himalayan Salt
+      - group [ref=f23e1332]:
+        - generic [ref=f23e1333]:
+          - paragraph [ref=f23e1335]:
+            - generic [ref=f23e1336]:
+              - generic [ref=f23e1337]: “Buzz
+              - generic [ref=f23e1338]: took
+              - generic [ref=f23e1339]: our
+              - generic [ref=f23e1340]: ‘sort-of
+              - generic [ref=f23e1341]: idea’
+              - generic [ref=f23e1342]: and
+              - generic [ref=f23e1343]: turned
+              - generic [ref=f23e1344]: it
+              - generic [ref=f23e1345]: into
+              - generic [ref=f23e1346]: an
+            - generic [ref=f23e1347]:
+              - generic [ref=f23e1348]: actual
+              - generic [ref=f23e1349]: brand
+              - generic [ref=f23e1350]: people
+              - generic [ref=f23e1351]: care
+              - generic [ref=f23e1352]: about.
+              - generic [ref=f23e1353]: It’s
+              - generic [ref=f23e1354]: wild
+              - generic [ref=f23e1355]: how
+              - generic [ref=f23e1356]: fast
+              - generic [ref=f23e1357]: it
+            - generic [ref=f23e1358]: clicked.”
+          - generic [ref=f23e1362]:
+            - generic [ref=f23e1363]: Startup Co-founder
+            - generic [ref=f23e1364]: pre-launch product
+      - group [ref=f23e1365]:
+        - generic [ref=f23e1366]:
+          - paragraph [ref=f23e1368]:
+            - generic [ref=f23e1369]:
+              - generic [ref=f23e1370]: "\"Thank"
+              - generic [ref=f23e1371]: you,
+              - generic [ref=f23e1372]: Buzz,
+              - generic [ref=f23e1373]: for
+              - generic [ref=f23e1374]: turning
+              - generic [ref=f23e1375]: our
+              - generic [ref=f23e1376]: vision
+              - generic [ref=f23e1377]: into
+              - generic [ref=f23e1378]: reality.
+            - generic [ref=f23e1379]:
+              - generic [ref=f23e1380]: Your
+              - generic [ref=f23e1381]: team’s
+              - generic [ref=f23e1382]: creativity
+              - generic [ref=f23e1383]: and
+              - generic [ref=f23e1384]: commitment
+              - generic [ref=f23e1385]: made
+              - generic [ref=f23e1386]: all
+              - generic [ref=f23e1387]: the
+            - generic [ref=f23e1388]:
+              - generic [ref=f23e1389]: difference.
+              - generic [ref=f23e1390]: The
+              - generic [ref=f23e1391]: final
+              - generic [ref=f23e1392]: product
+              - generic [ref=f23e1393]: is
+              - generic [ref=f23e1394]: exactly
+              - generic [ref=f23e1395]: what
+              - generic [ref=f23e1396]: we
+              - generic [ref=f23e1397]: were
+            - generic [ref=f23e1398]:
+              - generic [ref=f23e1399]: hoping
+              - generic [ref=f23e1400]: for."
+          - generic [ref=f23e1403]:
+            - generic [ref=f23e1404]: Waheed
+            - generic [ref=f23e1405]: Samad Group
+    - button "previous slide" [ref=f23e1407] [cursor=pointer]: 
+    - button "next slide" [ref=f23e1408] [cursor=pointer]: 
+    - generic [ref=f23e1409]:
+      - button "Show slide 1 of 9" [pressed] [ref=f23e1410] [cursor=pointer]
+      - button "Show slide 2 of 9" [ref=f23e1411] [cursor=pointer]
+      - button "Show slide 3 of 9" [ref=f23e1412] [cursor=pointer]
+      - button "Show slide 4 of 9" [ref=f23e1413] [cursor=pointer]
+      - button "Show slide 5 of 9" [ref=f23e1414] [cursor=pointer]
+      - button "Show slide 6 of 9" [ref=f23e1415] [cursor=pointer]
+      - button "Show slide 7 of 9" [ref=f23e1416] [cursor=pointer]
+      - button "Show slide 8 of 9" [ref=f23e1417] [cursor=pointer]
+      - button "Show slide 9 of 9" [ref=f23e1418] [cursor=pointer]
+  - generic [ref=f23e1420]:
+    - generic [ref=f23e1421]:
+      - heading "Let's Connect" [level=2] [ref=f23e1423]
+      - form "Contact Form" [ref=f23e1426]:
+        - generic:
+          - textbox "Full name"
+        - generic:
+          - textbox "Email"
+        - generic:
+          - textbox "Phone"
+        - generic:
+          - textbox "Company name"
+        - generic:
+          - textbox "Your designation"
+        - generic:
+          - combobox:
+            - option "How did you hear about us" [selected]
+            - option "Google"
+            - option "Facebook"
+            - option "Instagram"
+            - option "Email"
+            - option "Referred by someone"
+            - option "Other"
+        - generic:
+          - textbox "Write your message"
+        - generic [ref=f23e1427]:
+          - generic [ref=f23e1428]: I am interested in
+          - generic [ref=f23e1429]:
+            - generic [ref=f23e1430]:
+              - checkbox "Website" [ref=f23e1431]
+              - generic [ref=f23e1432]: Website
+            - generic [ref=f23e1433]:
+              - checkbox "SEO" [ref=f23e1434]
+              - generic [ref=f23e1435]: SEO
+            - generic [ref=f23e1436]:
+              - checkbox "UI/UX" [ref=f23e1437]
+              - generic [ref=f23e1438]: UI/UX
+            - generic [ref=f23e1439]:
+              - checkbox "Mobile App" [ref=f23e1440]
+              - generic [ref=f23e1441]: Mobile App
+            - generic [ref=f23e1442]:
+              - checkbox "Web App" [ref=f23e1443]
+              - generic [ref=f23e1444]: Web App
+            - generic [ref=f23e1445]:
+              - checkbox "Other" [ref=f23e1446]
+              - generic [ref=f23e1447]: Other
+        - generic [ref=f23e1448]:
+          - generic [ref=f23e1449]: My budget is
+          - generic [ref=f23e1450]:
+            - generic [ref=f23e1451]:
+              - radio "$2,000 - $5,000" [ref=f23e1452]
+              - generic [ref=f23e1453]: $2,000 - $5,000
+            - generic [ref=f23e1454]:
+              - radio "$5,000 - $10,000" [ref=f23e1455]
+              - generic [ref=f23e1456]: $5,000 - $10,000
+            - generic [ref=f23e1457]:
+              - radio "$10,000 +" [ref=f23e1458]
+              - generic [ref=f23e1459]: $10,000 +
+        - button "Submit" [disabled] [ref=f23e1461]
+    - generic [ref=f23e1466]:
+      - generic [ref=f23e1467]:
+        - paragraph [ref=f23e1468]: Lahore
+        - generic [ref=f23e1469]:
+          - link [ref=f23e1470]:
+            - /url: https://maps.app.goo.gl/MrFBavNx4j2YAfvr8
+            - paragraph [ref=f23e1471]: "4th Floor, Plaza # 63, C Block,CCA, Phase 6. DHA. Lahore. Pakistan."
+          - link "+92-349-1466556" [ref=f23e1472]:
+            - /url: tel:+923491466556
+          - link "pk@buzzinteractive.co" [ref=f23e1473]:
+            - /url: mailto:pk@buzzinteractive.co
+      - generic [ref=f23e1474]:
+        - paragraph [ref=f23e1475]: Kuala Lumpur
+        - generic [ref=f23e1476]:
+          - paragraph [ref=f23e1477]: Level 1, Menara Amplewest6 Jalan P Ramlee, Malaysia.
+          - link "+60-16-619-1086" [ref=f23e1478]:
+            - /url: tel:+60166191086
+          - link "my@buzzinteractive.co" [ref=f23e1479]:
+            - /url: mailto:my@buzzinteractive.co
+      - generic [ref=f23e1480]:
+        - paragraph [ref=f23e1481]: USA
+        - generic [ref=f23e1482]:
+          - paragraph [ref=f23e1483]: 704 Charles StreetChesapeake VA 23320
+          - link "+1-205-687-8151" [ref=f23e1484]:
+            - /url: tel:+12056878151
+          - link "us@buzzinteractive.co" [ref=f23e1485]:
+            - /url: mailto:us@buzzinteractive.co
+      - generic [ref=f23e1486]:
+        - generic [ref=f23e1487]:
+          - link "Behance" [ref=f23e1488]:
+            - /url: https://www.behance.net/buzzglobal
+          - link "LinkedIn" [ref=f23e1490]:
+            - /url: https://www.linkedin.com/company/buzz-interactive/
+          - link "Instagram" [ref=f23e1492]:
+            - /url: https://www.instagram.com/buzzinteractive?igsh=MWNneDVsbjE3b2Rtaw==
+        - link [ref=f23e1494]:
+          - /url: "#"
+          - paragraph [ref=f23e1495]: Let's go up
+    - generic [ref=f23e1502]:
+      - generic [ref=f23e1503]:
+        - generic [ref=f23e1504]: "Powered by:"
+        - generic [ref=f23e1505]:
+          - link [ref=f23e1589]:
+            - /url: http://itsbuzzinteractive.com/?utm_source=Footer&utm_medium=Buzz+Interactive+Pk&utm_campaign=Buzz+Interactive+Pk+Footer&utm_id=Website
+          - link [ref=f23e1590]:
+            - /url: https://www.itsdesignade.com/?utm_source=Website&utm_medium=Footer&utm_campaign=Client
+      - generic [ref=f23e1591]:
+        - link "Privacy Policy" [ref=f23e1592]:
+          - /url: /privacy
+        - link "Terms Of Use" [ref=f23e1593]:
+          - /url: /terms-of-use
+        - link "Careers" [ref=f23e1594]:
+          - /url: /careers

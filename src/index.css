@@ -89,6 +89,14 @@
   scrollbar-width: none;
 }
 
+@media (min-width: 1024px) {
+  .scroll-bleed {
+    margin-inline: 0;
+    padding-inline: 0;
+    scroll-snap-type: none;
+  }
+}
+
 .scroll-bleed::-webkit-scrollbar {
   display: none;
 }
@@ -104,7 +112,7 @@
 
 @media (min-width: 1024px) {
   .services-track {
-    height: 250vh;
+    height: 212vh;
   }
 
   .services-sticky {
@@ -241,45 +249,198 @@ body {
   border-radius: 2.5rem 2.5rem 0 0;
 }
 
-/* Buzz services — full-bleed lime wash (Buzz pink blob), fades off screen edges */
-.services-green-gradient {
-  background:
-    radial-gradient(
-      ellipse 120% 90% at -5% 52%,
-      rgba(100, 255, 0, 0.16) 0%,
-      rgba(100, 255, 0, 0.05) 45%,
-      transparent 72%
-    ),
-    radial-gradient(
-      ellipse 90% 70% at 105% 58%,
-      rgba(100, 255, 0, 0.08) 0%,
-      transparent 58%
-    );
+/* Buzz services — lime blob (Buzz pink), left-side glow behind cards */
+.services-blob {
+  position: absolute;
+  left: -15%;
+  top: 28%;
+  width: min(75vw, 900px);
+  height: min(65vh, 620px);
+  background: radial-gradient(
+    ellipse 80% 80% at 30% 50%,
+    rgba(100, 255, 0, 0.28) 0%,
+    rgba(100, 255, 0, 0.12) 40%,
+    transparent 72%
+  );
+  filter: blur(48px);
+  pointer-events: none;
+  z-index: 0;
 }
 
-/* Glass cards — frosted white panels (not green boxes) */
+/* Buzz services headline — large but must not overflow 100vh sticky */
+.services-headline {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: clamp(2rem, 5.5vw, 4.2rem);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  color: var(--color-jet-black);
+  max-width: 90%;
+  position: relative;
+  padding-left: 1.1rem;
+}
+
+.services-dot {
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: clamp(0.4rem, 0.55vw, 0.55rem);
+  height: clamp(0.4rem, 0.55vw, 0.55rem);
+  background: var(--color-electric-lime);
+  border-radius: 50%;
+}
+
+/* Buzz cards viewport — clips horizontal row */
+.services-cards-viewport {
+  overflow: hidden;
+  width: 100%;
+  min-width: 0;
+}
+
+.services-cards-row {
+  display: flex;
+  gap: clamp(0.875rem, 2.75vw, 1.95rem);
+  width: max-content;
+  padding-right: var(--page-pad);
+}
+
+@media (min-width: 1024px) {
+  .services-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .services-headline-wrap {
+    flex-shrink: 0;
+    padding-top: clamp(3rem, 8vh, 5rem);
+  }
+
+  /* Buzz: left intro column + right clipped card track */
+  .services-body {
+    flex: 1;
+    display: grid;
+    grid-template-columns: minmax(240px, 300px) minmax(0, 1fr);
+    align-items: end;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+    width: 100%;
+    max-width: var(--page-max);
+    margin-inline: auto;
+    padding-inline: var(--page-pad);
+    padding-bottom: clamp(2rem, 5vh, 3.5rem);
+    min-height: 0;
+  }
+
+  .services-cards-viewport {
+    align-self: center;
+    /* bleed card track to the right viewport edge */
+    margin-right: calc(-1 * max(var(--page-pad), (100vw - var(--page-max)) / 2 + var(--page-pad)));
+    padding-right: max(var(--page-pad), (100vw - var(--page-max)) / 2 + var(--page-pad));
+  }
+
+  .services-cards-row {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 1023px) {
+  .services-body {
+    display: flex;
+    flex-direction: column;
+    padding-inline: var(--page-pad);
+    padding-bottom: 3rem;
+  }
+
+  .services-cards-viewport {
+    order: 1;
+    margin-top: 2rem;
+  }
+
+  .services-intro {
+    order: 2;
+    margin-top: 2rem;
+    max-width: none;
+  }
+}
+
+/* Buzz service card — outline panel, NOT heavy white glass */
+.services-card-buzz {
+  flex-shrink: 0;
+  width: clamp(280px, 28vw, 320px);
+  padding: clamp(1.1rem, 2vw, 1.42rem) clamp(1rem, 1.75vw, 1.25rem);
+  border-radius: clamp(0.85rem, 1.5vw, 1.07rem);
+  border: 1px solid var(--color-jet-black);
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--color-jet-black);
+}
+
+.services-card-title {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: clamp(1.5rem, 2.75vw, 1.95rem);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+  color: var(--color-jet-black);
+}
+
+.services-card-link {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: clamp(0.875rem, 1.65vw, 1.17rem);
+  font-weight: 300;
+  line-height: 1.45;
+  padding: 0.2rem 0;
+  color: var(--color-jet-black);
+  transition: color 0.2s;
+}
+
+.services-card-link:hover {
+  color: var(--color-secondary);
+}
+
+/* Intro copy — left column on desktop, below cards on mobile */
+.services-intro {
+  max-width: 295px;
+}
+
+@media (min-width: 1024px) {
+  .services-intro {
+    align-self: end;
+    padding-bottom: 0.25rem;
+  }
+}
+
+.services-intro p {
+  font-family: var(--font-sans);
+  font-size: clamp(0.95rem, 1.5vw, 1.065rem);
+  font-weight: 400;
+  line-height: 2;
+  color: var(--color-jet-black);
+}
+
+.services-intro p + p {
+  color: var(--color-on-surface-variant);
+}
+
+/* Ensures horizontal scrub on ultra-wide (4K) displays */
+.services-scroll-spacer {
+  flex-shrink: 0;
+  width: clamp(320px, 50vw, 1400px);
+  height: 1px;
+}
+
+/* Glass cards — frosted white panels (used elsewhere, not services) */
 .buzz-glass-card {
   background: rgba(255, 255, 255, 0.68);
   backdrop-filter: blur(18px) saturate(1.4);
   -webkit-backdrop-filter: blur(18px) saturate(1.4);
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
-}
-
-/* Align desktop card row with page-shell left edge */
-.services-row-pad {
-  padding-inline: var(--page-pad);
-}
-
-@media (min-width: 1024px) {
-  .services-strip-inset {
-    padding-left: max(var(--page-pad), calc((100vw - var(--page-max)) / 2 + var(--page-pad)));
-    padding-right: var(--page-pad);
-  }
-
-  .services-row-pad {
-    padding-inline: 0;
-  }
 }
 
 @media (min-width: 768px) {
@@ -289,6 +450,159 @@ body {
   .buzz-card-round-top {
     border-radius: 3rem 3rem 0 0;
   }
+}
+
+/* ── Buzz contact form — full-bleed panel, vw-scaled (measured from buzzinteractive.co) ── */
+.contact-panel {
+  margin-top: clamp(1.875rem, 5vw, 4.5rem);
+  background: var(--color-jet-black);
+  color: var(--color-pure-white);
+  border-radius: clamp(1.45rem, 6vw, 5.4rem) clamp(1.45rem, 6vw, 5.4rem) 0 0;
+  padding: clamp(3.75rem, 10vw, 9rem) clamp(1.25rem, 3vw, 2.7rem) clamp(1.25rem, 2.5vw, 2.25rem);
+}
+
+.contact-inner {
+  width: 100%;
+  max-width: var(--page-max);
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .contact-inner {
+    width: 90%;
+  }
+}
+
+.contact-heading {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 6.5vw, 5.85rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--color-pure-white);
+  margin-bottom: clamp(2rem, 5vw, 4.5rem);
+}
+
+.contact-field {
+  margin-bottom: clamp(1.5rem, 2.5vw, 2.25rem);
+  padding-bottom: clamp(0.75rem, 1vw, 0.9rem);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.contact-input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  outline: none;
+  font-family: var(--font-sans);
+  font-size: clamp(1.125rem, 1.75vw, 1.575rem);
+  line-height: 1.2;
+  color: var(--color-pure-white);
+  padding: 0;
+}
+
+.contact-input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.contact-input:focus {
+  outline: none;
+}
+
+.contact-field:focus-within {
+  border-bottom-color: var(--color-electric-lime);
+}
+
+.contact-section-label {
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
+  font-weight: 400;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+}
+
+.contact-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: clamp(2.75rem, 3.4vw, 3.0625rem);
+  padding: 0 clamp(0.875rem, 1.5vw, 1.125rem);
+  font-family: var(--font-sans);
+  font-size: clamp(0.875rem, 1.25vw, 1.125rem);
+  font-weight: 700;
+  line-height: 1;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.contact-chip:hover {
+  border-color: rgba(255, 255, 255, 0.65);
+}
+
+.contact-chip.is-selected {
+  background: var(--color-electric-lime);
+  border-color: var(--color-electric-lime);
+  color: var(--color-jet-black);
+}
+
+.contact-submit {
+  width: 100%;
+  margin-top: clamp(1.5rem, 3vw, 2rem);
+  padding: clamp(1.375rem, 3vw, 2.7rem) 1rem;
+  font-family: var(--font-sans);
+  font-size: clamp(1.125rem, 2vw, 1.8rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--color-jet-black);
+  background: var(--color-electric-lime);
+  border: 0;
+  border-radius: clamp(1rem, 2.2vw, 2rem);
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.contact-submit:hover {
+  background: var(--color-pure-white);
+}
+
+.contact-textarea.contact-input {
+  min-height: clamp(5rem, 8vw, 7.2rem);
+  resize: none;
+  line-height: 1.5;
+}
+
+.contact-radio-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(0.625rem, 1.2vw, 0.875rem);
+}
+
+.contact-radio {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  min-height: clamp(2.75rem, 3.4vw, 3.0625rem);
+  padding: 0 clamp(0.875rem, 1.5vw, 1.125rem);
+  font-family: var(--font-sans);
+  font-size: clamp(0.875rem, 1.25vw, 1.125rem);
+  font-weight: 700;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.contact-radio.is-selected {
+  background: var(--color-electric-lime);
+  border-color: var(--color-electric-lime);
+  color: var(--color-jet-black);
+}
+
+.contact-radio input {
+  accent-color: var(--color-electric-lime);
 }
 
 /* Buzz-style skewed hero frame */
