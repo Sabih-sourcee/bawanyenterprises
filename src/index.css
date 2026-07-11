@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,600;0,700;1,400&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Libre Caslon Text", serif;
+  --font-sans: "Hanken Grotesk", sans-serif;
+
+  --color-surface: #f9f9f9;
+  --color-surface-dim: #dadada;
+  --color-surface-bright: #f9f9f9;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f3f3f3;
+  --color-surface-container: #eeeeee;
+  --color-chalk-white: #f3f3f3;
+  --color-jet-black: #000000;
+  --color-pure-white: #ffffff;
+  --color-electric-lime: #64ff00;
+  --color-on-surface: #1a1c1c;
+  --color-on-surface-variant: #4c4546;
+  --color-outline: #7e7576;
+  --color-secondary: #276c00;
+  --color-secondary-container: #64ff00;
+  --color-error: #ba1a1a;
+
+  --spacing-gutter: 24px;
+  --spacing-margin-mobile: 20px;
+  --spacing-margin-desktop: 64px;
+  --spacing-bento-gap: 1px;
+
+  --page-max: 87.5rem;
+  --page-pad: 1.25rem;
+  --nav-height: 4rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --page-pad: 4rem;
+    --nav-height: 5rem;
+  }
+}
+
+/* ── Global layout system (consistent every section) ── */
+.page-shell {
+  width: 100%;
+  max-width: var(--page-max);
+  margin-inline: auto;
+  padding-inline: var(--page-pad);
+}
+
+.section-y {
+  padding-block: clamp(3rem, 7vw, 6rem);
+}
+
+.section-y-lg {
+  padding-block: clamp(4rem, 9vw, 8rem);
+}
+
+.section-heading {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: clamp(2rem, 4.2vw, 3.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--color-jet-black);
+}
+
+.section-label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-on-surface-variant);
+}
+
+/* Fixed nav clearance — use on first content block below navbar */
+.hero-offset {
+  padding-top: calc(var(--nav-height) + clamp(1.5rem, 4vw, 3rem));
+}
+
+/* Horizontal scroll that bleeds to viewport edges on mobile */
+.scroll-bleed {
+  margin-inline: calc(-1 * var(--page-pad));
+  padding-inline: var(--page-pad);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.scroll-bleed::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-snap-start {
+  scroll-snap-align: start;
+}
+
+/* Services: desktop-only sticky track height */
+.services-track {
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .services-track {
+    height: 250vh;
+  }
+
+  .services-sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+html {
+  font-family: var(--font-sans);
+  background: var(--color-surface);
+  color: var(--color-on-surface);
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+body {
+  /* clip (not hidden) so position:sticky keeps working inside descendants */
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography utilities */
+.text-hero-display {
+  font-family: var(--font-serif);
+  font-size: clamp(2.75rem, 10vw, 6.5rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+.text-hero-rotator-active {
+  font-size: clamp(1.5rem, 4vw, 2.75rem);
+  line-height: 1.1;
+}
+
+.text-hero-rotator {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  line-height: 1.1;
+}
+
+.text-display-xl {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.text-headline-lg {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.text-headline-md {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.text-body-lg {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  line-height: 1.55;
+}
+
+.text-body-md {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.text-label-caps {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.text-data-mono {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+/* Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+}
+
+@keyframes marquee-fast {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee-fast {
+  animation: marquee-fast 22s linear infinite;
+}
+
+/* Buzz-style rounded cards (Buzz uses heavy radius; adapted for Bawany lime/black) */
+.buzz-card-round {
+  border-radius: 2rem;
+}
+
+.buzz-card-round-sm {
+  border-radius: 9999px;
+}
+
+.buzz-card-round-top {
+  border-radius: 2.5rem 2.5rem 0 0;
+}
+
+/* Buzz services — full-bleed lime wash (Buzz pink blob), fades off screen edges */
+.services-green-gradient {
+  background:
+    radial-gradient(
+      ellipse 120% 90% at -5% 52%,
+      rgba(100, 255, 0, 0.16) 0%,
+      rgba(100, 255, 0, 0.05) 45%,
+      transparent 72%
+    ),
+    radial-gradient(
+      ellipse 90% 70% at 105% 58%,
+      rgba(100, 255, 0, 0.08) 0%,
+      transparent 58%
+    );
+}
+
+/* Glass cards — frosted white panels (not green boxes) */
+.buzz-glass-card {
+  background: rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(18px) saturate(1.4);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+/* Align desktop card row with page-shell left edge */
+.services-row-pad {
+  padding-inline: var(--page-pad);
+}
+
+@media (min-width: 1024px) {
+  .services-strip-inset {
+    padding-left: max(var(--page-pad), calc((100vw - var(--page-max)) / 2 + var(--page-pad)));
+    padding-right: var(--page-pad);
+  }
+
+  .services-row-pad {
+    padding-inline: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .buzz-card-round {
+    border-radius: 2.5rem;
+  }
+  .buzz-card-round-top {
+    border-radius: 3rem 3rem 0 0;
+  }
+}
+
+/* Buzz-style skewed hero frame */
+.hero-frame-buzz {
+  clip-path: polygon(2% 5%, 98% 0%, 100% 95%, 0% 100%);
+}
+
+@media (max-width: 768px) {
+  .hero-frame-buzz {
+    clip-path: polygon(0 2%, 100% 0%, 100% 98%, 0 100%);
+  }
+}
+
+/* Legacy hero frame */
+.hero-frame {
+  clip-path: polygon(0 8%, 100% 0%, 100% 92%, 0 100%);
+}
+
+@media (max-width: 768px) {
+  .hero-frame {
+    clip-path: polygon(0 4%, 100% 0%, 100% 96%, 0 100%);
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-jet-black);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-electric-lime);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .animate-marquee {
+    animation: none;
+  }
+}
+
+/* Hero video frame clip */
+.hero-frame {
+  clip-path: polygon(0 8%, 100% 0%, 100% 92%, 0 100%);
+}
+
+@media (max-width: 768px) {
+  .hero-frame {
+    clip-path: polygon(0 4%, 100% 0%, 100% 96%, 0 100%);
+  }
+}

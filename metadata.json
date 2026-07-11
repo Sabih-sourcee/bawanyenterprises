@@ -1,0 +1,6 @@
+{
+  "name": "Buzz Interactive",
+  "description": "Bespoke high-end landing page for Buzz Interactive digital experience agency, featuring physics-based canvas interactive asteroid fields, synthesized audio toggles, bento portfolio displays, and fully validated frictionless multi-step inquiry workflows.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
