@@ -314,33 +314,39 @@ body {
 
   .services-headline-wrap {
     flex-shrink: 0;
-    padding-top: clamp(3rem, 8vh, 5rem);
+    padding-top: clamp(2.5rem, 7vh, 4.5rem);
+    padding-bottom: clamp(1rem, 2.5vh, 1.75rem);
   }
 
-  /* Buzz: left intro column + right clipped card track */
   .services-body {
     flex: 1;
-    display: grid;
-    grid-template-columns: minmax(240px, 300px) minmax(0, 1fr);
-    align-items: end;
-    gap: clamp(1.5rem, 3vw, 2.5rem);
-    width: 100%;
-    max-width: var(--page-max);
-    margin-inline: auto;
-    padding-inline: var(--page-pad);
-    padding-bottom: clamp(2rem, 5vh, 3.5rem);
+    position: relative;
     min-height: 0;
+    overflow: hidden;
+  }
+
+  .services-intro {
+    position: absolute;
+    bottom: clamp(2rem, 5vh, 3.5rem);
+    left: var(--page-pad);
+    max-width: 250px;
+    z-index: 10;
   }
 
   .services-cards-viewport {
-    align-self: center;
-    /* bleed card track to the right viewport edge */
-    margin-right: calc(-1 * max(var(--page-pad), (100vw - var(--page-max)) / 2 + var(--page-pad)));
-    padding-right: max(var(--page-pad), (100vw - var(--page-max)) / 2 + var(--page-pad));
+    position: absolute;
+    top: 0;
+    left: clamp(220px, 20vw, 300px);
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
   }
 
   .services-cards-row {
     padding-left: 0;
+    padding-bottom: clamp(2rem, 5vh, 3.5rem);
   }
 }
 
@@ -367,14 +373,16 @@ body {
 /* Buzz service card — outline panel, NOT heavy white glass */
 .services-card-buzz {
   flex-shrink: 0;
-  width: clamp(280px, 28vw, 320px);
-  padding: clamp(1.1rem, 2vw, 1.42rem) clamp(1rem, 1.75vw, 1.25rem);
+  width: clamp(280px, 28vw, 340px);
+  padding: clamp(1.25rem, 2.5vh, 2rem) clamp(1rem, 1.75vw, 1.25rem);
   border-radius: clamp(0.85rem, 1.5vw, 1.07rem);
-  border: 1px solid var(--color-jet-black);
-  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(0,0,0,0.25);
+  background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   color: var(--color-jet-black);
+  display: flex;
+  flex-direction: column;
 }
 
 .services-card-title {
@@ -408,23 +416,19 @@ body {
   max-width: 295px;
 }
 
-@media (min-width: 1024px) {
-  .services-intro {
-    align-self: end;
-    padding-bottom: 0.25rem;
-  }
-}
+/* desktop overrides handled in the .services-body block above */
 
 .services-intro p {
   font-family: var(--font-sans);
-  font-size: clamp(0.95rem, 1.5vw, 1.065rem);
+  font-size: clamp(0.875rem, 1.4vw, 1rem);
   font-weight: 400;
-  line-height: 2;
+  line-height: 1.7;
   color: var(--color-jet-black);
 }
 
 .services-intro p + p {
   color: var(--color-on-surface-variant);
+  margin-top: 0.5rem;
 }
 
 /* Ensures horizontal scrub on ultra-wide (4K) displays */
