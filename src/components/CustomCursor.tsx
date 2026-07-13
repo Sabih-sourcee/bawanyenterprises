@@ -2,9 +2,8 @@ import React, { useEffect, useRef } from "react";
 import { gsap, prefersReducedMotion } from "@/src/lib/animations";
 
 /**
- * Decorative neon-green blob cursor graphic (assets/cursor.png).
- * Rendered as a fixed UI element that follows the pointer — not via
- * CSS `cursor: url()`, so glow/blur in the PNG stay intact.
+ * Hand-pointer cursor graphic (assets/cursor.png).
+ * Fixed UI follower — not CSS `cursor: url()`.
  */
 export default function CustomCursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
@@ -72,11 +71,11 @@ export default function CustomCursor() {
     <div ref={cursorRef} className="custom-cursor" aria-hidden style={{ display: "none" }}>
       <img
         className="custom-cursor__mark"
-        src="/assets/cursor.png?v=2"
+        src="/assets/cursor.png?v=4"
         alt=""
         draggable={false}
-        width={80}
-        height={80}
+        width={44}
+        height={46}
       />
     </div>
   );

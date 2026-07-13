@@ -39,33 +39,34 @@
   }
 }
 
-/* ── Custom neon blob cursor (PNG asset — not cursor:url()) ── */
-/* ── Custom neon blob cursor (PNG asset — not cursor:url()) ── */
+/* ── Custom hand-pointer cursor (PNG asset — not cursor:url()) ── */
 .custom-cursor {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 99999;
-  width: 80px;
-  height: 80px;
-  margin-left: -40px;
-  margin-top: -40px;
+  width: 44px;
+  height: 46px;
+  /* Hotspot near the fingertip (top-center of the mark) */
+  margin-left: -14px;
+  margin-top: -4px;
   pointer-events: none;
   will-change: transform;
   line-height: 0;
+  background: none;
+  filter: none;
 }
 
 .custom-cursor__mark {
   display: block;
-  width: 80px;
-  height: 80px;
+  width: 44px;
+  height: 46px;
   object-fit: contain;
   user-select: none;
   -webkit-user-drag: none;
-  /* Soft outer glow (PNG has flat edge; glow via CSS) */
-  filter: drop-shadow(0 0 10px rgba(57, 255, 20, 0.85))
-    drop-shadow(0 0 24px rgba(57, 255, 20, 0.5))
-    drop-shadow(0 0 40px rgba(57, 255, 20, 0.28));
+  background: transparent;
+  /* No glow / gradient — flat black hand only */
+  filter: none;
 }
 
 /* Hide the real OS pointer so it never overlaps the graphic */
