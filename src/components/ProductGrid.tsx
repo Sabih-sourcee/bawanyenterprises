@@ -31,6 +31,7 @@ export default function ProductGrid() {
             <article
               key={item.id}
               data-work-card
+              data-cursor-grow
               className={`group cursor-pointer buzz-card-round overflow-hidden bg-chalk-white ${
                 item.layout === "wide" ? "md:col-span-2" : ""
               }`}

@@ -39,17 +39,17 @@
   }
 }
 
-/* ── Custom hand-pointer cursor (PNG asset — not cursor:url()) ── */
+/* ── Dual custom cursor (default arrow + hand on interactive) ── */
 .custom-cursor {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 99999;
-  width: 44px;
-  height: 46px;
-  /* Hotspot near the fingertip (top-center of the mark) */
-  margin-left: -14px;
-  margin-top: -4px;
+  width: 28px;
+  height: 28px;
+  /* Hotspot at tip of default arrow (top-left) */
+  margin-left: -2px;
+  margin-top: -2px;
   pointer-events: none;
   will-change: transform;
   line-height: 0;
@@ -57,15 +57,22 @@
   filter: none;
 }
 
+.custom-cursor.is-pointer {
+  width: 40px;
+  height: 42px;
+  /* Hotspot near fingertip */
+  margin-left: -12px;
+  margin-top: -4px;
+}
+
 .custom-cursor__mark {
   display: block;
-  width: 44px;
-  height: 46px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   user-select: none;
   -webkit-user-drag: none;
   background: transparent;
-  /* No glow / gradient — flat black hand only */
   filter: none;
 }
 
