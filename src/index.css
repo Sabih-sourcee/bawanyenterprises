@@ -54,7 +54,10 @@
   will-change: transform;
   line-height: 0;
   background: none;
-  filter: none;
+  /* Black artwork → invert to white, then difference-blend so it
+     reads black on light surfaces and white on dark surfaces */
+  filter: invert(1);
+  mix-blend-mode: difference;
 }
 
 .custom-cursor.is-pointer {
@@ -73,7 +76,6 @@
   user-select: none;
   -webkit-user-drag: none;
   background: transparent;
-  filter: none;
 }
 
 /* Hide the real OS pointer so it never overlaps the graphic */
