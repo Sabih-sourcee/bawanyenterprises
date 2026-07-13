@@ -5,13 +5,13 @@
   --font-serif: "Libre Caslon Text", serif;
   --font-sans: "Hanken Grotesk", sans-serif;
 
-  --color-surface: #f9f9f9;
+  --color-surface: #ffffff;
   --color-surface-dim: #dadada;
-  --color-surface-bright: #f9f9f9;
+  --color-surface-bright: #ffffff;
   --color-surface-container-lowest: #ffffff;
   --color-surface-container-low: #f3f3f3;
   --color-surface-container: #eeeeee;
-  --color-chalk-white: #f3f3f3;
+  --color-chalk-white: #ffffff;
   --color-jet-black: #000000;
   --color-pure-white: #ffffff;
   --color-electric-lime: #64ff00;
