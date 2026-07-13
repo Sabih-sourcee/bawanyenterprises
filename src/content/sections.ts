@@ -225,7 +225,8 @@ export const workItems = [
     title: "Official Infinix Distribution Rollout",
     client: "Bawany Mobiles — Nationwide",
     metric: "PTA Approved Supply",
-    image: "/assets/work/dealer-network.webp",
+    image: "/assets/work/infinix.webp",
+    hoverImage: "/assets/work/hover.jpeg",
     layout: "wide" as const,
   },
   {
@@ -234,7 +235,8 @@ export const workItems = [
     title: "Nationwide Dealer Network Expansion",
     client: "Intro Technology Partners",
     metric: "Major Cities Covered",
-    image: "/assets/work/dealer-network.webp",
+    image: "/assets/work/nationwide.jpeg",
+    hoverImage: "/assets/work/nationwide-hover.jpeg",
     layout: "half" as const,
   },
   {
@@ -243,7 +245,8 @@ export const workItems = [
     title: "Full PTA Registration Pipeline",
     client: "Legal Import Channels",
     metric: "100% Approved Stock",
-    image: "/assets/work/accessories-line.webp",
+    image: "/assets/work/warehouse.jpeg",
+    hoverImage: "/assets/work/warehouse-hover.jpeg",
     layout: "half" as const,
   },
   {

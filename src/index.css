@@ -276,6 +276,11 @@ body {
   animation: marquee-fast 22s linear infinite;
 }
 
+/* Work card media — mask reveal container */
+.work-card-media {
+  isolation: isolate;
+}
+
 /* Buzz-style rounded cards (Buzz uses heavy radius; adapted for Bawany lime/black) */
 .buzz-card-round {
   border-radius: 2rem;
