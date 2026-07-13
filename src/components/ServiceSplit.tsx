@@ -143,10 +143,8 @@ export default function ServiceSplit() {
               We&apos;re an infrastructure &amp; technology group making partners scale with
               confidence.
             </h2>
-          </PageContainer>
 
-          <div className="services-body">
-            {/* Left column — intro never overlaps cards */}
+            {/* Caption sits in normal flow above the cards row — never overlaps cards */}
             <div ref={introRef} className="services-intro relative z-10">
               <p data-services-line>
                 Honest pricing. Smart engineering. Real distribution results.
@@ -155,27 +153,27 @@ export default function ServiceSplit() {
                 You bring the vision. We&apos;ll wire it into reality.
               </p>
             </div>
+          </PageContainer>
 
-            {/* Right column — clipped card track */}
-            <div className="services-cards-viewport relative z-[5]">
-              <div ref={stripRef} className="overflow-x-auto scroll-bleed lg:overflow-x-clip">
-                <div ref={rowRef} className="services-cards-row">
-                  {serviceTabs.map((tab) => (
-                    <article key={tab.id} data-service-card className="services-card-buzz scroll-snap-start">
-                      <span className="services-card-title">{tab.title}</span>
-                      <ul className="flex flex-col">
-                        {tab.links.slice(0, 5).map((link) => (
-                          <li key={link}>
-                            <a href="#contact-form-section" className="services-card-link">
-                              {link}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </article>
-                  ))}
-                  <div className="services-scroll-spacer hidden lg:block" aria-hidden />
-                </div>
+          {/* Clipped card track — full-bleed to the right viewport edge */}
+          <div className="services-cards-viewport relative z-[5]">
+            <div ref={stripRef} className="overflow-x-auto scroll-bleed lg:overflow-x-clip">
+              <div ref={rowRef} className="services-cards-row">
+                {serviceTabs.map((tab) => (
+                  <article key={tab.id} data-service-card className="services-card-buzz scroll-snap-start">
+                    <span className="services-card-title">{tab.title}</span>
+                    <ul className="flex flex-col">
+                      {tab.links.slice(0, 5).map((link) => (
+                        <li key={link}>
+                          <a href="#contact-form-section" className="services-card-link">
+                            {link}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </article>
+                ))}
+                <div className="services-scroll-spacer hidden lg:block" aria-hidden />
               </div>
             </div>
           </div>

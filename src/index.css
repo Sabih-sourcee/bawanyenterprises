@@ -39,6 +39,49 @@
   }
 }
 
+/* ── Custom neon blob cursor (PNG asset — not cursor:url()) ── */
+/* ── Custom neon blob cursor (PNG asset — not cursor:url()) ── */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 80px;
+  height: 80px;
+  margin-left: -40px;
+  margin-top: -40px;
+  pointer-events: none;
+  will-change: transform;
+  line-height: 0;
+}
+
+.custom-cursor__mark {
+  display: block;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+  /* Soft outer glow (PNG has flat edge; glow via CSS) */
+  filter: drop-shadow(0 0 10px rgba(57, 255, 20, 0.85))
+    drop-shadow(0 0 24px rgba(57, 255, 20, 0.5))
+    drop-shadow(0 0 40px rgba(57, 255, 20, 0.28));
+}
+
+/* Hide the real OS pointer so it never overlaps the graphic */
+html.has-custom-cursor,
+html.has-custom-cursor *,
+html.has-custom-cursor *::before,
+html.has-custom-cursor *::after {
+  cursor: none !important;
+}
+
+@media (pointer: coarse) {
+  .custom-cursor {
+    display: none !important;
+  }
+}
+
 /* ── Global layout system (consistent every section) ── */
 .page-shell {
   width: 100%;
@@ -290,7 +333,7 @@ body {
   border-radius: 50%;
 }
 
-/* Buzz cards viewport — clips horizontal row */
+/* Buzz cards viewport — clips horizontal row, never clips card content */
 .services-cards-viewport {
   overflow: hidden;
   width: 100%;
@@ -299,88 +342,63 @@ body {
 
 .services-cards-row {
   display: flex;
-  gap: clamp(0.875rem, 2.75vw, 1.95rem);
+  align-items: stretch;
+  gap: clamp(1rem, 2.5vw, 2rem);
   width: max-content;
-  padding-right: var(--page-pad);
+  padding-inline: var(--page-pad);
+}
+
+/* Normal document flow: heading -> caption -> cards. No absolute positioning
+   so the caption can never overlap the card row at any viewport width. */
+.services-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.services-headline-wrap {
+  padding-top: clamp(3rem, 8vh, 5rem);
+  padding-bottom: clamp(1.5rem, 4vh, 2.5rem);
 }
 
 @media (min-width: 1024px) {
   .services-layout {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
+    justify-content: center;
+    gap: clamp(2rem, 5vh, 3rem);
     overflow: hidden;
+    padding-block: clamp(2rem, 5vh, 3rem);
   }
 
   .services-headline-wrap {
-    flex-shrink: 0;
-    padding-top: clamp(2.5rem, 7vh, 4.5rem);
-    padding-bottom: clamp(1rem, 2.5vh, 1.75rem);
-  }
-
-  .services-body {
-    flex: 1;
-    position: relative;
-    min-height: 0;
-    overflow: hidden;
-  }
-
-  .services-intro {
-    position: absolute;
-    bottom: clamp(2rem, 5vh, 3.5rem);
-    left: var(--page-pad);
-    max-width: 250px;
-    z-index: 10;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .services-cards-viewport {
-    position: absolute;
-    top: 0;
-    left: clamp(220px, 20vw, 300px);
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: flex-end;
-  }
-
-  .services-cards-row {
-    padding-left: 0;
-    padding-bottom: clamp(2rem, 5vh, 3.5rem);
+    flex-shrink: 0;
   }
 }
 
 @media (max-width: 1023px) {
-  .services-body {
-    display: flex;
-    flex-direction: column;
-    padding-inline: var(--page-pad);
-    padding-bottom: 3rem;
-  }
-
   .services-cards-viewport {
-    order: 1;
     margin-top: 2rem;
-  }
-
-  .services-intro {
-    order: 2;
-    margin-top: 2rem;
-    max-width: none;
   }
 }
 
-/* Buzz service card — outline panel, NOT heavy white glass */
+/* Buzz service card — outline panel, NOT heavy white glass. Equal padding
+   on every side, equal width, and flex row default stretches all cards
+   to the same height. */
 .services-card-buzz {
   flex-shrink: 0;
   width: clamp(280px, 28vw, 340px);
-  padding: clamp(1.25rem, 2.5vh, 2rem) clamp(1rem, 1.75vw, 1.25rem);
+  padding: 2rem;
   border-radius: clamp(0.85rem, 1.5vw, 1.07rem);
-  border: 1px solid rgba(0,0,0,0.25);
+  border: 1px solid rgba(0, 0, 0, 0.25);
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   color: var(--color-jet-black);
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
 }
@@ -411,12 +429,11 @@ body {
   color: var(--color-secondary);
 }
 
-/* Intro copy — left column on desktop, below cards on mobile */
+/* Intro caption — sits above the cards row in normal flow, full width */
 .services-intro {
-  max-width: 295px;
+  max-width: 480px;
+  margin-top: clamp(1rem, 2.5vh, 1.5rem);
 }
-
-/* desktop overrides handled in the .services-body block above */
 
 .services-intro p {
   font-family: var(--font-sans);

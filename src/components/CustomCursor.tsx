@@ -1,62 +1,83 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { gsap, prefersReducedMotion } from "@/src/lib/animations";
 
+/**
+ * Decorative neon-green blob cursor graphic (assets/cursor.png).
+ * Rendered as a fixed UI element that follows the pointer — not via
+ * CSS `cursor: url()`, so glow/blur in the PNG stay intact.
+ */
 export default function CustomCursor() {
-  const dotRef = useRef<HTMLDivElement>(null);
-  const ringRef = useRef<HTMLDivElement>(null);
-  const [active, setActive] = useState(false);
+  const cursorRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const cursor = cursorRef.current;
+    if (!cursor) return;
+
     const coarse = window.matchMedia("(pointer: coarse)").matches;
     const reduced = prefersReducedMotion();
-    if (coarse || reduced) return;
+    if (coarse || reduced) {
+      cursor.style.display = "none";
+      return;
+    }
 
-    setActive(true);
+    cursor.style.display = "block";
+    document.documentElement.classList.add("has-custom-cursor");
 
-    const dot = dotRef.current;
-    const ring = ringRef.current;
-    if (!dot || !ring) return;
+    gsap.set(cursor, { x: -200, y: -200 });
 
-    gsap.set([dot, ring], { x: window.innerWidth / 2, y: window.innerHeight / 2 });
+    const xTo = gsap.quickTo(cursor, "x", { duration: 0.35, ease: "power3.out" });
+    const yTo = gsap.quickTo(cursor, "y", { duration: 0.35, ease: "power3.out" });
 
     const move = (e: MouseEvent) => {
-      gsap.to(dot, { x: e.clientX, y: e.clientY, duration: 0.06, ease: "power2.out" });
-      gsap.to(ring, { x: e.clientX, y: e.clientY, duration: 0.3, ease: "power2.out" });
+      xTo(e.clientX);
+      yTo(e.clientY);
     };
 
-    const grow = () => gsap.to(ring, { scale: 2.2, borderColor: "#64ff00", duration: 0.2 });
-    const shrink = () => gsap.to(ring, { scale: 1, borderColor: "#000000", duration: 0.2 });
+    const grow = () => gsap.to(cursor, { scale: 1.2, duration: 0.25, ease: "power2.out" });
+    const shrink = () => gsap.to(cursor, { scale: 1, duration: 0.25, ease: "power2.out" });
+    const onDown = () => gsap.to(cursor, { scale: 0.88, duration: 0.12, ease: "power2.out" });
+    const onUp = () => gsap.to(cursor, { scale: 1, duration: 0.2, ease: "power2.out" });
 
-    window.addEventListener("mousemove", move);
-    const interactives = document.querySelectorAll("a, button, [data-cursor-grow]");
-    interactives.forEach((el) => {
-      el.addEventListener("mouseenter", grow);
-      el.addEventListener("mouseleave", shrink);
-    });
+    window.addEventListener("mousemove", move, { passive: true });
+    window.addEventListener("mousedown", onDown);
+    window.addEventListener("mouseup", onUp);
+
+    const onEnter = (e: Event) => {
+      const t = e.target as HTMLElement | null;
+      if (t?.closest?.("a, button, [data-cursor-grow], input, select, textarea, label")) {
+        grow();
+      }
+    };
+    const onLeave = (e: Event) => {
+      const t = e.target as HTMLElement | null;
+      if (t?.closest?.("a, button, [data-cursor-grow], input, select, textarea, label")) {
+        shrink();
+      }
+    };
+
+    document.addEventListener("mouseover", onEnter);
+    document.addEventListener("mouseout", onLeave);
 
     return () => {
+      document.documentElement.classList.remove("has-custom-cursor");
       window.removeEventListener("mousemove", move);
-      interactives.forEach((el) => {
-        el.removeEventListener("mouseenter", grow);
-        el.removeEventListener("mouseleave", shrink);
-      });
+      window.removeEventListener("mousedown", onDown);
+      window.removeEventListener("mouseup", onUp);
+      document.removeEventListener("mouseover", onEnter);
+      document.removeEventListener("mouseout", onLeave);
     };
   }, []);
 
-  if (!active) return null;
-
   return (
-    <>
-      <div
-        ref={dotRef}
-        className="fixed top-0 left-0 w-1.5 h-1.5 bg-electric-lime pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2"
-        aria-hidden
+    <div ref={cursorRef} className="custom-cursor" aria-hidden style={{ display: "none" }}>
+      <img
+        className="custom-cursor__mark"
+        src="/assets/cursor.png?v=2"
+        alt=""
+        draggable={false}
+        width={80}
+        height={80}
       />
-      <div
-        ref={ringRef}
-        className="fixed top-0 left-0 w-10 h-10 border border-jet-black pointer-events-none z-[9998] -translate-x-1/2 -translate-y-1/2"
-        aria-hidden
-      />
-    </>
+    </div>
   );
 }
