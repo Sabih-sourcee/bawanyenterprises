@@ -2,15 +2,21 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { gsap, ScrollTrigger } from "@/src/lib/animations";
-import { brand } from "@/src/content/brand";
-import { verticals } from "@/src/content/brand";
+import { brand, divisions } from "@/src/content/brand";
 import { navLinks } from "@/src/content/sections";
 import PageContainer from "@/src/components/layout/PageContainer";
 import Button from "@/src/components/ui/Button";
 
-export default function Navbar() {
+type PageId = "home" | "about";
+
+interface NavbarProps {
+  page: PageId;
+  onNavigate: (page: PageId, hash?: string) => void;
+}
+
+export default function Navbar({ page, onNavigate }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [showVerticals, setShowVerticals] = useState(false);
+  const [showDivisions, setShowDivisions] = useState(false);
   const [hidden, setHidden] = useState(false);
   const navRef = useRef<HTMLElement>(null);
   const lastScroll = useRef(0);
@@ -34,6 +40,12 @@ export default function Navbar() {
     });
   }, []);
 
+  const go = (next: PageId, hash?: string) => {
+    setIsOpen(false);
+    setShowDivisions(false);
+    onNavigate(next, hash);
+  };
+
   return (
     <nav
       ref={navRef}
@@ -42,34 +54,51 @@ export default function Navbar() {
       }`}
     >
       <PageContainer as="div" className="h-16 md:h-20 flex justify-between items-center">
-        <a href="#" className="font-serif text-xl md:text-2xl font-bold text-jet-black tracking-tight">
+        <button
+          type="button"
+          onClick={() => go("home")}
+          className="font-serif text-xl md:text-2xl font-bold text-jet-black tracking-tight cursor-pointer"
+        >
           {brand.shortName}
           <span className="text-electric-lime">.</span>
-        </a>
+        </button>
 
         <div className="hidden lg:flex items-center gap-8 h-full">
-          {navLinks.slice(0, 2).map((link) => (
-            <a
-              key={link.title}
-              href={link.href}
-              className="text-label-caps text-on-surface-variant hover:text-jet-black transition-colors"
-            >
-              {link.title}
-            </a>
-          ))}
+          <button
+            type="button"
+            onClick={() => go("home")}
+            className={`text-label-caps transition-colors cursor-pointer ${
+              page === "home" ? "text-jet-black" : "text-on-surface-variant hover:text-jet-black"
+            }`}
+          >
+            Home
+          </button>
+          <button
+            type="button"
+            onClick={() => go("about")}
+            className={`text-label-caps transition-colors cursor-pointer ${
+              page === "about" ? "text-jet-black" : "text-on-surface-variant hover:text-jet-black"
+            }`}
+          >
+            About
+          </button>
 
           <div
             className="relative h-full flex items-center"
-            onMouseEnter={() => setShowVerticals(true)}
-            onMouseLeave={() => setShowVerticals(false)}
+            onMouseEnter={() => setShowDivisions(true)}
+            onMouseLeave={() => setShowDivisions(false)}
           >
-            <button className="text-label-caps text-on-surface-variant hover:text-jet-black transition-colors flex items-center gap-2 cursor-pointer">
-              Verticals
+            <button
+              type="button"
+              className="text-label-caps text-on-surface-variant hover:text-jet-black transition-colors flex items-center gap-2 cursor-pointer"
+              onClick={() => go("home", "#divisions-section")}
+            >
+              Divisions
               <span className="w-1.5 h-1.5 bg-electric-lime" />
             </button>
 
             <AnimatePresence>
-              {showVerticals && (
+              {showDivisions && (
                 <motion.div
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -77,12 +106,12 @@ export default function Navbar() {
                   transition={{ duration: 0.2 }}
                   className="absolute top-full left-1/2 -translate-x-1/2 w-[640px] bg-pure-white border border-jet-black grid grid-cols-2 gap-px bg-jet-black mt-0"
                 >
-                  {verticals.map((v) => (
-                    <a
+                  {divisions.map((v) => (
+                    <button
                       key={v.id}
-                      href="#services-section"
-                      onClick={() => setShowVerticals(false)}
-                      className="bg-pure-white p-6 hover:bg-electric-lime group transition-colors"
+                      type="button"
+                      onClick={() => go("home", "#divisions-section")}
+                      className="bg-pure-white p-6 hover:bg-electric-lime group transition-colors text-left cursor-pointer"
                     >
                       <p className="text-label-caps text-on-surface-variant group-hover:text-jet-black mb-2">
                         {v.tag}
@@ -94,28 +123,34 @@ export default function Navbar() {
                       <span className="text-data-mono text-jet-black mt-3 inline-flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                         Explore <ArrowUpRight className="w-3 h-3" />
                       </span>
-                    </a>
+                    </button>
                   ))}
                 </motion.div>
               )}
             </AnimatePresence>
           </div>
 
-          {navLinks.slice(2).map((link) => (
-            <a
-              key={link.title}
-              href={link.href}
-              className="text-label-caps text-on-surface-variant hover:text-jet-black transition-colors"
-            >
-              {link.title}
-            </a>
-          ))}
+          <button
+            type="button"
+            onClick={() => go("home", "#contact-form-section")}
+            className="text-label-caps text-on-surface-variant hover:text-jet-black transition-colors cursor-pointer"
+          >
+            Contact
+          </button>
         </div>
 
         <div className="hidden lg:block">
-          <Button href="#contact-form-section" variant="primary" className="!text-xs">
+          <Button
+            href="#contact-form-section"
+            variant="primary"
+            className="!text-xs"
+            onClick={(e) => {
+              e.preventDefault();
+              go("home", "#contact-form-section");
+            }}
+          >
             <span className="w-1.5 h-1.5 bg-electric-lime inline-block mr-2" />
-            Partner With Us
+            Contact Us
           </Button>
         </div>
 
@@ -137,18 +172,26 @@ export default function Navbar() {
             className="lg:hidden border-t border-jet-black bg-pure-white overflow-hidden"
           >
             <PageContainer className="py-6 flex flex-col gap-4">
-              {[...navLinks, { title: "Verticals", href: "#services-section" }].map((link) => (
-                <a
+              {navLinks.map((link) => (
+                <button
                   key={link.title}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="text-label-caps text-jet-black py-2 border-b border-surface-container"
+                  type="button"
+                  onClick={() => go(link.page, link.href.startsWith("#") && link.page === "home" && link.href !== "#home" ? link.href : undefined)}
+                  className="text-label-caps text-jet-black py-2 border-b border-surface-container text-left cursor-pointer"
                 >
                   {link.title}
-                </a>
+                </button>
               ))}
-              <Button href="#contact-form-section" variant="primary" className="w-full mt-2">
-                Partner With Us
+              <Button
+                href="#contact-form-section"
+                variant="primary"
+                className="w-full mt-2"
+                onClick={(e) => {
+                  e.preventDefault();
+                  go("home", "#contact-form-section");
+                }}
+              >
+                Contact Us
               </Button>
             </PageContainer>
           </motion.div>

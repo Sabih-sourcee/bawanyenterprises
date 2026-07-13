@@ -58,7 +58,7 @@ export default function MultiStepForm() {
       {/* Buzz: full-bleed black panel — not wrapped in page-shell */}
       <div className="contact-panel">
         <div className="contact-inner">
-          <h2 className="contact-heading">Let&apos;s Connect</h2>
+          <h2 className="contact-heading">Get In Touch</h2>
 
           {submitted ? (
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="py-16 text-center">
@@ -136,7 +136,7 @@ export default function MultiStepForm() {
               </div>
 
               <div className="mb-[clamp(1.5rem,2.5vw,2.25rem)]">
-                <p className="contact-section-label">My budget is</p>
+                <p className="contact-section-label">I am looking for</p>
                 <div className="contact-radio-row">
                   {formBudgets.map((b) => (
                     <label

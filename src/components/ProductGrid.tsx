@@ -4,10 +4,7 @@ import PageContainer from "@/src/components/layout/PageContainer";
 import { workItems } from "@/src/content/sections";
 import { skewUpReveal } from "@/src/lib/animations";
 
-/* Buzz "Selected Work" mechanics:
-   - Heading revealed with skew-up word animation.
-   - Cards fade in; on hover, tag chips slide in from translateX(100%)
-     with stagger, and the title pill expands from width 0. */
+/* Selected Work — Buzz masonry cards with chip slide-in + title reveal on hover */
 
 export default function ProductGrid() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -25,7 +22,6 @@ export default function ProductGrid() {
           Selected Work
         </h2>
 
-        {/* Buzz masonry: wide + two halves + wide */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
           {workItems.map((item) => (
             <article
@@ -46,7 +42,6 @@ export default function ProductGrid() {
                   style={{ backgroundImage: `url(${item.image})`, backgroundColor: "#e8e8e8" }}
                 />
 
-                {/* Buzz _w-chip: slide in from right with stagger on hover */}
                 <div className="absolute top-4 right-4 md:top-5 md:right-5 flex flex-col items-end gap-2 overflow-hidden">
                   {item.tags.map((tag, i) => (
                     <span
@@ -59,7 +54,6 @@ export default function ProductGrid() {
                   ))}
                 </div>
 
-                {/* Buzz _w-title-wrap: pill expands from width 0 on hover */}
                 <div className="absolute bottom-4 left-4 md:bottom-5 md:left-5">
                   <div className="grid grid-cols-[0fr] group-hover:grid-cols-[1fr] transition-[grid-template-columns] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
                     <div className="overflow-hidden">

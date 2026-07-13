@@ -8,16 +8,16 @@ import { prefersReducedMotion } from "@/src/lib/animations";
    dragged with the mouse. */
 
 const TAGS = [
-  "Solar Energy",
-  "Lithium Storage",
-  "Mobile Distribution",
-  "LED Lighting",
-  "Tech Accessories",
+  "PTA Approved",
+  "Official Imports",
+  "Bawany Mobiles",
+  "Intro Technology",
+  "Infinix Pakistan",
+  "Genuine Warranty",
+  "Legal Channels",
+  "Nationwide Reach",
+  "Authentic Devices",
   "Dealer Network",
-  "B2B Partnerships",
-  "Nationwide Logistics",
-  "Honest Pricing",
-  "Enterprise Solutions",
 ];
 
 interface PillBody {

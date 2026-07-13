@@ -2,16 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 import { gsap, ScrollTrigger, prefersReducedMotion } from "@/src/lib/animations";
 import PageContainer from "@/src/components/layout/PageContainer";
+import Button from "@/src/components/ui/Button";
 import { brand } from "@/src/content/brand";
-import { heroPhrases } from "@/src/content/sections";
-
-/* Buzz hero mechanics:
-   1. H1 spans reveal with 3D entrance (split words, y/skew).
-   2. Rotating line = vertical word carousel: overflow-hidden mask,
-      column of phrases stepped -100% per phrase on a loop.
-   3. Showreel = sticky-track (200vh) + sticky video-wrapper whose
-      clip-path scrubs from a skewed polygon at 60% width to a
-      full-bleed rectangle at 100vw/100vh. */
 
 const CLIP_START = "polygon(20% 1%, 88% 40%, 99% 99%, 0% 74%)";
 const CLIP_END = "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)";
@@ -20,36 +12,10 @@ export default function Hero() {
   const [isMuted, setIsMuted] = useState(true);
   const trackRef = useRef<HTMLDivElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
-  const tickerRef = useRef<HTMLDivElement>(null);
   const videoWrapperRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLParagraphElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  /* Vertical word carousel — Buzz .ticker-inner */
-  useEffect(() => {
-    const ticker = tickerRef.current;
-    if (!ticker || prefersReducedMotion()) return;
-
-    const items = ticker.children;
-    const count = heroPhrases.length; // last item is a duplicate of the first
-    const tl = gsap.timeline({ repeat: -1 });
-
-    for (let i = 1; i <= count; i++) {
-      tl.to(items, {
-        yPercent: -100 * i,
-        duration: 0.7,
-        ease: "power3.inOut",
-        delay: 1.6,
-      });
-    }
-    tl.set(items, { yPercent: 0 });
-
-    return () => {
-      tl.kill();
-    };
-  }, []);
-
-  /* Headline split reveal + clip-path scrub */
   useEffect(() => {
     if (prefersReducedMotion()) return;
 
@@ -68,7 +34,7 @@ export default function Hero() {
             yPercent: 100,
             skewX: -6,
             opacity: 0,
-            stagger: 0.08,
+            stagger: 0.06,
             duration: 1,
             ease: "power4.out",
             delay: 0.2,
@@ -82,8 +48,8 @@ export default function Hero() {
           start: "top top",
           end: "bottom bottom",
           scrub: 0.6,
+          invalidateOnRefresh: true,
           scroller: document.documentElement,
-          id: "hero-clip",
         },
       });
 
@@ -91,63 +57,57 @@ export default function Hero() {
         videoWrapper,
         { clipPath: CLIP_START, width: "60%", height: "60vh" },
         { clipPath: CLIP_END, width: "100%", height: "100vh", ease: "none" },
-        0
+        0,
       );
 
       if (overlay) {
-        tl.fromTo(
-          overlay,
-          { opacity: 0, y: 40 },
-          { opacity: 1, y: 0, ease: "none" },
-          0.55
-        );
+        tl.to(overlay, { opacity: 1, duration: 0.25, ease: "none" }, 0.7);
       }
     }, track);
 
     return () => {
       ctx.revert();
-      ScrollTrigger.getById("hero-clip")?.kill();
+      ScrollTrigger.getAll().forEach((st) => {
+        if (st.trigger === track) st.kill();
+      });
     };
   }, []);
 
   const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !isMuted;
-      setIsMuted(!isMuted);
-    }
+    const video = videoRef.current;
+    if (!video) return;
+    video.muted = !video.muted;
+    setIsMuted(video.muted);
   };
 
   return (
-    <div id="hero-section" className="relative bg-surface">
-      {/* Headline block */}
-      <div className="hero-offset pb-4 md:pb-6">
+    <div id="home" className="relative bg-surface">
+      <div className="hero-offset pb-8 md:pb-12">
         <PageContainer>
           <h1
             ref={headlineRef}
-            className="font-sans font-bold text-jet-black tracking-tight"
+            className="font-sans font-bold text-jet-black tracking-tight max-w-5xl"
           >
             <span
               data-hero-lead
-              className="block text-[clamp(2.5rem,8.5vw,7rem)] leading-[1.02] overflow-hidden"
+              className="block text-[clamp(2.25rem,6.5vw,5.5rem)] leading-[1.05] overflow-hidden"
             >
-              {brand.heroHeadlineLead}
-            </span>
-
-            {/* Buzz hero-ticker-wrap: overflow-hidden mask, one line tall */}
-            <span className="block overflow-hidden h-[1.06em] text-[clamp(2.5rem,8.5vw,7rem)] leading-[1.02]">
-              <span ref={tickerRef} className="flex flex-col">
-                {[...heroPhrases, heroPhrases[0]].map((phrase, i) => (
-                  <span key={`${phrase}-${i}`} className="block will-change-transform">
-                    {phrase}
-                  </span>
-                ))}
-              </span>
+              {brand.heroHeadline}
             </span>
           </h1>
+
+          <p className="mt-6 md:mt-8 max-w-2xl text-body-lg text-on-surface-variant leading-relaxed">
+            {brand.heroSubhead}
+          </p>
+
+          <div className="mt-8 md:mt-10">
+            <Button href="#brands-section" variant="primary">
+              {brand.heroCta}
+            </Button>
+          </div>
         </PageContainer>
       </div>
 
-      {/* Buzz sticky-track: 200vh scroll distance, sticky video inside */}
       <div ref={trackRef} className="relative h-[200vh]">
         <div className="sticky top-0 h-screen flex items-start justify-center overflow-hidden">
           <div
@@ -173,7 +133,6 @@ export default function Hero() {
 
             <div className="absolute inset-0 bg-jet-black/20 pointer-events-none" />
 
-            {/* Quote overlay reveals at end of clip scrub */}
             <p
               ref={overlayRef}
               className="absolute inset-0 flex items-center justify-center text-center px-[var(--page-pad)] font-serif text-[clamp(1.5rem,4vw,3.5rem)] text-pure-white leading-tight opacity-0"

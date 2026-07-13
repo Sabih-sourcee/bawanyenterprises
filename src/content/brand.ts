@@ -1,19 +1,24 @@
 export const brand = {
   name: "Bawany Enterprises",
   shortName: "Bawany",
-  tagline: "Powering Connectivity, Sustaining Progress.",
-  pillars: ["Smart Design", "Honest Pricing", "Long-Lasting Performance"],
+  tagline: "Pakistan's Trusted Name in Mobile Phone Distribution",
   purpose:
-    "To bridge the gap between world-class technology and everyday utility by equipping businesses and homes with the energy, lighting, and connectivity tools they need to thrive.",
+    "Pakistan's official importer and distributor of mobile phones, bringing authentic, PTA approved devices to customers who deserve better than grey market risks.",
   vision:
-    "To become one of Pakistan's most trusted, multi-disciplinary distribution and technology conglomerates, recognized for setting benchmark standards in product longevity, distribution reach, and customer partnerships.",
+    "To become Pakistan's most trusted name in mobile phone distribution, known not just for the brands we carry, but for the integrity behind every transaction.",
   mission:
-    "We source, distribute, and implement high-performance technology and energy solutions. By focusing on honest pricing, smart engineering, and dependable post-sale relationships, we ensure every product we deliver adds measurable value to our clients' ecosystems.",
+    "To bring authentic, fully approved mobile technology to every corner of Pakistan, through honest business practices, transparent processes, and a distribution network people can genuinely trust.",
   positioning:
-    "For commercial enterprises, retailers, and modern consumers across Pakistan seeking reliable infrastructure and technology, Bawany Enterprises is the premier distribution and solutions partner that delivers future-ready energy, illumination, and mobile connectivity backed by uncompromising durability and honest value.",
-  heroHeadlineLead: "Leading Full-Service",
-  heroOverlayQuote:
-    "A narrative etched with decades of shaping industries across Pakistan.",
+    "We are not here to compete with grey market sellers. We are here to give people a reason to stop trusting them.",
+  heroHeadline: "Pakistan's Trusted Name in Mobile Phone Distribution",
+  heroSubhead:
+    "Bawany Enterprises is Pakistan's official importer and distributor of mobile phones, bringing authentic, PTA approved devices to customers who deserve better than grey market risks.",
+  heroCta: "Explore Our Brands",
+  heroOverlayQuote: "Authentic. PTA approved. Properly documented.",
+  contactCtaHeadline: "Get In Touch",
+  contactCtaBody:
+    "Looking for a phone you can actually trust? Reach out to Bawany Enterprises and experience what proper distribution looks like.",
+  contactCtaButton: "Contact Us",
   contact: {
     email: "info@bawanyenterprises.com",
     phone: "+92-300-0000000",
@@ -25,88 +30,109 @@ export const brand = {
   },
 } as const;
 
-export const verticals = [
+/** Two operating divisions */
+export const divisions = [
   {
-    id: "energy",
-    name: "Energy Solutions",
-    shortLabel: "Energy Solutions",
-    tag: "ENERGY SOLUTIONS",
+    id: "bawany-mobiles",
+    name: "Bawany Mobiles",
+    shortLabel: "Bawany Mobiles",
+    tag: "OFFICIAL DISTRIBUTOR",
     description:
-      "Solar energy systems and lithium battery storage for residential and commercial use — future-ready resilience against grid volatility.",
+      "The official distributor of Infinix in Pakistan. Every device passes through legal import channels, complete documentation, and full PTA registration. What you get is a phone that works properly, and a warranty that actually means something.",
     features: [
-      "Residential Solar Systems",
-      "Commercial Solar Arrays",
-      "Lithium Battery Storage",
-      "Grid-Independent Power",
+      "Official Infinix Distributor",
+      "Legal Import Channels",
+      "Full PTA Registration",
+      "Genuine Warranty Support",
     ],
-    stat: { label: "MW INSTALLED", value: "25+" },
-    image: "/assets/verticals/energy.webp",
-  },
-  {
-    id: "mobile",
-    name: "Mobile Distribution",
-    shortLabel: "Mobile Distribution",
-    tag: "MOBILE DISTRIBUTION",
-    description:
-      "Nationwide distribution network connecting global mobile manufacturers to local retail markets with robust supply chain reliability.",
-    features: [
-      "Nationwide Dealer Network",
-      "Leading Brand Partnerships",
-      "Supply Chain Logistics",
-      "Retail Channel Support",
-    ],
-    stat: { label: "DEALER PARTNERS", value: "500+" },
     image: "/assets/verticals/mobile.webp",
   },
   {
-    id: "lighting",
-    name: "Lighting Solutions",
-    shortLabel: "Lighting Solutions",
-    tag: "LIGHTING SOLUTIONS",
+    id: "intro-technology",
+    name: "Intro Technology",
+    shortLabel: "Intro Technology",
+    tag: "DISTRIBUTION NETWORK",
     description:
-      "Commercial and residential energy-saving LED illumination — high-efficiency brightness that reduces operational footprints.",
+      "Our second division, built to widen our reach across Pakistan's retail and distribution network. Intro Technology works closely with partners across the country to keep supply steady, transparent, and reliable.",
     features: [
-      "Commercial LED Systems",
-      "Residential Illumination",
-      "Energy-Efficient Retrofits",
-      "Industrial Lighting",
+      "Nationwide Retail Reach",
+      "Partner Network Support",
+      "Steady Supply Chains",
+      "Transparent Distribution",
     ],
-    stat: { label: "LUMENS DELIVERED", value: "10M+" },
-    image: "/assets/verticals/lighting.webp",
-  },
-  {
-    id: "tech",
-    name: "Tech Accessories",
-    shortLabel: "Tech Accessories",
-    tag: "TECH ACCESSORIES",
-    description:
-      "Chargers, audio devices, and everyday performance hardware engineered for daily wear and tear at accessible price points.",
-    features: [
-      "Fast-Charging Solutions",
-      "Audio & Peripherals",
-      "Durability-Tested Hardware",
-      "Retail-Ready Packaging",
-    ],
-    stat: { label: "SKUs DISTRIBUTED", value: "200+" },
     image: "/assets/verticals/tech.webp",
   },
 ] as const;
 
-export const values = [
+/** @deprecated use divisions — kept as alias for gradual migration */
+export const verticals = divisions;
+
+export const trustReasons = [
   {
-    title: "Reliability & Longevity",
-    description: "Products curated for endurance — from solar arrays to charging cables.",
+    title: "Authentic Imports Only",
+    description:
+      "Every phone comes through proper legal channels, no smuggled stock, no shortcuts.",
   },
   {
-    title: "Integrity in Pricing",
-    description: "Honest pricing structures delivering maximum ROI for B2B and consumers.",
+    title: "PTA Approved, Always",
+    description:
+      "Full registration means your phone works without restrictions, right from day one.",
   },
   {
-    title: "Agile Innovation",
-    description: "Staying ahead of technological curves in energy, mobile, and accessories.",
+    title: "Real Warranty Support",
+    description: "Genuine after-sales service and support you can actually count on.",
   },
   {
-    title: "Relationship-Centric Growth",
-    description: "Distribution networks built on long-term trust and mutual scaling.",
+    title: "Nationwide Presence",
+    description: "A distribution network that reaches major cities across Pakistan.",
   },
 ] as const;
+
+export const aboutPage = {
+  headline: "Built on Trust. Driven by Authenticity.",
+  intro: [
+    "Bawany Enterprises stands as Pakistan's official importer and distributor of mobile phones. For years, we have worked to bring genuine technology into people's hands, the right way, through the right channels, with nothing hidden and nothing compromised.",
+    "Our operations run through two divisions, Bawany Mobiles, the official distributor of Infinix in Pakistan, and Intro Technology, which strengthens our reach across the country's retail landscape. Together, these two divisions reflect what we stand for: honest business, proper process, and products people can rely on.",
+    "In a market crowded with grey market imports and unauthorized sellers, we chose a harder path. We chose to do things properly. And that decision has shaped everything we do.",
+  ],
+  mission: {
+    title: "Our Mission",
+    body: "To bring authentic, fully approved mobile technology to every corner of Pakistan, through honest business practices, transparent processes, and a distribution network people can genuinely trust. We exist to prove that doing business the right way is not just possible, it is better, for customers, for retailers, and for the industry as a whole.",
+  },
+  vision: {
+    title: "Our Vision",
+    body: 'To become Pakistan\'s most trusted name in mobile phone distribution, known not just for the brands we carry, but for the integrity behind every transaction. We see a future where grey market phones are no longer the default choice, where customers know exactly what they are buying, and where "official distributor" is not just a label, but a promise that is kept every single time.',
+  },
+  differentiators: [
+    {
+      title: "Legal Imports, Always",
+      description:
+        "No grey market shortcuts. Every device we distribute follows proper import procedures from start to finish.",
+    },
+    {
+      title: "Full PTA Compliance",
+      description:
+        "Every phone is registered and approved, so customers never face restrictions or surprises.",
+    },
+    {
+      title: "Genuine Accountability",
+      description:
+        "When something needs support, we stand behind it. Real service, real warranty, real people.",
+    },
+    {
+      title: "Years of Industry Experience",
+      description:
+        "Our understanding of Pakistan's mobile market runs deep, built through consistent, dependable work.",
+    },
+  ],
+} as const;
+
+export const whoWeAre = {
+  label: "Who We Are",
+  paragraphs: [
+    "We are Bawany Enterprises, the official importer and distributor of mobile phones in Pakistan. Our work runs through two strong divisions, Bawany Mobiles and Intro Technology, both built on one simple promise: every phone we bring into this country is genuine, properly documented, and fully approved by PTA.",
+    "We are not here to compete with grey market sellers. We are here to give people a reason to stop trusting them.",
+  ],
+} as const;
+
+export const values = trustReasons;

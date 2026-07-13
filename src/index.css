@@ -158,22 +158,9 @@ html.has-custom-cursor *::after {
   scroll-snap-align: start;
 }
 
-/* Services: desktop-only sticky track height */
+/* Services / divisions — no sticky scrub track */
 .services-track {
   position: relative;
-}
-
-@media (min-width: 1024px) {
-  .services-track {
-    height: 212vh;
-  }
-
-  .services-sticky {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow: hidden;
-  }
 }
 
 html {
@@ -343,23 +330,77 @@ body {
   border-radius: 50%;
 }
 
-/* Buzz cards viewport — clips horizontal row, never clips card content */
+/* Divisions — static 50/50 viewport cards, no horizontal scrub */
 .services-cards-viewport {
-  overflow: hidden;
+  overflow: visible;
   width: 100%;
-  min-width: 0;
 }
 
-.services-cards-row {
-  display: flex;
-  align-items: stretch;
-  gap: clamp(1rem, 2.5vw, 2rem);
-  width: max-content;
+.divisions-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 100%;
   padding-inline: var(--page-pad);
 }
 
-/* Normal document flow: heading -> caption -> cards. No absolute positioning
-   so the caption can never overlap the card row at any viewport width. */
+@media (min-width: 768px) {
+  .divisions-grid {
+    grid-template-columns: 50vw 50vw;
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    gap: 0;
+    padding-inline: 0;
+  }
+}
+
+.divisions-card {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: clamp(280px, 42vh, 420px);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--color-jet-black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.divisions-card .services-card-title {
+  text-align: center;
+}
+
+.divisions-card ul {
+  align-items: center;
+  width: 100%;
+}
+
+.divisions-card .services-card-link {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .divisions-card {
+    border-radius: 0;
+    border-left: none;
+  }
+
+  .divisions-card:first-child {
+    border-left: 1px solid rgba(0, 0, 0, 0.25);
+  }
+}
+
+@media (max-width: 767px) {
+  .divisions-card {
+    border-radius: clamp(0.85rem, 1.5vw, 1.07rem);
+  }
+}
+
 .services-layout {
   display: flex;
   flex-direction: column;
@@ -368,49 +409,6 @@ body {
 .services-headline-wrap {
   padding-top: clamp(3rem, 8vh, 5rem);
   padding-bottom: clamp(1.5rem, 4vh, 2.5rem);
-}
-
-@media (min-width: 1024px) {
-  .services-layout {
-    min-height: 100vh;
-    justify-content: center;
-    gap: clamp(2rem, 5vh, 3rem);
-    overflow: hidden;
-    padding-block: clamp(2rem, 5vh, 3rem);
-  }
-
-  .services-headline-wrap {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .services-cards-viewport {
-    flex-shrink: 0;
-  }
-}
-
-@media (max-width: 1023px) {
-  .services-cards-viewport {
-    margin-top: 2rem;
-  }
-}
-
-/* Buzz service card — outline panel, NOT heavy white glass. Equal padding
-   on every side, equal width, and flex row default stretches all cards
-   to the same height. */
-.services-card-buzz {
-  flex-shrink: 0;
-  width: clamp(280px, 28vw, 340px);
-  padding: 2rem;
-  border-radius: clamp(0.85rem, 1.5vw, 1.07rem);
-  border: 1px solid rgba(0, 0, 0, 0.25);
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  color: var(--color-jet-black);
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
 }
 
 .services-card-title {
@@ -439,7 +437,6 @@ body {
   color: var(--color-secondary);
 }
 
-/* Intro caption — sits above the cards row in normal flow, full width */
 .services-intro {
   max-width: 480px;
   margin-top: clamp(1rem, 2.5vh, 1.5rem);
@@ -456,13 +453,6 @@ body {
 .services-intro p + p {
   color: var(--color-on-surface-variant);
   margin-top: 0.5rem;
-}
-
-/* Ensures horizontal scrub on ultra-wide (4K) displays */
-.services-scroll-spacer {
-  flex-shrink: 0;
-  width: clamp(320px, 50vw, 1400px);
-  height: 1px;
 }
 
 /* Glass cards — frosted white panels (used elsewhere, not services) */

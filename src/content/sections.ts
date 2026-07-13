@@ -1,110 +1,50 @@
-import { verticals } from "./brand";
+import { divisions, trustReasons } from "./brand";
 
-export const heroPhrases = verticals.map((v) => v.shortLabel);
+export const heroPhrases = [
+  "Mobile Distribution",
+  "Official Imports",
+  "PTA Approved",
+  "Genuine Warranty",
+];
 
 export const heroTickerItems = [
-  ...verticals.map((v) => v.name),
-  "Solar & Storage Systems",
+  "Official Importer",
+  "PTA Approved Devices",
+  "Bawany Mobiles",
+  "Intro Technology",
+  "Infinix Pakistan",
+  "Genuine Warranty",
   "Nationwide Distribution",
-  "Commercial LED",
-  "Performance Accessories",
-  "Dealer Network",
-  "Enterprise Solutions",
+  "Authentic Imports",
 ];
 
 export const partnerLogos = [
+  { name: "Infinix", src: "/assets/partners/infinix.svg" },
   { name: "Samsung", src: "/assets/partners/samsung.svg" },
   { name: "Xiaomi", src: "/assets/partners/xiaomi.svg" },
   { name: "Oppo", src: "/assets/partners/oppo.svg" },
   { name: "Vivo", src: "/assets/partners/vivo.svg" },
   { name: "Realme", src: "/assets/partners/realme.svg" },
-  { name: "Infinix", src: "/assets/partners/infinix.svg" },
   { name: "Tecno", src: "/assets/partners/tecno.svg" },
-  { name: "Haier", src: "/assets/partners/haier.svg" },
 ];
 
-export const workItems = [
-  {
-    id: "commercial-solar",
-    tags: ["SOLAR", "COMMERCIAL", "STORAGE"],
-    title: "Commercial Solar & Storage Deployment",
-    client: "Samad Group of Industries",
-    metric: "500 kW Installed Capacity",
-    image: "/assets/work/commercial-solar.webp",
-    layout: "wide" as const,
-  },
-  {
-    id: "dealer-network",
-    tags: ["MOBILE", "DISTRIBUTION", "B2B"],
-    title: "Nationwide Mobile Dealer Network",
-    client: "Retail Channel Expansion",
-    metric: "120+ Cities Covered",
-    image: "/assets/work/dealer-network.webp",
-    layout: "half" as const,
-  },
-  {
-    id: "led-retrofit",
-    tags: ["LED", "COMMERCIAL", "EFFICIENCY"],
-    title: "Commercial LED Retrofit Program",
-    client: "Corporate Campus — Karachi",
-    metric: "40% Energy Reduction",
-    image: "/assets/work/led-retrofit.webp",
-    layout: "half" as const,
-  },
-  {
-    id: "accessories-line",
-    tags: ["ACCESSORIES", "RETAIL", "DURABILITY"],
-    title: "Performance Accessories Product Line",
-    client: "Retail Distribution Launch",
-    metric: "200+ SKUs Nationwide",
-    image: "/assets/work/accessories-line.webp",
-    layout: "half" as const,
-  },
-  {
-    id: "residential-solar",
-    tags: ["SOLAR", "RESIDENTIAL", "STORAGE"],
-    title: "Residential Solar & Lithium Storage",
-    client: "Housing Society — Lahore",
-    metric: "300+ Homes Energized",
-    image: "/assets/work/residential-solar.webp",
-    layout: "half" as const,
-  },
-];
+/** Divisions shown as service-style cards */
+export const serviceTabs = divisions.map((d) => ({
+  id: d.id,
+  label: d.shortLabel,
+  title: d.name,
+  headline: d.description,
+  links: d.features as unknown as string[],
+}));
 
-export const serviceTabs = [
-  ...verticals.map((v) => ({
-    id: v.id,
-    label: v.name.replace(" Solutions", "").replace(" Distribution", ""),
-    title: v.name,
-    headline: `We deliver ${v.name.toLowerCase()} built for longevity.`,
-    links: [
-      ...v.features,
-      "Enterprise Procurement",
-      "Technical Support",
-    ] as string[],
-  })),
-  {
-    id: "logistics",
-    label: "Logistics",
-    title: "Distribution & Logistics",
-    headline: "We move products across Pakistan with supply chains built for scale.",
-    links: [
-      "Nationwide Logistics",
-      "Dealer Onboarding",
-      "Warehouse Management",
-      "Retail Channel Support",
-      "After-Sales Service",
-      "Inventory Planning",
-    ] as string[],
-  },
-];
+export const trustItems = trustReasons;
 
 export const buzzStats = [
   {
     id: "stat-1",
-    value: "240",
+    value: "100",
     suffix: "%",
-    label: "lead gen spike within partner networks. Actual math, not fluff.",
+    label: "PTA approved devices. Full registration, zero restrictions.",
     variant: "accent" as const,
     span: "col-span-1 row-span-1",
   },
@@ -112,7 +52,7 @@ export const buzzStats = [
     id: "stat-2",
     value: "",
     suffix: "",
-    label: "custom-built supply chains. From warehouse to retail shelf. No cookie-cutter distribution.",
+    label: "Legal import channels only. No grey market. No shortcuts.",
     variant: "light" as const,
     span: "col-span-1 row-span-1",
   },
@@ -120,24 +60,24 @@ export const buzzStats = [
     id: "stat-3",
     value: "Zero",
     suffix: "",
-    label: "disposable solutions. Every product curated for endurance.",
+    label: "smuggled stock. Every phone properly documented.",
     variant: "light" as const,
     span: "col-span-1 row-span-1",
   },
   {
     id: "stat-4",
-    value: "4",
-    suffix: "X",
-    label: "more distribution reach. When infrastructure works, partners scale.",
+    value: "2",
+    suffix: "",
+    label: "strong divisions — Bawany Mobiles and Intro Technology — one promise of authenticity.",
     variant: "light" as const,
     span: "col-span-2 row-span-1",
     large: true,
   },
   {
     id: "stat-5",
-    value: "94",
-    suffix: "%",
-    label: "of B2B partners stick around. Results earn repeat business.",
+    value: "Nation",
+    suffix: "-wide",
+    label: "distribution reach across Pakistan's major cities.",
     variant: "accent" as const,
     span: "col-span-1 row-span-1",
     large: true,
@@ -153,85 +93,84 @@ export const buzzStats = [
   },
 ];
 
-export const stats = [
-  { id: "stat-kw", target: 2500, suffix: "+", label: "SOLAR CAPACITY INSTALLED" },
-  { id: "stat-dealers", target: 500, suffix: "+", label: "DEALER PARTNERS NATIONWIDE" },
-  { id: "stat-retention", target: 94, suffix: "%", label: "B2B PARTNER RETENTION RATE" },
-  { id: "stat-years", target: 15, suffix: "+", label: "YEARS OF DISTRIBUTION EXCELLENCE" },
-];
-
 export const highlightStats = buzzStats;
 
 export const testimonials = [
   {
     quote:
-      "Bawany's supply chain reliability transformed our retail operations. Consistent inventory, honest pricing, and a team that understands dealer economics.",
+      "With Bawany, every handset is PTA approved and properly documented. Our customers finally stopped worrying about grey market risks.",
     author: "Ahmed Raza",
-    role: "Regional Dealer — Mobile Division",
+    role: "Retail Partner — Karachi",
   },
   {
     quote:
-      "The commercial solar installation exceeded our ROI projections. Grid-independent power with lithium storage gave us operational resilience we needed.",
-    author: "Sana Malik",
-    role: "Operations Director — Manufacturing",
-  },
-  {
-    quote:
-      "Their LED retrofit program cut our facility energy costs by 40%. Long-lasting products, transparent pricing, and dependable post-sale support.",
-    author: "Faisal Khan",
-    role: "Facilities Manager — Corporate Campus",
-  },
-  {
-    quote:
-      "We've partnered with Bawany for mobile distribution across three provinces. Their logistics network and brand relationships are unmatched.",
+      "Official Infinix supply through Bawany Mobiles changed our shelves. Steady stock, real warranty, and a team that stands behind every device.",
     author: "Usman Ali",
-    role: "CEO — Retail Chain",
+    role: "Dealer — Punjab Region",
   },
   {
     quote:
-      "Hiring Bawany was straightforward. We stopped evaluating other distributors halfway through the first call.",
-    author: "Head of Procurement",
-    role: "Enterprise Retail Group",
+      "Intro Technology keeps our retail network supplied without the usual chaos. Transparent process, reliable deliveries.",
+    author: "Sana Malik",
+    role: "Retail Chain Manager",
   },
   {
     quote:
-      "Within two weeks, the difference was obvious. Our inventory moved faster, margins improved, and we stopped fighting supply gaps.",
+      "We switched from informal channels to Bawany and never looked back. Genuine phones, genuine support.",
+    author: "Faisal Khan",
+    role: "Mobile Retailer — Lahore",
+  },
+  {
+    quote:
+      "PTA registration from day one means fewer complaints and happier customers. That alone is worth the partnership.",
+    author: "Zain Sheikh",
+    role: "Distributor — Sindh",
+  },
+  {
+    quote:
+      "Bawany treats dealer relationships like partnerships, not transactions. Pricing stays honest even when the market doesn't.",
     author: "Brand Manager",
     role: "Consumer Electronics",
   },
   {
     quote:
-      "Their team handled our entire lighting procurement — spec, supply, and install — without a single delay. That kind of coordination is rare.",
-    author: "Project Lead",
-    role: "Commercial Real Estate Developer",
+      "Warranty claims that actually get resolved. After years of grey market headaches, that feels revolutionary.",
+    author: "Category Lead",
+    role: "National Retail",
   },
   {
     quote:
-      "Bawany treats dealer relationships like partnerships, not transactions. Pricing stays honest even when the market doesn't.",
-    author: "Zain Sheikh",
-    role: "Distributor — Punjab Region",
+      "Official importer status isn't just a label with Bawany — you see it in the paperwork, the process, and the after-sales.",
+    author: "Procurement Head",
+    role: "Enterprise Retail Group",
   },
   {
     quote:
-      "The accessories line outsold every competing brand on our shelves within a quarter. Durability sells itself when the supply is consistent.",
-    author: "Category Manager",
-    role: "National Retail Chain",
+      "Our customers ask for PTA approved devices. Bawany is how we deliver that promise every time.",
+    author: "Store Owner",
+    role: "Islamabad",
   },
 ];
 
-export const formInterests = verticals.map((v) => v.name);
+export const formInterests = [
+  "Bawany Mobiles / Infinix",
+  "Intro Technology Partnership",
+  "Dealer / Retail Inquiry",
+  "Corporate Procurement",
+  "Warranty & After-Sales",
+];
 
 export const formBudgets = [
-  "Under PKR 500,000",
-  "PKR 500,000 – 2,000,000",
-  "PKR 2,000,000+",
+  "Dealer / Retail Partnership",
+  "Bulk / Corporate Order",
+  "General Inquiry",
 ];
 
 export const formSources = [
   "Google",
   "Referral",
-  "LinkedIn",
-  "Trade Event",
+  "Social Media",
+  "Retail Partner",
   "Existing Partner",
   "Other",
 ];
@@ -258,18 +197,18 @@ export const locations = [
 ];
 
 export const navLinks = [
-  { title: "About", href: "#about-section" },
-  { title: "Partners", href: "#partners-marquee-section" },
-  { title: "Work", href: "#portfolio" },
-  { title: "Contact", href: "#contact-form-section" },
+  { title: "Home", href: "#home", page: "home" as const },
+  { title: "About", href: "#about", page: "about" as const },
+  { title: "Divisions", href: "#divisions-section", page: "home" as const },
+  { title: "Contact", href: "#contact-form-section", page: "home" as const },
 ];
 
 export const footerLinks = {
-  verticals: verticals.map((v) => ({ label: v.name, href: "#services-section" })),
+  divisions: divisions.map((d) => ({ label: d.name, href: "#divisions-section" })),
   company: [
-    { label: "About Us", href: "#about-section" },
-    { label: "Our Work", href: "#portfolio" },
-    { label: "Partner With Us", href: "#contact-form-section" },
+    { label: "About Us", href: "#about" },
+    { label: "Our Divisions", href: "#divisions-section" },
+    { label: "Contact Us", href: "#contact-form-section" },
   ],
   connect: [
     { label: "Dealer Inquiry", href: "#contact-form-section" },
@@ -277,3 +216,52 @@ export const footerLinks = {
     { label: "Privacy Policy", href: "#" },
   ],
 };
+
+/** Selected Work — mobile distribution case studies */
+export const workItems = [
+  {
+    id: "infinix-launch",
+    tags: ["INFINIX", "OFFICIAL", "LAUNCH"],
+    title: "Official Infinix Distribution Rollout",
+    client: "Bawany Mobiles — Nationwide",
+    metric: "PTA Approved Supply",
+    image: "/assets/work/dealer-network.webp",
+    layout: "wide" as const,
+  },
+  {
+    id: "dealer-network",
+    tags: ["RETAIL", "DEALERS", "B2B"],
+    title: "Nationwide Dealer Network Expansion",
+    client: "Intro Technology Partners",
+    metric: "Major Cities Covered",
+    image: "/assets/work/dealer-network.webp",
+    layout: "half" as const,
+  },
+  {
+    id: "pta-compliance",
+    tags: ["PTA", "COMPLIANCE", "IMPORTS"],
+    title: "Full PTA Registration Pipeline",
+    client: "Legal Import Channels",
+    metric: "100% Approved Stock",
+    image: "/assets/work/accessories-line.webp",
+    layout: "half" as const,
+  },
+  {
+    id: "warranty-support",
+    tags: ["WARRANTY", "SUPPORT", "SERVICE"],
+    title: "Genuine After-Sales Support Network",
+    client: "Customer Care Operations",
+    metric: "Real Warranty Coverage",
+    image: "/assets/work/led-retrofit.webp",
+    layout: "half" as const,
+  },
+  {
+    id: "retail-supply",
+    tags: ["SUPPLY", "RETAIL", "LOGISTICS"],
+    title: "Steady Retail Supply Program",
+    client: "Intro Technology — Distribution",
+    metric: "Transparent Logistics",
+    image: "/assets/work/commercial-solar.webp",
+    layout: "half" as const,
+  },
+];

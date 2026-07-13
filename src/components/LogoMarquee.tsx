@@ -6,7 +6,7 @@ export default function LogoMarquee() {
 
   return (
     <section
-      id="partners-marquee-section"
+      id="brands-section"
       className="py-8 md:py-10 bg-pure-white border-y border-jet-black/10 overflow-hidden"
     >
       <div className="flex w-max animate-marquee items-center gap-0">
