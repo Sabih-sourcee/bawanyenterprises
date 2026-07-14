@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect } from "react";
 import SmoothScrollProvider from "@/src/providers/SmoothScrollProvider";
 import Preloader from "@/src/components/Preloader";
-import Navbar from "@/src/components/Navbar";
+import StaggeredMenu from "@/src/components/StaggeredMenu";
 import Hero from "@/src/components/Hero";
 import HeroTicker from "@/src/components/HeroTicker";
 import CustomCursor from "@/src/components/CustomCursor";
@@ -9,14 +9,15 @@ import LogoMarquee from "@/src/components/LogoMarquee";
 import ProductGrid from "@/src/components/ProductGrid";
 import ServiceSplit from "@/src/components/ServiceSplit";
 import BrandStatement from "@/src/components/BrandStatement";
-import TrustReasons from "@/src/components/TrustReasons";
 import BentoStats from "@/src/components/BentoStats";
 import AboutPage from "@/src/components/AboutPage";
 import GroupPage from "@/src/components/GroupPage";
 import TestimonialCarousel from "@/src/components/TestimonialCarousel";
 import MultiStepForm from "@/src/components/MultiStepForm";
 import Footer from "@/src/components/Footer";
+import { brand } from "@/src/content/brand";
 import type { PageId } from "@/src/types/page";
+import type { StaggeredMenuItem } from "@/src/components/StaggeredMenu";
 
 /** Cleared when the user wipes site data / cache — then the intro loader shows again. */
 const PRELOADER_SEEN_KEY = "bawany-enterprises-preloader-seen";
@@ -88,13 +89,48 @@ export default function App() {
     return () => window.removeEventListener("hashchange", onHash);
   }, []);
 
+  const menuItems: StaggeredMenuItem[] = [
+    { label: "Home", ariaLabel: "Go to home page", onClick: () => navigate("home") },
+    { label: "About", ariaLabel: "Learn about us", onClick: () => navigate("about") },
+    { label: "Our Group", ariaLabel: "Explore our group companies", onClick: () => navigate("group") },
+    {
+      label: "Divisions",
+      ariaLabel: "View our divisions",
+      onClick: () => navigate("home", "#divisions-section"),
+    },
+    {
+      label: "Contact",
+      ariaLabel: "Get in touch",
+      onClick: () => navigate("home", "#contact-form-section"),
+    },
+  ];
+
+  const socialItems = [
+    { label: "LinkedIn", link: brand.social.linkedin || "#" },
+    { label: "Instagram", link: brand.social.instagram || "#" },
+  ];
+
   return (
     <SmoothScrollProvider enabled={!loading}>
       {loading && <Preloader onComplete={handlePreloaderComplete} />}
 
       <div className="bg-surface text-on-surface min-h-screen font-sans selection:bg-electric-lime selection:text-jet-black antialiased md:cursor-none">
         <CustomCursor />
-        <Navbar page={page} onNavigate={navigate} />
+        <StaggeredMenu
+          position="right"
+          items={menuItems}
+          socialItems={socialItems}
+          displaySocials
+          displayItemNumbering
+          isFixed
+          logoUrl="/assets/bawany-wordmark.svg"
+          menuButtonColor="#000000"
+          openMenuButtonColor="#000000"
+          changeMenuColorOnOpen={false}
+          colors={["#0a0a0a", "#64ff00"]}
+          accentColor="#64ff00"
+          onLogoClick={() => navigate("home")}
+        />
 
         <main>
           {page === "about" ? (
@@ -109,7 +145,6 @@ export default function App() {
               <ProductGrid />
               <BrandStatement />
               <ServiceSplit />
-              <TrustReasons />
               <BentoStats />
               <TestimonialCarousel />
               <MultiStepForm />

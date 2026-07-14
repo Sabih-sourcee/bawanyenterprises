@@ -256,7 +256,8 @@ export const workItems = [
     title: "Genuine After-Sales Support",
     client: "Customer Care Operations",
     metric: "Real Warranty Coverage",
-    image: "/assets/work/led-retrofit.webp",
+    image: "/assets/work/support.jpeg",
+    hoverImage: "/assets/work/support-hover.jpeg",
     layout: "half" as const,
   },
   {
@@ -265,7 +266,8 @@ export const workItems = [
     title: "Bawany Mobile Accessories",
     client: "Retail & Wholesale Trust",
     metric: "Nationwide Reach",
-    image: "/assets/work/commercial-solar.webp",
+    image: "/assets/work/mobile-phone.jpeg",
+    hoverImage: "/assets/work/mobile-phone-hover.jpeg",
     layout: "half" as const,
   },
 ];
