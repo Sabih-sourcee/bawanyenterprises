@@ -61,6 +61,51 @@ export const divisions = [
     ],
     image: "/assets/verticals/tech.webp",
   },
+  {
+    id: "factor-led",
+    name: "Factor LED",
+    shortLabel: "Factor LED",
+    tag: "SINCE 2018",
+    description:
+      "A manufacturer — not just a distributor — designing and producing residential, commercial, industrial, and architectural lighting from COB lights to street lighting.",
+    features: [
+      "LED Manufacturer",
+      "Residential & Commercial",
+      "Industrial Lighting",
+      "Street Lighting",
+    ],
+    image: "/assets/verticals/led.webp",
+  },
+  {
+    id: "factor-solar",
+    name: "Factor Solar",
+    shortLabel: "Factor Solar",
+    tag: "SINCE 2022",
+    description:
+      "Importing and distributing solar panels, lithium batteries, and inverters — helping homes and businesses take control of their own power.",
+    features: [
+      "Solar Panels",
+      "Lithium Batteries",
+      "Inverters",
+      "Energy Solutions",
+    ],
+    image: "/assets/verticals/solar.webp",
+  },
+  {
+    id: "factor-institutional",
+    name: "Factor Institutional",
+    shortLabel: "Institutional",
+    tag: "SINCE 2026",
+    description:
+      "Taking everything we've learned in lighting and energy and applying it at institutional scale — for partners who need the whole picture.",
+    features: [
+      "Institutional Projects",
+      "Lighting & Energy",
+      "Large-Scale Delivery",
+      "End-to-End Partners",
+    ],
+    image: "/assets/verticals/led.webp",
+  },
 ] as const;
 
 export const verticals = divisions;

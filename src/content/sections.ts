@@ -46,7 +46,7 @@ export const buzzStats = [
     suffix: "",
     label: "The year we started distributing mobile phones the right way.",
     variant: "accent" as const,
-    span: "col-span-1 row-span-1",
+    span: "col-span-1",
   },
   {
     id: "stat-2",
@@ -54,7 +54,7 @@ export const buzzStats = [
     suffix: "",
     label: "Brought Infinix to Pakistan as the first official distributor.",
     variant: "light" as const,
-    span: "col-span-1 row-span-1",
+    span: "col-span-1",
   },
   {
     id: "stat-3",
@@ -62,7 +62,7 @@ export const buzzStats = [
     suffix: "%",
     label: "PTA approved devices. Real phones, real registration.",
     variant: "light" as const,
-    span: "col-span-1 row-span-1",
+    span: "col-span-1",
   },
   {
     id: "stat-4",
@@ -70,7 +70,7 @@ export const buzzStats = [
     suffix: "",
     label: "years standing on the same principles — do it right, or don't do it.",
     variant: "light" as const,
-    span: "col-span-2 row-span-1",
+    span: "col-span-1 md:col-span-2",
     large: true,
   },
   {
@@ -79,7 +79,7 @@ export const buzzStats = [
     suffix: "-wide",
     label: "retail and wholesale reach across Pakistan.",
     variant: "accent" as const,
-    span: "col-span-1 row-span-1",
+    span: "col-span-1",
     large: true,
   },
   {
@@ -88,7 +88,7 @@ export const buzzStats = [
     suffix: "",
     label: "",
     variant: "dark" as const,
-    span: "col-span-1 row-span-1",
+    span: "col-span-1",
     icon: "heart" as const,
   },
 ];
@@ -199,16 +199,15 @@ export const locations = [
 export const navLinks = [
   { title: "Home", href: "#home", page: "home" as const },
   { title: "About", href: "#about", page: "about" as const },
-  { title: "Our Group", href: "#group", page: "group" as const },
-  { title: "Divisions", href: "#divisions-section", page: "home" as const },
+  { title: "Divisions", href: "#divisions", page: "divisions" as const },
   { title: "Contact", href: "#contact-form-section", page: "home" as const },
 ];
 
 export const footerLinks = {
-  divisions: divisions.map((d) => ({ label: d.name, href: "#divisions-section" })),
+  divisions: divisions.map((d) => ({ label: d.name, href: "#divisions" })),
   company: [
     { label: "About Us", href: "#about" },
-    { label: "Our Group", href: "#group" },
+    { label: "Divisions", href: "#divisions" },
     { label: "Contact Us", href: "#contact-form-section" },
   ],
   connect: [

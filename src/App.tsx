@@ -25,7 +25,8 @@ const PRELOADER_SEEN_KEY = "bawany-enterprises-preloader-seen";
 function pageFromHash(): PageId {
   const hash = window.location.hash.replace("#", "").split("/")[0];
   if (hash === "about") return "about";
-  if (hash === "group") return "group";
+  // #divisions is the group companies page (formerly #group)
+  if (hash === "divisions" || hash === "group") return "divisions";
   return "home";
 }
 
@@ -64,8 +65,8 @@ export default function App() {
       window.scrollTo({ top: 0 });
       return;
     }
-    if (next === "group") {
-      window.history.pushState(null, "", "#group");
+    if (next === "divisions") {
+      window.history.pushState(null, "", "#divisions");
       window.scrollTo({ top: 0 });
       return;
     }
@@ -84,7 +85,17 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    const onHash = () => setPage(pageFromHash());
+    const onHash = () => {
+      const raw = window.location.hash.replace("#", "").split("/")[0];
+      // Keep legacy #group URLs working → same page as #divisions
+      if (raw === "group") {
+        window.history.replaceState(null, "", "#divisions");
+      }
+      setPage(pageFromHash());
+      if (raw === "divisions" || raw === "group" || raw === "about") {
+        window.scrollTo({ top: 0 });
+      }
+    };
     window.addEventListener("hashchange", onHash);
     return () => window.removeEventListener("hashchange", onHash);
   }, []);
@@ -92,11 +103,10 @@ export default function App() {
   const menuItems: StaggeredMenuItem[] = [
     { label: "Home", ariaLabel: "Go to home page", onClick: () => navigate("home") },
     { label: "About", ariaLabel: "Learn about us", onClick: () => navigate("about") },
-    { label: "Our Group", ariaLabel: "Explore our group companies", onClick: () => navigate("group") },
     {
       label: "Divisions",
       ariaLabel: "View our divisions",
-      onClick: () => navigate("home", "#divisions-section"),
+      onClick: () => navigate("divisions"),
     },
     {
       label: "Contact",
@@ -135,7 +145,7 @@ export default function App() {
         <main>
           {page === "about" ? (
             <AboutPage onContact={() => navigate("home", "#contact-form-section")} />
-          ) : page === "group" ? (
+          ) : page === "divisions" ? (
             <GroupPage />
           ) : (
             <>

@@ -81,15 +81,6 @@ export default function Navbar({ page, onNavigate }: NavbarProps) {
           >
             About
           </button>
-          <button
-            type="button"
-            onClick={() => go("group")}
-            className={`text-label-caps transition-colors cursor-pointer ${
-              page === "group" ? "text-jet-black" : "text-on-surface-variant hover:text-jet-black"
-            }`}
-          >
-            Our Group
-          </button>
 
           <div
             className="relative h-full flex items-center"
@@ -99,7 +90,7 @@ export default function Navbar({ page, onNavigate }: NavbarProps) {
             <button
               type="button"
               className="text-label-caps text-on-surface-variant hover:text-jet-black transition-colors flex items-center gap-2 cursor-pointer"
-              onClick={() => go("home", "#divisions-section")}
+              onClick={() => go("divisions")}
             >
               Divisions
               <span className="w-1.5 h-1.5 bg-electric-lime" />
@@ -118,7 +109,7 @@ export default function Navbar({ page, onNavigate }: NavbarProps) {
                     <button
                       key={v.id}
                       type="button"
-                      onClick={() => go("home", "#divisions-section")}
+                      onClick={() => go("divisions")}
                       className="bg-pure-white p-6 hover:bg-electric-lime group transition-colors text-left cursor-pointer"
                     >
                       <p className="text-label-caps text-on-surface-variant group-hover:text-jet-black mb-2">
@@ -185,7 +176,7 @@ export default function Navbar({ page, onNavigate }: NavbarProps) {
                   key={link.title}
                   type="button"
                   onClick={() => {
-                    if (link.page === "about" || link.page === "group") {
+                    if (link.page === "about" || link.page === "divisions") {
                       go(link.page);
                       return;
                     }

@@ -24,7 +24,7 @@ export default function ServiceSplit() {
   return (
     <section
       ref={sectionRef}
-      id="divisions-section"
+      id="built-on"
       className="relative bg-surface border-t border-jet-black/10 section-y"
     >
       <div className="services-blob" aria-hidden />
@@ -38,12 +38,11 @@ export default function ServiceSplit() {
 
         <div ref={introRef} className="services-intro relative z-10">
           <p data-services-line>
-            From accessories to the first official Infinix partnership — every step earned.
+            From accessories to Infinix, lighting, and energy — every step earned.
           </p>
         </div>
       </PageContainer>
 
-      {/* Full-bleed 50/50 cards — no scroll scrub */}
       <div className="divisions-grid relative z-[5]">
         {serviceTabs.map((tab) => (
           <article key={tab.id} data-service-card className="divisions-card">
