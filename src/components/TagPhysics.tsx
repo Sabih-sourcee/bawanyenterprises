@@ -8,16 +8,16 @@ import { prefersReducedMotion } from "@/src/lib/animations";
    dragged with the mouse. */
 
 const TAGS = [
+  "Since 1996",
   "PTA Approved",
-  "Official Imports",
-  "Bawany Mobiles",
-  "Intro Technology",
+  "Bawany Mobile",
   "Infinix Pakistan",
-  "Genuine Warranty",
-  "Legal Channels",
+  "Factor LED",
+  "Factor Solar",
+  "Genuine Devices",
+  "Login Smart",
   "Nationwide Reach",
-  "Authentic Devices",
-  "Dealer Network",
+  "Do It Right",
 ];
 
 interface PillBody {

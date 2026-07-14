@@ -10,30 +10,61 @@ import ProductGrid from "@/src/components/ProductGrid";
 import ServiceSplit from "@/src/components/ServiceSplit";
 import BrandStatement from "@/src/components/BrandStatement";
 import TrustReasons from "@/src/components/TrustReasons";
+import BentoStats from "@/src/components/BentoStats";
 import AboutPage from "@/src/components/AboutPage";
+import GroupPage from "@/src/components/GroupPage";
 import TestimonialCarousel from "@/src/components/TestimonialCarousel";
 import MultiStepForm from "@/src/components/MultiStepForm";
 import Footer from "@/src/components/Footer";
+import type { PageId } from "@/src/types/page";
 
-type PageId = "home" | "about";
+/** Cleared when the user wipes site data / cache — then the intro loader shows again. */
+const PRELOADER_SEEN_KEY = "bawany-enterprises-preloader-seen";
 
 function pageFromHash(): PageId {
-  const hash = window.location.hash.replace("#", "");
+  const hash = window.location.hash.replace("#", "").split("/")[0];
   if (hash === "about") return "about";
+  if (hash === "group") return "group";
   return "home";
 }
 
+function hasSeenPreloader(): boolean {
+  try {
+    return localStorage.getItem(PRELOADER_SEEN_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+
+function markPreloaderSeen() {
+  try {
+    localStorage.setItem(PRELOADER_SEEN_KEY, "1");
+  } catch {
+    /* private mode / blocked storage — skip persist */
+  }
+}
+
 export default function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(() =>
+    typeof window !== "undefined" ? !hasSeenPreloader() : true,
+  );
   const [page, setPage] = useState<PageId>(() =>
     typeof window !== "undefined" ? pageFromHash() : "home",
   );
-  const handlePreloaderComplete = useCallback(() => setLoading(false), []);
+  const handlePreloaderComplete = useCallback(() => {
+    markPreloaderSeen();
+    setLoading(false);
+  }, []);
 
   const navigate = useCallback((next: PageId, hash?: string) => {
     setPage(next);
     if (next === "about") {
       window.history.pushState(null, "", "#about");
+      window.scrollTo({ top: 0 });
+      return;
+    }
+    if (next === "group") {
+      window.history.pushState(null, "", "#group");
       window.scrollTo({ top: 0 });
       return;
     }
@@ -68,6 +99,8 @@ export default function App() {
         <main>
           {page === "about" ? (
             <AboutPage onContact={() => navigate("home", "#contact-form-section")} />
+          ) : page === "group" ? (
+            <GroupPage />
           ) : (
             <>
               <Hero />
@@ -77,6 +110,7 @@ export default function App() {
               <BrandStatement />
               <ServiceSplit />
               <TrustReasons />
+              <BentoStats />
               <TestimonialCarousel />
               <MultiStepForm />
             </>

@@ -101,7 +101,7 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 md:mt-10">
-            <Button href="#brands-section" variant="primary">
+            <Button href="#about-section" variant="primary">
               {brand.heroCta}
             </Button>
           </div>

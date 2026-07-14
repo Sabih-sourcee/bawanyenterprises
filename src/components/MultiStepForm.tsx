@@ -58,7 +58,10 @@ export default function MultiStepForm() {
       {/* Buzz: full-bleed black panel — not wrapped in page-shell */}
       <div className="contact-panel">
         <div className="contact-inner">
-          <h2 className="contact-heading">Get In Touch</h2>
+          <h2 className="contact-heading">{brand.contactCtaHeadline}</h2>
+          <p className="text-pure-white/60 text-body-lg max-w-2xl mt-4 mb-8 leading-relaxed">
+            {brand.contactCtaBody}
+          </p>
 
           {submitted ? (
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="py-16 text-center">

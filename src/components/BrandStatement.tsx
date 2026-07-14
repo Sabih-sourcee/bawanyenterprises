@@ -22,7 +22,7 @@ export default function BrandStatement() {
       <PageContainer>
         <p className="section-label mb-4">{whoWeAre.label}</p>
         <h2 data-about-h className="section-heading mb-10 md:mb-14 max-w-4xl">
-          Official importer. Genuine devices. Fully PTA approved.
+          {whoWeAre.headline}
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 max-w-5xl">

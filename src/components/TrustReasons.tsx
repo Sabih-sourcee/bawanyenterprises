@@ -26,9 +26,9 @@ export default function TrustReasons() {
       className="section-y bg-surface border-t border-jet-black/10"
     >
       <PageContainer>
-        <p className="section-label mb-4">Why People Trust Bawany Enterprises</p>
+        <p className="section-label mb-4">Why People Stick With Us</p>
         <h2 data-trust-h className="section-heading mb-10 md:mb-14 max-w-3xl">
-          Authentic imports. Real warranty. Nationwide reach.
+          Almost thirty years. Same principles. Still growing.
         </h2>
 
         {/* Same card language as Selected Work — buzz-card-round, not pill radius */}

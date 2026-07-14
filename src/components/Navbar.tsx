@@ -4,10 +4,9 @@ import { Menu, X, ArrowUpRight } from "lucide-react";
 import { gsap, ScrollTrigger } from "@/src/lib/animations";
 import { brand, divisions } from "@/src/content/brand";
 import { navLinks } from "@/src/content/sections";
+import type { PageId } from "@/src/types/page";
 import PageContainer from "@/src/components/layout/PageContainer";
 import Button from "@/src/components/ui/Button";
-
-type PageId = "home" | "about";
 
 interface NavbarProps {
   page: PageId;
@@ -81,6 +80,15 @@ export default function Navbar({ page, onNavigate }: NavbarProps) {
             }`}
           >
             About
+          </button>
+          <button
+            type="button"
+            onClick={() => go("group")}
+            className={`text-label-caps transition-colors cursor-pointer ${
+              page === "group" ? "text-jet-black" : "text-on-surface-variant hover:text-jet-black"
+            }`}
+          >
+            Our Group
           </button>
 
           <div
@@ -176,7 +184,16 @@ export default function Navbar({ page, onNavigate }: NavbarProps) {
                 <button
                   key={link.title}
                   type="button"
-                  onClick={() => go(link.page, link.href.startsWith("#") && link.page === "home" && link.href !== "#home" ? link.href : undefined)}
+                  onClick={() => {
+                    if (link.page === "about" || link.page === "group") {
+                      go(link.page);
+                      return;
+                    }
+                    go(
+                      "home",
+                      link.href.startsWith("#") && link.href !== "#home" ? link.href : undefined,
+                    );
+                  }}
                   className="text-label-caps text-jet-black py-2 border-b border-surface-container text-left cursor-pointer"
                 >
                   {link.title}

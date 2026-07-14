@@ -30,18 +30,15 @@ export default function ServiceSplit() {
       <div className="services-blob" aria-hidden />
 
       <PageContainer className="relative z-10 mb-10 md:mb-14">
+        <p className="section-label mb-4">What We&apos;re Built On</p>
         <h2 ref={headingRef} className="services-headline">
           <span ref={dotRef} className="services-dot" aria-hidden />
-          We&apos;re Pakistan&apos;s official mobile importer — two divisions, one promise of
-          authenticity.
+          Different chapters. Same standard.
         </h2>
 
         <div ref={introRef} className="services-intro relative z-10">
           <p data-services-line>
-            Honest imports. PTA approved. Warranty that means something.
-          </p>
-          <p data-services-line>
-            You bring the demand. We&apos;ll keep the supply genuine.
+            From accessories to the first official Infinix partnership — every step earned.
           </p>
         </div>
       </PageContainer>
@@ -51,6 +48,9 @@ export default function ServiceSplit() {
         {serviceTabs.map((tab) => (
           <article key={tab.id} data-service-card className="divisions-card">
             <span className="services-card-title">{tab.title}</span>
+            <p className="text-body-md text-on-surface-variant mt-4 mb-6 leading-relaxed max-w-md mx-auto">
+              {tab.headline}
+            </p>
             <ul className="flex flex-col mt-auto">
               {tab.links.slice(0, 5).map((link) => (
                 <li key={link}>

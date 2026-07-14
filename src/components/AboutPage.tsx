@@ -25,7 +25,7 @@ export default function AboutPage({ onContact }: AboutPageProps) {
   return (
     <section ref={sectionRef} className="hero-offset section-y-lg bg-surface min-h-screen">
       <PageContainer>
-        <p className="section-label mb-4">About Us</p>
+        <p className="section-label mb-4">{aboutPage.label}</p>
         <h1 data-about-reveal className="section-heading mb-8 md:mb-12 max-w-4xl">
           {aboutPage.headline}
         </h1>
@@ -42,7 +42,28 @@ export default function AboutPage({ onContact }: AboutPageProps) {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 mb-16 md:mb-24">
+        <p className="section-label mb-4">{aboutPage.timelineLabel}</p>
+        <h2 data-about-reveal className="section-heading mb-10 md:mb-14 max-w-3xl">
+          From a phone in someone&apos;s hand to a group that lights, powers, and connects.
+        </h2>
+
+        <ol className="relative border-l border-jet-black/20 ml-3 md:ml-4 mb-16 md:mb-24 space-y-10 md:space-y-12">
+          {aboutPage.timeline.map((item) => (
+            <li key={item.year} data-about-reveal className="pl-8 md:pl-10 relative">
+              <span className="absolute left-0 top-1.5 w-2.5 h-2.5 -translate-x-[calc(50%+0.5px)] bg-electric-lime border border-jet-black" />
+              <p className="text-data-mono text-on-surface-variant mb-1">{item.year}</p>
+              <h3 className="font-sans font-bold text-xl md:text-2xl text-jet-black mb-2">
+                {item.title}
+              </h3>
+              <p className="text-body-md text-on-surface-variant leading-relaxed max-w-2xl">
+                {item.body}
+              </p>
+            </li>
+          ))}
+        </ol>
+
+        <p className="section-label mb-4">{aboutPage.whyLabel}</p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 mb-16">
           <div data-about-reveal>
             <h2 className="font-sans font-bold text-2xl md:text-3xl text-jet-black mb-4">
               {aboutPage.mission.title}
@@ -59,28 +80,6 @@ export default function AboutPage({ onContact }: AboutPageProps) {
               {aboutPage.vision.body}
             </p>
           </div>
-        </div>
-
-        <p className="section-label mb-4">What Sets Us Apart</p>
-        <h2 data-about-reveal className="section-heading mb-10 md:mb-14 max-w-3xl">
-          The harder path. Proper process. Products people rely on.
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-16">
-          {aboutPage.differentiators.map((item) => (
-            <article
-              key={item.title}
-              data-about-reveal
-              className="border border-jet-black/20 p-6 md:p-8 buzz-card-round-sm"
-            >
-              <h3 className="font-sans font-bold text-xl md:text-2xl text-jet-black mb-3">
-                {item.title}
-              </h3>
-              <p className="text-body-md text-on-surface-variant leading-relaxed">
-                {item.description}
-              </p>
-            </article>
-          ))}
         </div>
 
         <Button

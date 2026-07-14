@@ -1,21 +1,21 @@
 import { divisions, trustReasons } from "./brand";
 
 export const heroPhrases = [
-  "Mobile Distribution",
-  "Official Imports",
+  "Since 1996",
+  "Infinix Pakistan",
   "PTA Approved",
-  "Genuine Warranty",
+  "Genuine Support",
 ];
 
 export const heroTickerItems = [
-  "Official Importer",
-  "PTA Approved Devices",
-  "Bawany Mobiles",
-  "Intro Technology",
-  "Infinix Pakistan",
-  "Genuine Warranty",
-  "Nationwide Distribution",
-  "Authentic Imports",
+  "Since 1996",
+  "First Infinix Distributor",
+  "Bawany Mobile",
+  "PTA Approved",
+  "Factor Group",
+  "Genuine Devices",
+  "Nationwide Reach",
+  "Do It Right",
 ];
 
 export const partnerLogos = [
@@ -42,33 +42,33 @@ export const trustItems = trustReasons;
 export const buzzStats = [
   {
     id: "stat-1",
-    value: "100",
-    suffix: "%",
-    label: "PTA approved devices. Full registration, zero restrictions.",
+    value: "1996",
+    suffix: "",
+    label: "The year we started distributing mobile phones the right way.",
     variant: "accent" as const,
     span: "col-span-1 row-span-1",
   },
   {
     id: "stat-2",
-    value: "",
+    value: "2015",
     suffix: "",
-    label: "Legal import channels only. No grey market. No shortcuts.",
+    label: "Brought Infinix to Pakistan as the first official distributor.",
     variant: "light" as const,
     span: "col-span-1 row-span-1",
   },
   {
     id: "stat-3",
-    value: "Zero",
-    suffix: "",
-    label: "smuggled stock. Every phone properly documented.",
+    value: "100",
+    suffix: "%",
+    label: "PTA approved devices. Real phones, real registration.",
     variant: "light" as const,
     span: "col-span-1 row-span-1",
   },
   {
     id: "stat-4",
-    value: "2",
+    value: "~30",
     suffix: "",
-    label: "strong divisions — Bawany Mobiles and Intro Technology — one promise of authenticity.",
+    label: "years standing on the same principles — do it right, or don't do it.",
     variant: "light" as const,
     span: "col-span-2 row-span-1",
     large: true,
@@ -77,7 +77,7 @@ export const buzzStats = [
     id: "stat-5",
     value: "Nation",
     suffix: "-wide",
-    label: "distribution reach across Pakistan's major cities.",
+    label: "retail and wholesale reach across Pakistan.",
     variant: "accent" as const,
     span: "col-span-1 row-span-1",
     large: true,
@@ -104,13 +104,13 @@ export const testimonials = [
   },
   {
     quote:
-      "Official Infinix supply through Bawany Mobiles changed our shelves. Steady stock, real warranty, and a team that stands behind every device.",
+      "Official Infinix supply through Bawany changed our shelves. Steady stock, real warranty, and a team that stands behind every device.",
     author: "Usman Ali",
     role: "Dealer — Punjab Region",
   },
   {
     quote:
-      "Intro Technology keeps our retail network supplied without the usual chaos. Transparent process, reliable deliveries.",
+      "Almost thirty years in the market shows. Transparent process, reliable deliveries, and products people trust.",
     author: "Sana Malik",
     role: "Retail Chain Manager",
   },
@@ -140,7 +140,7 @@ export const testimonials = [
   },
   {
     quote:
-      "Official importer status isn't just a label with Bawany — you see it in the paperwork, the process, and the after-sales.",
+      "Being the first official Infinix distributor isn't just a label — you see it in the paperwork, the process, and the after-sales.",
     author: "Procurement Head",
     role: "Enterprise Retail Group",
   },
@@ -153,11 +153,11 @@ export const testimonials = [
 ];
 
 export const formInterests = [
-  "Bawany Mobiles / Infinix",
-  "Intro Technology Partnership",
+  "Bawany Mobile / Infinix",
+  "Login Smart Technology",
+  "Factor LED / Factor Solar",
   "Dealer / Retail Inquiry",
-  "Corporate Procurement",
-  "Warranty & After-Sales",
+  "Corporate / Institutional",
 ];
 
 export const formBudgets = [
@@ -199,6 +199,7 @@ export const locations = [
 export const navLinks = [
   { title: "Home", href: "#home", page: "home" as const },
   { title: "About", href: "#about", page: "about" as const },
+  { title: "Our Group", href: "#group", page: "group" as const },
   { title: "Divisions", href: "#divisions-section", page: "home" as const },
   { title: "Contact", href: "#contact-form-section", page: "home" as const },
 ];
@@ -207,7 +208,7 @@ export const footerLinks = {
   divisions: divisions.map((d) => ({ label: d.name, href: "#divisions-section" })),
   company: [
     { label: "About Us", href: "#about" },
-    { label: "Our Divisions", href: "#divisions-section" },
+    { label: "Our Group", href: "#group" },
     { label: "Contact Us", href: "#contact-form-section" },
   ],
   connect: [
@@ -221,19 +222,19 @@ export const footerLinks = {
 export const workItems = [
   {
     id: "infinix-launch",
-    tags: ["INFINIX", "OFFICIAL", "LAUNCH"],
+    tags: ["INFINIX", "OFFICIAL", "2015"],
     title: "Official Infinix Distribution Rollout",
-    client: "Bawany Mobiles — Nationwide",
-    metric: "PTA Approved Supply",
+    client: "Bawany Enterprises — Nationwide",
+    metric: "First Official Distributor",
     image: "/assets/work/infinix.webp",
     hoverImage: "/assets/work/hover.jpeg",
     layout: "wide" as const,
   },
   {
     id: "dealer-network",
-    tags: ["RETAIL", "DEALERS", "B2B"],
-    title: "Nationwide Dealer Network Expansion",
-    client: "Intro Technology Partners",
+    tags: ["RETAIL", "WHOLESALE", "SINCE 1996"],
+    title: "Nationwide Dealer Network",
+    client: "Bawany Mobile Partners",
     metric: "Major Cities Covered",
     image: "/assets/work/nationwide.jpeg",
     hoverImage: "/assets/work/nationwide-hover.jpeg",
@@ -241,7 +242,7 @@ export const workItems = [
   },
   {
     id: "pta-compliance",
-    tags: ["PTA", "COMPLIANCE", "IMPORTS"],
+    tags: ["PTA", "GENUINE", "APPROVED"],
     title: "Full PTA Registration Pipeline",
     client: "Legal Import Channels",
     metric: "100% Approved Stock",
@@ -252,7 +253,7 @@ export const workItems = [
   {
     id: "warranty-support",
     tags: ["WARRANTY", "SUPPORT", "SERVICE"],
-    title: "Genuine After-Sales Support Network",
+    title: "Genuine After-Sales Support",
     client: "Customer Care Operations",
     metric: "Real Warranty Coverage",
     image: "/assets/work/led-retrofit.webp",
@@ -260,10 +261,10 @@ export const workItems = [
   },
   {
     id: "retail-supply",
-    tags: ["SUPPLY", "RETAIL", "LOGISTICS"],
-    title: "Steady Retail Supply Program",
-    client: "Intro Technology — Distribution",
-    metric: "Transparent Logistics",
+    tags: ["ACCESSORIES", "BAWANY MOBILE", "2005"],
+    title: "Bawany Mobile Accessories",
+    client: "Retail & Wholesale Trust",
+    metric: "Nationwide Reach",
     image: "/assets/work/commercial-solar.webp",
     layout: "half" as const,
   },

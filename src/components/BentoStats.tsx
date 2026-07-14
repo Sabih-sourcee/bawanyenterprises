@@ -73,11 +73,14 @@ export default function BentoStats() {
                     stat.large ? "text-[clamp(3rem,8vw,5rem)]" : "text-[clamp(2rem,5vw,3.5rem)]"
                   }`}
                 >
-                  {stat.value === "Zero" ? (
-                    <span data-stat-value data-word="true">Zero</span>
-                  ) : (
+                  {Number.isFinite(Number(stat.value)) ? (
                     <span data-stat-value data-target={stat.value} data-suffix={stat.suffix}>
                       0{stat.suffix}
+                    </span>
+                  ) : (
+                    <span data-stat-value data-word="true">
+                      {stat.value}
+                      {stat.suffix}
                     </span>
                   )}
                 </p>
