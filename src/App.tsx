@@ -3,7 +3,6 @@ import SmoothScrollProvider from "@/src/providers/SmoothScrollProvider";
 import Preloader from "@/src/components/Preloader";
 import StaggeredMenu from "@/src/components/StaggeredMenu";
 import Hero from "@/src/components/Hero";
-import HeroTicker from "@/src/components/HeroTicker";
 import CustomCursor from "@/src/components/CustomCursor";
 import LogoMarquee from "@/src/components/LogoMarquee";
 import ProductGrid from "@/src/components/ProductGrid";
@@ -150,7 +149,6 @@ export default function App() {
           ) : (
             <>
               <Hero />
-              <HeroTicker />
               <LogoMarquee />
               <ProductGrid />
               <BrandStatement />

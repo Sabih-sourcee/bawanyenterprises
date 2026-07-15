@@ -7,17 +7,6 @@ export const heroPhrases = [
   "Genuine Support",
 ];
 
-export const heroTickerItems = [
-  "Since 1996",
-  "First Infinix Distributor",
-  "Bawany Mobile",
-  "PTA Approved",
-  "Factor Group",
-  "Genuine Devices",
-  "Nationwide Reach",
-  "Do It Right",
-];
-
 export const partnerLogos = [
   { name: "Infinix", src: "/assets/partners/infinix.svg" },
   { name: "Samsung", src: "/assets/partners/samsung.svg" },

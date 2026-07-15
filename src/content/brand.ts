@@ -62,6 +62,21 @@ export const divisions = [
     image: "/assets/verticals/tech.webp",
   },
   {
+    id: "login-story",
+    name: "The Login Story",
+    shortLabel: "Login Smart",
+    tag: "SINCE 2018",
+    description:
+      "What started as a simple accessories line grew into Login Smart Technology — smartwatches, earbuds, speakers, power banks, and the everyday tech people actually reach for.",
+    features: [
+      "Smartwatches & Wearables",
+      "Audio & Earbuds",
+      "Power Banks & Chargers",
+      "Lifestyle Tech",
+    ],
+    image: "/assets/verticals/tech.webp",
+  },
+  {
     id: "factor-led",
     name: "Factor LED",
     shortLabel: "Factor LED",
