@@ -23,6 +23,7 @@ export type StaggeredMenuProps = {
   displayItemNumbering?: boolean;
   className?: string;
   logoUrl?: string;
+  logoUrlOpen?: string;
   menuButtonColor?: string;
   openMenuButtonColor?: string;
   accentColor?: string;
@@ -43,6 +44,7 @@ export default function StaggeredMenu({
   displayItemNumbering = true,
   className,
   logoUrl = "/assets/bawany-wordmark.svg",
+  logoUrlOpen,
   menuButtonColor = "#000",
   openMenuButtonColor = "#000",
   accentColor = "#64ff00",
@@ -64,6 +66,8 @@ export default function StaggeredMenu({
   const textInnerRef = useRef<HTMLSpanElement>(null);
   const toggleBtnRef = useRef<HTMLButtonElement>(null);
   const [textLines, setTextLines] = useState(["Menu", "Close"]);
+
+  const resolvedLogoUrl = open && logoUrlOpen ? logoUrlOpen : logoUrl;
 
   const openTlRef = useRef<gsap.core.Timeline | null>(null);
   const closeTweenRef = useRef<gsap.core.Tween | null>(null);
@@ -396,7 +400,7 @@ export default function StaggeredMenu({
       <header className="staggered-menu-header" aria-label="Main navigation header">
         <button type="button" className="sm-logo" aria-label="Bawany home" onClick={onLogoClick}>
           <img
-            src={logoUrl}
+            src={resolvedLogoUrl}
             alt="Bawany"
             className="sm-logo-img"
             draggable={false}

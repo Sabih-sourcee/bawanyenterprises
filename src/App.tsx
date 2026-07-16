@@ -11,6 +11,7 @@ import BrandStatement from "@/src/components/BrandStatement";
 import BentoStats from "@/src/components/BentoStats";
 import AboutPage from "@/src/components/AboutPage";
 import GroupPage from "@/src/components/GroupPage";
+import InfinixStoryPage from "@/src/components/InfinixStoryPage";
 import TestimonialCarousel from "@/src/components/TestimonialCarousel";
 import MultiStepForm from "@/src/components/MultiStepForm";
 import Footer from "@/src/components/Footer";
@@ -24,6 +25,7 @@ const PRELOADER_SEEN_KEY = "bawany-enterprises-preloader-seen";
 function pageFromHash(): PageId {
   const hash = window.location.hash.replace("#", "").split("/")[0];
   if (hash === "about") return "about";
+  if (hash === "infinix") return "infinix";
   // #divisions is the group companies page (formerly #group)
   if (hash === "divisions" || hash === "group") return "divisions";
   return "home";
@@ -69,6 +71,11 @@ export default function App() {
       window.scrollTo({ top: 0 });
       return;
     }
+    if (next === "infinix") {
+      window.history.pushState(null, "", "#infinix");
+      window.scrollTo({ top: 0 });
+      return;
+    }
     const target = hash && hash !== "#home" ? hash : "#home";
     window.history.pushState(null, "", target === "#home" ? "#" : target);
     requestAnimationFrame(() => {
@@ -91,7 +98,7 @@ export default function App() {
         window.history.replaceState(null, "", "#divisions");
       }
       setPage(pageFromHash());
-      if (raw === "divisions" || raw === "group" || raw === "about") {
+      if (raw === "divisions" || raw === "group" || raw === "about" || raw === "infinix") {
         window.scrollTo({ top: 0 });
       }
     };
@@ -102,6 +109,11 @@ export default function App() {
   const menuItems: StaggeredMenuItem[] = [
     { label: "Home", ariaLabel: "Go to home page", onClick: () => navigate("home") },
     { label: "About", ariaLabel: "Learn about us", onClick: () => navigate("about") },
+    {
+      label: "Infinix",
+      ariaLabel: "Read the Infinix story",
+      onClick: () => navigate("infinix"),
+    },
     {
       label: "Divisions",
       ariaLabel: "View our divisions",
@@ -132,10 +144,10 @@ export default function App() {
           displaySocials
           displayItemNumbering
           isFixed
-          logoUrl="/assets/bawany-wordmark.svg"
+          logoUrl="/assets/logo/bawany-logo-black.png"
           menuButtonColor="#000000"
-          openMenuButtonColor="#000000"
-          changeMenuColorOnOpen={false}
+          openMenuButtonColor="#ffffff"
+          changeMenuColorOnOpen
           colors={["#0a0a0a", "#64ff00"]}
           accentColor="#64ff00"
           onLogoClick={() => navigate("home")}
@@ -146,6 +158,8 @@ export default function App() {
             <AboutPage onContact={() => navigate("home", "#contact-form-section")} />
           ) : page === "divisions" ? (
             <GroupPage />
+          ) : page === "infinix" ? (
+            <InfinixStoryPage onContact={() => navigate("home", "#contact-form-section")} />
           ) : (
             <>
               <Hero />

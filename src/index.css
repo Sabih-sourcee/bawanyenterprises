@@ -602,6 +602,10 @@ body {
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--color-pure-white);
+  /* Extra separation when heading overlaps any faint artwork/logos */
+  text-shadow:
+    0 0 0.55rem rgba(0, 0, 0, 0.7),
+    0 0 1.25rem rgba(100, 255, 0, 0.18);
   margin-bottom: clamp(2rem, 5vw, 4.5rem);
 }
 
@@ -624,7 +628,7 @@ body {
 }
 
 .contact-input::placeholder {
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .contact-input:focus {
@@ -725,6 +729,17 @@ body {
 
 .contact-radio input {
   accent-color: var(--color-electric-lime);
+}
+
+/* ── Infinix Story page ── */
+.infinix-scene canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.infinix-hero {
+  isolation: isolate;
 }
 
 /* Buzz-style skewed hero frame */

@@ -52,8 +52,8 @@ export default function LogoMarquee() {
     if (!track) return;
 
     const itemEls = Array.from(
-      track.querySelectorAll<HTMLElement>("[data-brand-item]")
-    );
+      track.querySelectorAll("[data-brand-item]")
+    ) as HTMLElement[];
 
     const setIdle = (el: HTMLElement, immediate = false) => {
       const text = el.querySelector<HTMLElement>("[data-brand-text]");

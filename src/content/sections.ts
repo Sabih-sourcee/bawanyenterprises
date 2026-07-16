@@ -188,6 +188,7 @@ export const locations = [
 export const navLinks = [
   { title: "Home", href: "#home", page: "home" as const },
   { title: "About", href: "#about", page: "about" as const },
+  { title: "Infinix Story", href: "#infinix", page: "infinix" as const },
   { title: "Divisions", href: "#divisions", page: "divisions" as const },
   { title: "Contact", href: "#contact-form-section", page: "home" as const },
 ];
@@ -195,6 +196,7 @@ export const navLinks = [
 export const footerLinks = {
   divisions: divisions.map((d) => ({ label: d.name, href: "#divisions" })),
   company: [
+    { label: "Infinix Story", href: "#infinix" },
     { label: "About Us", href: "#about" },
     { label: "Divisions", href: "#divisions" },
     { label: "Contact Us", href: "#contact-form-section" },
