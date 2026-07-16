@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import PageContainer from "@/src/components/layout/PageContainer";
 import Button from "@/src/components/ui/Button";
@@ -13,6 +13,7 @@ interface InfinixStoryPageProps {
 export default function InfinixStoryPage({ onContact }: InfinixStoryPageProps) {
   const pageRef = useRef<HTMLElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
+  const [activeSeries, setActiveSeries] = useState<string>("latest");
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -41,35 +42,21 @@ export default function InfinixStoryPage({ onContact }: InfinixStoryPageProps) {
           },
         });
       }
-
-      page.querySelectorAll("[data-infinix-product]").forEach((card) => {
-        const img = card.querySelector(".infinix-product-img") as HTMLElement | null;
-        if (!img) return;
-        gsap.fromTo(
-          img,
-          { scale: 1.04 },
-          {
-            scale: 1,
-            ease: "none",
-            scrollTrigger: {
-              trigger: card,
-              start: "top bottom",
-              end: "bottom top",
-              scrub: 1,
-            },
-          },
-        );
-      });
     }, page);
 
     return () => ctx.revert();
   }, []);
 
-  const { brand, products, productsLabel, productsHeadline, cta } = infinixStoryPage;
+  const { brand, products, productsLabel, productsHeadline, seriesTabs, viewAllHref, cta } =
+    infinixStoryPage;
+
+  const visibleProducts =
+    activeSeries === "latest"
+      ? products.filter((p) => p.latest)
+      : products.filter((p) => p.series === activeSeries);
 
   return (
     <article ref={pageRef} className="infinix-story bg-pure-white text-jet-black">
-      {/* Hero — 3D floating title */}
       <header
         ref={heroRef}
         className="infinix-hero relative min-h-[100svh] overflow-hidden bg-pure-white"
@@ -123,59 +110,77 @@ export default function InfinixStoryPage({ onContact }: InfinixStoryPageProps) {
         </PageContainer>
       </section>
 
-      {/* Products */}
+      {/* Series products */}
       <section className="border-t border-jet-black/10 section-y">
         <PageContainer>
           <p className="section-label mb-4">{productsLabel}</p>
-          <h2 data-infinix-reveal className="section-heading mb-12 md:mb-16 max-w-3xl">
+          <h2 data-infinix-reveal className="section-heading mb-8 md:mb-10 max-w-3xl">
             {productsHeadline}
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
-            {products.map((product, idx) => (
-              <article
-                key={product.id}
-                data-infinix-product
-                className={`group overflow-hidden bg-surface-container-low flex flex-col ${
-                  idx === 0 ? "md:col-span-2" : ""
-                }`}
-              >
-                <div
-                  className={`relative overflow-hidden bg-surface-container w-full ${
-                    idx === 0
-                      ? "aspect-[16/9] sm:aspect-[2/1] md:aspect-[21/9]"
-                      : "aspect-[4/3]"
+          <div
+            className="flex gap-1 overflow-x-auto scroll-bleed mb-8 md:mb-10 pb-1"
+            role="tablist"
+            aria-label="Infinix series"
+          >
+            {seriesTabs.map((tab) => {
+              const isActive = activeSeries === tab.id;
+              return (
+                <button
+                  key={tab.id}
+                  type="button"
+                  role="tab"
+                  aria-selected={isActive}
+                  onClick={() => setActiveSeries(tab.id)}
+                  className={`shrink-0 px-3 sm:px-4 py-2 text-sm sm:text-base font-sans font-semibold tracking-wide whitespace-nowrap transition-colors border-b-2 ${
+                    isActive
+                      ? "text-jet-black border-electric-lime"
+                      : "text-on-surface-variant border-transparent hover:text-jet-black"
                   }`}
                 >
+                  {tab.label}
+                </button>
+              );
+            })}
+          </div>
+
+          <div
+            key={activeSeries}
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4"
+          >
+            {visibleProducts.map((product) => (
+              <article
+                key={product.id}
+                className="group flex flex-col items-center text-center rounded-2xl bg-surface-container-low p-4 sm:p-5 md:p-6"
+              >
+                <div className="relative w-full aspect-[3/4] max-h-[220px] sm:max-h-[260px] flex items-center justify-center mb-4">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="infinix-product-img absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
+                    className="max-h-full max-w-full w-auto h-auto object-contain transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
-                  <span className="absolute top-3 left-3 sm:top-4 sm:left-4 text-label-caps bg-pure-white/90 text-jet-black px-2.5 py-1">
-                    {product.tag}
-                  </span>
                 </div>
-                <div className="p-5 sm:p-6 md:p-8 flex-1">
-                  <p className="text-data-mono text-on-surface-variant mb-1">{product.category}</p>
-                  <h3
-                    data-infinix-reveal
-                    className="font-sans font-bold text-lg sm:text-xl md:text-2xl text-jet-black mb-2"
-                  >
-                    {product.name}
-                  </h3>
-                  <p className="text-body-md text-on-surface-variant leading-relaxed max-w-lg">
-                    {product.description}
-                  </p>
-                </div>
+                <h3 className="font-sans font-bold text-sm sm:text-base md:text-lg text-jet-black">
+                  {product.name}
+                </h3>
               </article>
             ))}
+
+            <a
+              href={viewAllHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center justify-center rounded-2xl bg-surface-container-low p-6 min-h-[200px] sm:min-h-[240px] text-jet-black hover:bg-jet-black hover:text-pure-white transition-colors group"
+            >
+              <span className="font-sans font-bold text-lg sm:text-xl">
+                View All <span className="text-electric-lime group-hover:text-electric-lime">+</span>
+              </span>
+            </a>
           </div>
         </PageContainer>
       </section>
 
-      {/* CTA */}
       <section className="section-y-lg border-t border-jet-black/10 bg-surface-container-low">
         <PageContainer>
           <h2 data-infinix-reveal className="section-heading mb-4 max-w-2xl">
