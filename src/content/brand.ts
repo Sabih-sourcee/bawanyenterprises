@@ -268,4 +268,77 @@ export const groupPage = {
     "Different names, different products, same rule we started with — do it right, or don't do it. Wherever you find us in this group, that's what you're getting.",
 } as const;
 
+export type EventStatus = "upcoming" | "past";
+
+export interface BawanyEvent {
+  id: string;
+  status: EventStatus;
+  name: string;
+  dateLabel: string;
+  /** ISO date (YYYY-MM-DD) used only for sorting */
+  sortDate: string;
+  venue: string;
+  city: string;
+  division?: string;
+  summary: string;
+  href?: string;
+  ctaLabel?: string;
+  image?: string;
+  /** Additional photos for a past-event gallery */
+  images?: string[];
+}
+
+export const eventsPage = {
+  label: "Events",
+  headline: "Where We Show Up",
+  intro: [
+    "From trade shows to dealer meetups and product launches, Bawany Enterprises and our group companies meet partners and customers face to face.",
+    "There are no upcoming events scheduled right now. Below is a look at what we have already done — starting with a decade alongside Infinix.",
+  ],
+  upcomingLabel: "Upcoming",
+  pastLabel: "Past Events",
+  emptyUpcoming: "No upcoming events scheduled right now. Check back soon.",
+  emptyPast: "Past events will appear here once they are added.",
+  events: [
+    {
+      id: "10-years-with-infinix",
+      status: "past",
+      name: "10 Years with Infinix",
+      dateLabel: "2025",
+      sortDate: "2025-01-01",
+      venue: "Partnership celebration",
+      city: "Pakistan",
+      division: "Infinix",
+      summary:
+        "Celebrating a decade of style, performance, and trust with Infinix — from the first official distribution in 2015 to ten years of partnership.",
+      image: "/assets/events/event-01.jpeg",
+      images: [
+        "/assets/events/event-02.jpeg",
+        "/assets/events/event-03.jpeg",
+        "/assets/events/event-04.jpeg",
+        "/assets/events/event-05.jpeg",
+        "/assets/events/event-06.jpeg",
+        "/assets/events/event-07.jpeg",
+        "/assets/events/event-08.jpeg",
+        "/assets/events/event-09.jpeg",
+        "/assets/events/event-10.jpeg",
+        "/assets/events/event-11.jpeg",
+        "/assets/events/event-12.jpeg",
+        "/assets/events/event-13.jpeg",
+        "/assets/events/event-14.jpeg",
+        "/assets/events/event-15.jpeg",
+        "/assets/events/event-16.jpeg",
+        "/assets/events/event-17.jpeg",
+        "/assets/events/event-18.jpeg",
+        "/assets/events/event-19.jpeg",
+        "/assets/events/event-20.jpeg",
+        "/assets/events/event-21.jpeg",
+        "/assets/events/event-22.jpeg",
+        "/assets/events/event-23.jpeg",
+        "/assets/events/event-24.jpeg",
+      ],
+    },
+  ] as BawanyEvent[],
+};
+
 export const values = trustReasons;

@@ -11,6 +11,7 @@ import BrandStatement from "@/src/components/BrandStatement";
 import BentoStats from "@/src/components/BentoStats";
 import AboutPage from "@/src/components/AboutPage";
 import GroupPage from "@/src/components/GroupPage";
+import EventsPage from "@/src/components/EventsPage";
 import InfinixStoryPage from "@/src/components/InfinixStoryPage";
 import TestimonialCarousel from "@/src/components/TestimonialCarousel";
 import MultiStepForm from "@/src/components/MultiStepForm";
@@ -26,6 +27,7 @@ function pageFromHash(): PageId {
   const hash = window.location.hash.replace("#", "").split("/")[0];
   if (hash === "about") return "about";
   if (hash === "infinix") return "infinix";
+  if (hash === "events") return "events";
   // #divisions is the group companies page (formerly #group)
   if (hash === "divisions" || hash === "group") return "divisions";
   return "home";
@@ -76,6 +78,11 @@ export default function App() {
       window.scrollTo({ top: 0 });
       return;
     }
+    if (next === "events") {
+      window.history.pushState(null, "", "#events");
+      window.scrollTo({ top: 0 });
+      return;
+    }
     const target = hash && hash !== "#home" ? hash : "#home";
     window.history.pushState(null, "", target === "#home" ? "#" : target);
     requestAnimationFrame(() => {
@@ -98,7 +105,13 @@ export default function App() {
         window.history.replaceState(null, "", "#divisions");
       }
       setPage(pageFromHash());
-      if (raw === "divisions" || raw === "group" || raw === "about" || raw === "infinix") {
+      if (
+        raw === "divisions" ||
+        raw === "group" ||
+        raw === "about" ||
+        raw === "infinix" ||
+        raw === "events"
+      ) {
         window.scrollTo({ top: 0 });
       }
     };
@@ -118,6 +131,11 @@ export default function App() {
       label: "Divisions",
       ariaLabel: "View our divisions",
       onClick: () => navigate("divisions"),
+    },
+    {
+      label: "Events",
+      ariaLabel: "View our events",
+      onClick: () => navigate("events"),
     },
     {
       label: "Contact",
@@ -158,6 +176,8 @@ export default function App() {
             <AboutPage onContact={() => navigate("home", "#contact-form-section")} />
           ) : page === "divisions" ? (
             <GroupPage />
+          ) : page === "events" ? (
+            <EventsPage />
           ) : page === "infinix" ? (
             <InfinixStoryPage onContact={() => navigate("home", "#contact-form-section")} />
           ) : (
