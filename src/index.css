@@ -54,10 +54,9 @@
   will-change: transform;
   line-height: 0;
   background: none;
-  /* Black artwork → invert to white, then difference-blend so it
-     reads black on light surfaces and white on dark surfaces */
-  filter: invert(1);
-  mix-blend-mode: difference;
+  /* Dual shadow keeps the black artwork visible on light and dark UI */
+  filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.95))
+    drop-shadow(0 0 1px rgba(0, 0, 0, 0.95));
 }
 
 .custom-cursor__inner {

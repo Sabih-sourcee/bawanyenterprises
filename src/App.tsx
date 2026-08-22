@@ -153,7 +153,7 @@ export default function App() {
     <SmoothScrollProvider enabled={!loading}>
       {loading && <Preloader onComplete={handlePreloaderComplete} />}
 
-      <div className="bg-surface text-on-surface min-h-screen font-sans selection:bg-electric-lime selection:text-jet-black antialiased md:cursor-none">
+      <div className="bg-surface text-on-surface min-h-screen font-sans selection:bg-electric-lime selection:text-jet-black antialiased">
         <CustomCursor />
         <StaggeredMenu
           position="right"

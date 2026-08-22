@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { gsap, prefersReducedMotion } from "@/src/lib/animations";
 
 const DEFAULT_SRC = "/assets/cursor-default.png?v=2";
@@ -18,11 +19,16 @@ function isInteractiveTarget(el: Element | null): boolean {
  * Keeping them separate prevents scale tweens from wiping x/y.
  */
 export default function CustomCursor() {
+  const [mounted, setMounted] = useState(false);
   const cursorRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
   const isPointer = useRef(false);
   const lastTarget = useRef<EventTarget | null>(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const cursor = cursorRef.current;
@@ -34,6 +40,7 @@ export default function CustomCursor() {
     const reduced = prefersReducedMotion();
     if (coarse || reduced) {
       cursor.style.display = "none";
+      document.documentElement.classList.remove("has-custom-cursor");
       return;
     }
 
@@ -103,7 +110,7 @@ export default function CustomCursor() {
     };
   }, []);
 
-  return (
+  const cursor = (
     <div ref={cursorRef} className="custom-cursor" aria-hidden style={{ display: "none" }}>
       <div ref={innerRef} className="custom-cursor__inner">
         <img
@@ -126,4 +133,8 @@ export default function CustomCursor() {
       </div>
     </div>
   );
+
+  if (!mounted) return null;
+
+  return createPortal(cursor, document.body);
 }

@@ -301,6 +301,38 @@ export const eventsPage = {
   emptyPast: "Past events will appear here once they are added.",
   events: [
     {
+      id: "infinix-hot-70-play-launch",
+      status: "past",
+      name: "Infnix HOT 70 Play Launch",
+      dateLabel: "August 2026",
+      sortDate: "2026-08-22",
+      venue: "Product launch",
+      city: "Pakistan",
+      division: "Infinix",
+      summary:
+        "Launch event for the Infinix HOT 70 Play — celebrating the latest addition to the HOT series with partners and customers.",
+      image: encodeURI(
+        "/assets/events/Infnix HOT 70 Play Launch/WhatsApp Image 2026-08-22 at 3.09.29 PM (1).jpeg",
+      ),
+      images: [
+        encodeURI(
+          "/assets/events/Infnix HOT 70 Play Launch/WhatsApp Image 2026-08-22 at 3.09.29 PM.jpeg",
+        ),
+        encodeURI(
+          "/assets/events/Infnix HOT 70 Play Launch/WhatsApp Image 2026-08-22 at 3.09.30 PM.jpeg",
+        ),
+        encodeURI(
+          "/assets/events/Infnix HOT 70 Play Launch/WhatsApp Image 2026-08-22 at 3.09.34 PM (1).jpeg",
+        ),
+        encodeURI(
+          "/assets/events/Infnix HOT 70 Play Launch/WhatsApp Image 2026-08-22 at 3.09.34 PM.jpeg",
+        ),
+        encodeURI(
+          "/assets/events/Infnix HOT 70 Play Launch/WhatsApp Image 2026-08-22 at 3.09.35 PM.jpeg",
+        ),
+      ],
+    },
+    {
       id: "10-years-with-infinix",
       status: "past",
       name: "10 Years with Infinix",
